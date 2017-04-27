@@ -7,5 +7,6 @@ namespace Restaurant2
 {
     public class Busboy : Employee
     {
+        // I'm a busboy!
     }
 }
