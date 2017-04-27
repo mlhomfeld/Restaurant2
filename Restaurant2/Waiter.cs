@@ -7,5 +7,19 @@ namespace Restaurant2
 {
     public class Waiter : Employee
     {
+        public void TakeOrder()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RetrieveOrder()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void TakePayment()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

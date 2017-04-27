@@ -5,7 +5,4 @@ using System.Text;
 
 namespace Restaurant2
 {
-    public class Database
-    {
-    }
 }

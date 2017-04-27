@@ -7,5 +7,14 @@ namespace Restaurant2
 {
     public class Customer
     {
+        private string groupName;
+        private int groupSize;
+        private int groupTable;
+        private int groupTotal;
+
+        public void Pay()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

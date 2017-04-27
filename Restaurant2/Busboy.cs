@@ -7,6 +7,10 @@ namespace Restaurant2
 {
     public class Busboy : Employee
     {
+        public void Clean()
+        {
+            throw new System.NotImplementedException();
+        }
         // I'm a busboy!
     }
 }

@@ -7,5 +7,11 @@ namespace Restaurant2
 {
     public class FloorPlan
     {
+        private int tableStatus;
+
+        public void SetTableStatus(string status)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

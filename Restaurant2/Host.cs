@@ -7,5 +7,19 @@ namespace Restaurant2
 {
     public class Host : Employee
     {
+        public void CreateCustomerParty()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SetTableToOccupied()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void RemoveFromQueue()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

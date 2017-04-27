@@ -7,5 +7,14 @@ namespace Restaurant2
 {
     public class Cook : Employee
     {
+        public Cook()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SetOrderToReady()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
