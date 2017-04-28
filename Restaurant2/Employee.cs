@@ -5,6 +5,8 @@ using System.Text;
 
 namespace Restaurant2
 {
+
+    // Making a comment
     public class Employee
     {
         private int employeeID;
