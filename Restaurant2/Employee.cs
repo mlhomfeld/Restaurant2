@@ -5,6 +5,8 @@ using System.Text;
 
 namespace Restaurant2
 {
+
+    // Making a comment
     public class Employee
     {
         private int employeeID;
@@ -25,6 +27,11 @@ namespace Restaurant2
         }
 
         public void LogOut()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Timestamp()
         {
             throw new System.NotImplementedException();
         }

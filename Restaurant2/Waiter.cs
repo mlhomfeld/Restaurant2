@@ -9,6 +9,7 @@ namespace Restaurant2
     {
         public void TakeOrder()
         {
+            //Hector
             throw new System.NotImplementedException();
         }
 
@@ -17,7 +18,7 @@ namespace Restaurant2
             throw new System.NotImplementedException();
         }
 
-        public void TakePayment()
+        public void SetTableToDirty()
         {
             throw new System.NotImplementedException();
         }

@@ -10,11 +10,12 @@ namespace Restaurant2
         private string groupName;
         private int groupSize;
         private int groupTable;
-        private int groupTotal;
+        private decimal groupTotal;
 
-        public void Pay()
+        public void Pay (decimal Payment )
         {
-            throw new System.NotImplementedException();
+            //throw new System.NotImplementedException();
+            
         }
     }
 }

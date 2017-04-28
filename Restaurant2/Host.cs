@@ -7,8 +7,10 @@ namespace Restaurant2
 {
     public class Host : Employee
     {
+        // I'm working on the Host 
         public void CreateCustomerParty()
         {
+            
             throw new System.NotImplementedException();
         }
 
