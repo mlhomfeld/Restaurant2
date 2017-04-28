@@ -17,10 +17,39 @@ namespace Restaurant2
             InitializeComponent();
         }
 
-        private void btnTheButton_Click(object sender, EventArgs e)
+        private void btnTable1_Click(object sender, EventArgs e)
         {
-            Busboy bus = new Busboy();
-            bus.Clean();
+          
+        }
+
+        private void btnTable2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTable3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTable4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTable5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTable6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTable7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
