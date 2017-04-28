@@ -10,6 +10,7 @@ namespace Restaurant2
     {
         public void Clean()
         {
+            //Im Working on Busboy and FloorPlan
             MessageBox.Show("I'm clean!");
         }
 
