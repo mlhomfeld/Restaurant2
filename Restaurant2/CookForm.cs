@@ -16,5 +16,10 @@ namespace Restaurant2
         {
             InitializeComponent();
         }
+
+        private void btnRetrieveOrder_Click(object sender, EventArgs e)
+        {
+            // Waiter submits order, I retrieve it.
+        }
     }
 }
