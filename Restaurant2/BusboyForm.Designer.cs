@@ -35,7 +35,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.btnTheButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -101,22 +100,11 @@
             this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // btnTheButton
-            // 
-            this.btnTheButton.Location = new System.Drawing.Point(614, 120);
-            this.btnTheButton.Name = "btnTheButton";
-            this.btnTheButton.Size = new System.Drawing.Size(75, 23);
-            this.btnTheButton.TabIndex = 7;
-            this.btnTheButton.Text = "Button";
-            this.btnTheButton.UseVisualStyleBackColor = true;
-            this.btnTheButton.Click += new System.EventHandler(this.btnTheButton_Click);
-            // 
             // BusboyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 493);
-            this.Controls.Add(this.btnTheButton);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -139,6 +127,5 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button btnTheButton;
     }
 }
