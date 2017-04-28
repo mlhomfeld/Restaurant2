@@ -14,8 +14,10 @@ namespace Restaurant2
 
         public void Pay (decimal Payment )
         {
-            //throw new System.NotImplementedException();
             
+            //take the payment and subtrace to the grouptotal;
+            //if they didn't pay enough keep subtrace.
+             
         }
     }
 }
