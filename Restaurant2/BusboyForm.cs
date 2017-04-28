@@ -16,5 +16,11 @@ namespace Restaurant2
         {
             InitializeComponent();
         }
+
+        private void btnTheButton_Click(object sender, EventArgs e)
+        {
+            Busboy bus = new Busboy();
+            bus.Clean();
+        }
     }
 }

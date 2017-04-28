@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Restaurant2
 {
@@ -9,8 +10,8 @@ namespace Restaurant2
     {
         public void Clean()
         {
-            throw new System.NotImplementedException();
+            MessageBox.Show("I'm clean!");
         }
-        // I'm a busboy!
+
     }
 }

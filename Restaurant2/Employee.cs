@@ -28,5 +28,10 @@ namespace Restaurant2
         {
             throw new System.NotImplementedException();
         }
+
+        public void Timestamp()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
