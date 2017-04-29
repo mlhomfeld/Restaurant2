@@ -93,6 +93,9 @@
     <Compile Include="WaiterForm.Designer.cs">
       <DependentUpon>WaiterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
