@@ -21,5 +21,10 @@ namespace Restaurant2
         {
             // Waiter submits order, I retrieve it.
         }
+
+        private void btnPreppingOrder_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

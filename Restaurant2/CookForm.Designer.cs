@@ -38,7 +38,7 @@
             this.btnRetrieveOrder.BackColor = System.Drawing.SystemColors.InfoText;
             this.btnRetrieveOrder.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetrieveOrder.ForeColor = System.Drawing.Color.Red;
-            this.btnRetrieveOrder.Location = new System.Drawing.Point(24, 296);
+            this.btnRetrieveOrder.Location = new System.Drawing.Point(21, 42);
             this.btnRetrieveOrder.Name = "btnRetrieveOrder";
             this.btnRetrieveOrder.Size = new System.Drawing.Size(168, 112);
             this.btnRetrieveOrder.TabIndex = 1;
@@ -51,19 +51,20 @@
             this.btnPreppingOrder.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnPreppingOrder.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreppingOrder.ForeColor = System.Drawing.Color.Red;
-            this.btnPreppingOrder.Location = new System.Drawing.Point(240, 296);
+            this.btnPreppingOrder.Location = new System.Drawing.Point(228, 42);
             this.btnPreppingOrder.Name = "btnPreppingOrder";
             this.btnPreppingOrder.Size = new System.Drawing.Size(168, 112);
             this.btnPreppingOrder.TabIndex = 2;
             this.btnPreppingOrder.Text = "Prepping Order";
             this.btnPreppingOrder.UseVisualStyleBackColor = false;
+            this.btnPreppingOrder.Click += new System.EventHandler(this.btnPreppingOrder_Click);
             // 
             // btnOrderReady
             // 
             this.btnOrderReady.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnOrderReady.Font = new System.Drawing.Font("Britannic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderReady.ForeColor = System.Drawing.Color.Red;
-            this.btnOrderReady.Location = new System.Drawing.Point(464, 296);
+            this.btnOrderReady.Location = new System.Drawing.Point(442, 42);
             this.btnOrderReady.Name = "btnOrderReady";
             this.btnOrderReady.Size = new System.Drawing.Size(152, 112);
             this.btnOrderReady.TabIndex = 3;
