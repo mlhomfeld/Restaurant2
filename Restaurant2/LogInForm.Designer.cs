@@ -59,6 +59,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 2;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // lblEId
             // 
@@ -86,6 +87,7 @@
             this.btnCan.TabIndex = 5;
             this.btnCan.Text = "Cancel";
             this.btnCan.UseVisualStyleBackColor = true;
+            this.btnCan.Click += new System.EventHandler(this.btnCan_Click);
             // 
             // LogInForm
             // 
@@ -99,6 +101,7 @@
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.btnLog);
             this.Name = "LogInForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

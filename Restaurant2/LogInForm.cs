@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace Restaurant2
 {
+
     public partial class LogInForm : Form
     {
+
+        public int employeeID;
+
         public LogInForm()
         {
             InitializeComponent();
@@ -19,7 +23,19 @@ namespace Restaurant2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Employee emp = new Employee();
+            emp.LogIn(Convert.ToInt32(txtID.Text), txtPass.Text);
 
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnCan_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
