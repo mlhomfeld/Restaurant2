@@ -16,10 +16,11 @@ namespace Restaurant2
         {
             InitializeComponent();
         }
+        FloorPlan Table = new FloorPlan();
 
         private void btnTable1_Click(object sender, EventArgs e)
         {
-          
+            Table.table1 = "Clean";
         }
 
         private void btnTable2_Click(object sender, EventArgs e)
