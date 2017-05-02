@@ -19,7 +19,8 @@ namespace Restaurant2
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            Manager mng = new Manager();
+            mng.CreateEmployee(txtFirstName.Text, txtLastName.Text, txtPayRate.Text, txtPass.Text, txtRole.Text);
         }
     }
 }
