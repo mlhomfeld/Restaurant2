@@ -23,5 +23,18 @@ namespace Restaurant2
         {
 
         }
+
+        private void btnTableOne_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show( "Are you sure you want to set this table to dirty?", "!!!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //do something
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+        }
     }
 }

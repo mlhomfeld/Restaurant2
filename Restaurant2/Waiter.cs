@@ -9,8 +9,7 @@ namespace Restaurant2
     {
         public void TakeOrder()
         {
-            throw new System.NotImplementedException();
-
+            throw new System.NotImplementedException();           
 
         }
 
