@@ -78,17 +78,23 @@
     </Compile>
     <Compile Include="Host.cs" />
     <Compile Include="Manager.cs" />
+    <Compile Include="ManagerAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerAdd.Designer.cs">
+      <DependentUpon>ManagerAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagerInfoForm.cs">
+    <Compile Include="ManagerModify.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerInfoForm.Designer.cs">
-      <DependentUpon>ManagerInfoForm.cs</DependentUpon>
+    <Compile Include="ManagerModify.Designer.cs">
+      <DependentUpon>ManagerModify.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,11 +111,14 @@
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagerAdd.resx">
+      <DependentUpon>ManagerAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagerInfoForm.resx">
-      <DependentUpon>ManagerInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="ManagerModify.resx">
+      <DependentUpon>ManagerModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -19,15 +19,15 @@ namespace Restaurant2
 
         private void btnCreateEmployee_Click(object sender, EventArgs e)
         {
-            ManagerInfoForm managerinfoFrm = new ManagerInfoForm();
-            managerinfoFrm.Show();
+            ManagerAdd addFrm = new ManagerAdd();
+            addFrm.Show();
             this.Hide();
         }
 
         private void btnModifyEmployee_Click(object sender, EventArgs e)
         {
-            ManagerInfoForm managerinfoFrm = new ManagerInfoForm();
-            managerinfoFrm.Show();
+            ManagerModify modifyFrm = new ManagerModify();
+            modifyFrm.Show();
             this.Hide();
         }
     }
