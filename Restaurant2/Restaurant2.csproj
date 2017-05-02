@@ -96,6 +96,9 @@
     <EmbeddedResource Include="CookForm.resx">
       <DependentUpon>CookForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HostForm.resx">
+      <DependentUpon>HostForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
