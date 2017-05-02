@@ -13,6 +13,7 @@ namespace Restaurant2
         {
             
             throw new System.NotImplementedException();
+
         }
 
         public void SetTableToOccupied()
