@@ -7,7 +7,8 @@ namespace Restaurant2
 {
     public class Host : Employee
     {
-        // I'm working on the Host 
+        // I'm working on host
+        // Ray
         public void CreateCustomerParty()
         {
             

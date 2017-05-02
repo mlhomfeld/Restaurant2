@@ -10,7 +10,7 @@
   <Class Name="Restaurant2.Waiter">
     <Position X="4" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAACAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
       <FileName>Waiter.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -35,13 +35,6 @@
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Restaurant2.Employee">
-    <Position X="4" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAABACAABAAAAAAgAAABAAAAAAAhAAAAAACAAAAAg=</HashCode>
-      <FileName>Employee.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Restaurant2.Customer">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -52,8 +45,15 @@
   <Class Name="Restaurant2.FloorPlan">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <HashCode>AAAAACAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
       <FileName>FloorPlan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Restaurant2.Employee">
+    <Position X="4" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABACAgBAAAAAAgACABAAAAAAAhAQAAAACAAAAAg=</HashCode>
+      <FileName>Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
