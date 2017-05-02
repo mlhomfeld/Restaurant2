@@ -14,10 +14,26 @@ namespace Restaurant2
 
         public void Pay (decimal Payment )
         {
-            
-            //take the payment and subtrace to the grouptotal;
-            //if they didn't pay enough keep subtrace.
+            while(true)
+            {
+                if(Payment >= groupTotal)
+                {
+                    Console.WriteLine("You payment is not enough ");
+
+                    break;
+                
+                }
+                else
+                {
+                    groupTotal = groupTotal - Payment;
+                    Console.WriteLine("Thank you");
+                    //groupTotal = groupTotal;
+                }
+                    //take the payment and subtrace to the grouptotal;
+                    //if they didn't pay enough keep subtrace.
              
+             }
+
         }
     }
 }
