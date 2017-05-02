@@ -24,29 +24,37 @@ namespace Restaurant2
         
         private void btnTable1_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to set this table to open?", "!!!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-
-                SqlConnection connection = new SqlConnection();
-                connection.ConnectionString = "Server=cis1.actx.edu;Database=Project2;User Id=db2;Password = db20;";
-                connection.Open();
-                using (SqlCommand updateSeatingArea = connection.CreateCommand())
+                try
                 {
-                    updateSeatingArea.CommandText = "update dbo.SeatingArea set SeatingAreaStatus = @SeatingAreaStatus where ID = @ID;";
-                    var seatingAreaParam = new SqlParameter("SeatingAreaStatus", SqlDbType.VarChar) { Value = "Open" };
-                    var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 1 };
-                    updateSeatingArea.Parameters.Add(seatingAreaParam);
-                    updateSeatingArea.Parameters.Add(idParam);
 
-                    updateSeatingArea.ExecuteNonQuery();
-                    connection.Close();
-                }
+                    SqlConnection connection = new SqlConnection();
+                    connection.ConnectionString = "Server=cis1.actx.edu;Database=Project2;User Id=db2;Password = db20;";
+                    connection.Open();
+                    using (SqlCommand updateSeatingArea = connection.CreateCommand())
+                    {
+                        updateSeatingArea.CommandText = "update dbo.SeatingArea set SeatingAreaStatus = @SeatingAreaStatus where ID = @ID;";
+                        var seatingAreaParam = new SqlParameter("SeatingAreaStatus", SqlDbType.VarChar) { Value = "Open" };
+                        var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 1 };
+                        updateSeatingArea.Parameters.Add(seatingAreaParam);
+                        updateSeatingArea.Parameters.Add(idParam);
+
+                        updateSeatingArea.ExecuteNonQuery();
+                        connection.Close();
+                    }
                     MessageBox.Show("Table 1 has been set to Open");
-                
-            }
-            catch
-            {
 
+                }
+                catch
+                {
+
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
             }
         }
 
