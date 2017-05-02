@@ -16,7 +16,7 @@ namespace Restaurant2
         {
             SqlConnection connection = new SqlConnection();
             //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
-            connection.ConnectionString = "Server=cis1.actx.edu;Database=project1;User Id=db1;Password = db10;";
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=project1;User Id=db2;Password = db20;";
             connection.Open();
             MessageBox.Show(connection.ServerVersion);
 
@@ -42,7 +42,13 @@ namespace Restaurant2
 
         public void RemoveEmployee()
         {
-            throw new System.NotImplementedException();
+            SqlConnection connection = new SqlConnection();
+            //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
+            connection.ConnectionString = "Server=cis1.actx.edu;Database=project1;User Id=db2;Password = db20;";
+            connection.Open();
+            MessageBox.Show(connection.ServerVersion);
+
+
         }
 
         public void ModifyEmployee()
