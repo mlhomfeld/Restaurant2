@@ -46,6 +46,7 @@
             this.btnTable1.TabIndex = 0;
             this.btnTable1.Text = "Table 1";
             this.btnTable1.UseVisualStyleBackColor = true;
+            this.btnTable1.Click += new System.EventHandler(this.btnTable1_Click);
             // 
             // btnTable2
             // 
@@ -55,6 +56,7 @@
             this.btnTable2.TabIndex = 1;
             this.btnTable2.Text = "Table 2";
             this.btnTable2.UseVisualStyleBackColor = true;
+            this.btnTable2.Click += new System.EventHandler(this.btnTable2_Click);
             // 
             // btnTable3
             // 
@@ -64,6 +66,7 @@
             this.btnTable3.TabIndex = 2;
             this.btnTable3.Text = "Table 3";
             this.btnTable3.UseVisualStyleBackColor = true;
+            this.btnTable3.Click += new System.EventHandler(this.btnTable3_Click);
             // 
             // btnTable4
             // 
@@ -73,6 +76,7 @@
             this.btnTable4.TabIndex = 3;
             this.btnTable4.Text = "Table 4";
             this.btnTable4.UseVisualStyleBackColor = true;
+            this.btnTable4.Click += new System.EventHandler(this.btnTable4_Click);
             // 
             // btnTable5
             // 
@@ -82,6 +86,7 @@
             this.btnTable5.TabIndex = 4;
             this.btnTable5.Text = "Table 5";
             this.btnTable5.UseVisualStyleBackColor = true;
+            this.btnTable5.Click += new System.EventHandler(this.btnTable5_Click);
             // 
             // btnTable6
             // 
@@ -91,6 +96,7 @@
             this.btnTable6.TabIndex = 5;
             this.btnTable6.Text = "Table 6";
             this.btnTable6.UseVisualStyleBackColor = true;
+            this.btnTable6.Click += new System.EventHandler(this.btnTable6_Click);
             // 
             // btnTable7
             // 
@@ -100,6 +106,7 @@
             this.btnTable7.TabIndex = 6;
             this.btnTable7.Text = "Table 7";
             this.btnTable7.UseVisualStyleBackColor = true;
+            this.btnTable7.Click += new System.EventHandler(this.btnTable7_Click);
             // 
             // btnCreateParty
             // 
@@ -109,6 +116,7 @@
             this.btnCreateParty.TabIndex = 7;
             this.btnCreateParty.Text = "Create Party";
             this.btnCreateParty.UseVisualStyleBackColor = true;
+            this.btnCreateParty.Click += new System.EventHandler(this.btnCreateParty_Click);
             // 
             // HostForm
             // 
