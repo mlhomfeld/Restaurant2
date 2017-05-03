@@ -111,8 +111,8 @@ namespace Restaurant2
                 using (SqlCommand updateManager = con.CreateCommand())
                 {
 
-                    updateManager.CommandText = "update dbo.Employee set Challenge = @Challenge where ID = @ID;";
-                    var challenge = new SqlParameter("Challenge", SqlDbType.Int) { Value = randoNum };
+                    updateManager.CommandText = "update dbo.Employee set Passcode = @Passcode where ID = @ID;";
+                    var challenge = new SqlParameter("Passcode", SqlDbType.Int) { Value = randoNum };
                     var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 4 }; // valule needs to match manager's ID. I don't recall what it was.
                     updateManager.Parameters.Add(challenge);
 
@@ -165,7 +165,7 @@ namespace Restaurant2
                 using (SqlCommand readEmployeeRecords = con.CreateCommand())
                 {
 
-                    readEmployeeRecords.CommandText = "select * from dbo.Employee where passcode = @passcode;";
+                    readEmployeeRecords.CommandText = "select * from dbo.Employee where Passcode = @Passcode;";
                     var pass = new SqlParameter("passcode", passcode);
                     readEmployeeRecords.Parameters.Add(pass);
 
