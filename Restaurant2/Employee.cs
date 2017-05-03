@@ -90,7 +90,10 @@ namespace Restaurant2
             }
         }
 
-        // Trying something out here.... 
+        // Trying something out here... The below generates a random number for the manager in the
+        // challenge field. The random number will be emailed / sms'ed to the manager. They will 
+        // be challenged with another screen before the manager form launches. It will generate each 
+        // time the manager logs in. 
 
         //public void Manager()
         //{
@@ -98,27 +101,31 @@ namespace Restaurant2
         //    {
         //        int randoNum;
         //        Random rng = new Random();
-        //        rng.Next(100000, 999999);
-            
+        //        randoNum = rng.Next(100000, 999999);
 
-        //    SqlConnection con = new SqlConnection();
-        //    con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
-        //    con.Open();
-        //    using (SqlCommand updateManager = con.CreateCommand())
-        //    {
+        //        SqlConnection con = new SqlConnection();
+        //        con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+        //        con.Open();
+        //        using (SqlCommand updateManager = con.CreateCommand())
+        //        {
 
-        //    updateManager.CommandText = "update dbo.Employee set Challenge = @Challenge where ID = @ID;";
-        //    var challenge = new SqlParameter("Challenge", SqlDbType.Int) { Value = randoNum };
-        //    var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 2 };
-        //    updateManager.Parameters.Add(challenge);
-        //    updateManager.Parameters.Add(idParam);
+        //            updateManager.CommandText = "update dbo.Employee set Challenge = @Challenge where ID = @ID;";
+        //            var challenge = new SqlParameter("Challenge", SqlDbType.Int) { Value = randoNum };
+        //            var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 4 };
+        //            updateManager.Parameters.Add(challenge);
+        //            updateManager.Parameters.Add(idParam);
 
-        //    updateManager.ExecuteNonQuery();
-        //     }
+        //            updateManager.ExecuteNonQuery();
+        //        }
 
         //    }
+        //    catch (Exception err)
+        //    {
+        //        MessageBox.Show(err.Message);
+        //    }
+        //}
 
-// If any user hits the logout button on their home form, it will restart the application.
+        // If any user hits the logout button on their home form, it will restart the application.
         public void LogOut()
         {
            Application.Restart();
