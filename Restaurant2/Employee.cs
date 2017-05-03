@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Data;
+using System.Net.Mail;
 
 
 namespace Restaurant2
@@ -15,7 +16,7 @@ namespace Restaurant2
     public class Employee
     {
 
-        bool tryAgain = true;
+      //  bool tryAgain = true;
 
         //public void TimeClock()
         //{
@@ -64,8 +65,7 @@ namespace Restaurant2
                                 wait.Show();
                                 break;
                             case "Manager":
-                               // ManagerForm man = new ManagerForm();
-                               // man.Show();
+                                RandomChallenge();
                                 break;
                             case "Host":
                                 HostForm host = new HostForm();
@@ -90,40 +90,114 @@ namespace Restaurant2
             }
         }
 
-        // Trying something out here... The below generates a random number for the manager in the
-        // challenge field. The random number will be emailed / sms'ed to the manager. They will 
-        // be challenged with another screen before the manager form launches. It will generate each 
-        // time the manager logs in. 
+       //  The below generates a random number for the manager to provide a second factor of authentication
+       //  The first is the password (something you know), second is challenge email (something you have).
+       //  The random number will be emailed / sms'ed to the manager. After sending the random challenge, the 
+       //  manager will be presented the SecureLogin form. The Manager's email will need to be maintained here
+       //  in the employee class, one of the many shortcomings. 
 
-        //public void Manager()
-        //{
-        //    try
-        //    {
-        //        int randoNum;
-        //        Random rng = new Random();
-        //        randoNum = rng.Next(100000, 999999);
+        public void RandomChallenge()
+        {
 
-        //        SqlConnection con = new SqlConnection();
-        //        con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
-        //        con.Open();
-        //        using (SqlCommand updateManager = con.CreateCommand())
-        //        {
+            try
+            {
+                int randoNum;
+                Random rng = new Random();
+                randoNum = rng.Next(100000, 999999);
 
-        //            updateManager.CommandText = "update dbo.Employee set Challenge = @Challenge where ID = @ID;";
-        //            var challenge = new SqlParameter("Challenge", SqlDbType.Int) { Value = randoNum };
-        //            var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 4 };
-        //            updateManager.Parameters.Add(challenge);
-        //            updateManager.Parameters.Add(idParam);
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                con.Open();
+                using (SqlCommand updateManager = con.CreateCommand())
+                {
 
-        //            updateManager.ExecuteNonQuery();
-        //        }
+                    updateManager.CommandText = "update dbo.Employee set Challenge = @Challenge where ID = @ID;";
+                    var challenge = new SqlParameter("Challenge", SqlDbType.Int) { Value = randoNum };
+                    var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 4 }; // valule needs to match manager's ID. I don't recall what it was.
+                    updateManager.Parameters.Add(challenge);
 
-        //    }
-        //    catch (Exception err)
-        //    {
-        //        MessageBox.Show(err.Message);
-        //    }
-        //}
+                    updateManager.ExecuteNonQuery();
+                }
+
+
+                SmtpClient client = new SmtpClient();
+                string from = "bjbrooks17@gmail.com";
+                string to = "7193228584@vtext.com";
+                string subject = randoNum.ToString();
+                string body = "";
+                client.Host = "smtp.gmail.com";
+                client.Port = 587;
+                client.EnableSsl = true;
+                client.UseDefaultCredentials = false;
+                client.Credentials = new System.Net.NetworkCredential(from, "nyfzafnzohxaycik"); // this password can't be used interactively, it's controlled for app use only
+                client.Timeout = 1000;
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                MailMessage challengeMail = new MailMessage(from, to, subject, body);
+
+                SecureLogin mgr = new SecureLogin();
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
+
+        }
+
+        
+        // The manager response is similar to the login for normal employees, but this time we
+        // are looking for a passcode / challenge instead of employeeID and password. 
+        // The manager is the only one that will have a passcode so the switch statement below
+        // must match up with the manager role as well...a dumbed-down, simplistic 2-in-1 validation. 
+        // Upon meeting the challenge, the manager form will launch. All this should prevent 
+        // normal users from doing things they shouldn't unless they steal the manager's phone too. 
+        
+        public void ManagerResponse(int passcode)
+        {
+            try
+            {
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                con.Open();
+
+                using (SqlCommand readEmployeeRecords = con.CreateCommand())
+                {
+
+                    readEmployeeRecords.CommandText = "select * from dbo.Employee where passcode = @passcode;";
+                    var pass = new SqlParameter("passcode", passcode);
+                    readEmployeeRecords.Parameters.Add(pass);
+
+
+                    using (SqlDataReader reader = readEmployeeRecords.ExecuteReader())
+                    {
+                        string rec = "";
+                        while (reader.Read())
+                        {
+                            rec = reader.GetString(5);
+                        }
+
+                        switch (rec)
+                        {
+                            case "Manager":
+                                ManagerForm man = new ManagerForm();
+                                man.Show();
+                                break;
+                        }
+
+                    }
+
+                }
+
+
+            }
+
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
 
         // If any user hits the logout button on their home form, it will restart the application.
         public void LogOut()
@@ -131,28 +205,28 @@ namespace Restaurant2
            Application.Restart();
         }
 
-        public void Timestamp(string target, int order)
-        {
-            try
-            {
-                string date = "";
-                date = System.DateTime.Now.ToString();
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
-                con.Open();
-                using (SqlCommand stampIt = con.CreateCommand())
-                {
-                    stampIt.CommandText = "update TABLE" + target + "set " + date + " where " + order + " = " + order + ";";
-                    var timeStamp = new SqlParameter("TimeStamp", SqlDbType.Date) { Value = date };
-                    stampIt.Parameters.Add(timeStamp);
-                    stampIt.ExecuteNonQuery();
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
+        //public void Timestamp(string target, int order)
+        //{
+        //    try
+        //    {
+        //        string date = "";
+        //        date = System.DateTime.Now.ToString();
+        //        SqlConnection con = new SqlConnection();
+        //        con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+        //        con.Open();
+        //        using (SqlCommand stampIt = con.CreateCommand())
+        //        {
+        //            stampIt.CommandText = "update TABLE" + target + "set " + date + " where " + order + " = " + order + ";";
+        //            var timeStamp = new SqlParameter("TimeStamp", SqlDbType.Date) { Value = date };
+        //            stampIt.Parameters.Add(timeStamp);
+        //            stampIt.ExecuteNonQuery();
+        //        }
+        //    }
+        //    catch (Exception err)
+        //    {
+        //        MessageBox.Show(err.Message);
+        //    }
 
-        }
+        //}
     }
 }
