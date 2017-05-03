@@ -94,15 +94,31 @@ namespace Restaurant2
 
         //public void Manager()
         //{
-        //    int randoNum;
-        //    Random rng = new Random();
-        //    rng.Next(100000,999999);
+        //    try
+        //    {
+        //        int randoNum;
+        //        Random rng = new Random();
+        //        rng.Next(100000, 999999);
             
 
+        //    SqlConnection con = new SqlConnection();
+        //    con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+        //    con.Open();
+        //    using (SqlCommand updateManager = con.CreateCommand())
+        //    {
 
-        //}
+        //    updateManager.CommandText = "update dbo.Employee set Challenge = @Challenge where ID = @ID;";
+        //    var challenge = new SqlParameter("Challenge", SqlDbType.Int) { Value = randoNum };
+        //    var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 2 };
+        //    updateManager.Parameters.Add(challenge);
+        //    updateManager.Parameters.Add(idParam);
 
-        // If any user hits the logout button on their home form, it will restart the application.
+        //    updateManager.ExecuteNonQuery();
+        //     }
+
+        //    }
+
+// If any user hits the logout button on their home form, it will restart the application.
         public void LogOut()
         {
            Application.Restart();
