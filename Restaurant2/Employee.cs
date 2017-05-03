@@ -14,21 +14,22 @@ namespace Restaurant2
     // Making a comment
     public class Employee
     {
-        public int userInput { get; set; }
-        private string employeeID { get; set; }
-        private string lastName { get; set; }
-        private string firstName { get; set; }
-        private string role { get; set; }
-        private decimal payRate { get; set; }
-        private double hours { get; set; }
+        //public int userInput { get; set; }
+        //private string employeeID { get; set; }
+        //private string lastName { get; set; }
+        //private string firstName { get; set; }
+        //private string role { get; set; }
+        //private decimal payRate { get; set; }
+        //private double hours { get; set; }
         bool tryAgain = true;
 
-        public void TimeClock()
-        {
+        //public void TimeClock()
+        //{
          
-        }
+        //}
 
-        public void LogIn(int employeeID, string password)
+        //public void LogIn(int employeeID, string password)
+           public void LogIn(int employeeID, string password)
         {
             try
             {
@@ -40,77 +41,57 @@ namespace Restaurant2
 
                 using (SqlCommand readEmployeeRecords = con.CreateCommand())
                 {
-                    // Playing around with a couple of ways to do this... 
 
-                    //readEmployeeRecords.CommandText = "select * from dbo.Employee where employeeID = " + employeeID + " and password = " + password + " ;";
-                    //SqlDataAdapter reader = new SqlDataAdapter();
-                    //DataTable table = new DataTable();
-                    //reader.Fill(table);
-
-                    readEmployeeRecords.CommandText = "select * from TABLE where employeeID = @employeeID and password = @password;";
-                    var fnameParam = new SqlParameter(employeeID.ToString(), password);
-                    readEmployeeRecords.Parameters.Add(fnameParam);
-                    SqlDataAdapter adapter = new SqlDataAdapter();
-                    DataTable table = new DataTable();
+                    readEmployeeRecords.CommandText = "select * from dbo.Employee where employeeID = @employeeID and password = @password;";
+                    var empID = new SqlParameter("employeeID", employeeID);
+                    var pass = new SqlParameter("password", password);
+                    readEmployeeRecords.Parameters.Add(empID);
+                    readEmployeeRecords.Parameters.Add(pass);
 
                     using (SqlDataReader reader = readEmployeeRecords.ExecuteReader())
                     {
                         string rec = "";
                         while (reader.Read())
                         {
-                            rec = reader.GetString(1);
-                            rec += reader.GetString(2);
+                            rec = reader.GetString(5);
+                        }
+
+                        switch(rec)
+                        {
+                            case "Busboy":
+                                BusboyForm bus = new BusboyForm();
+                                bus.Show();
+                                tryAgain = false;
+                                break;
+                            case "Waiter":
+                                WaiterForm wait = new WaiterForm();
+                                wait.Show();
+                                tryAgain = false;
+                                break;
+                            case "Manager":
+                                ManagerForm man = new ManagerForm();
+                                man.Show();
+                                tryAgain = false;
+                                break;
+                            case "Host":
+                                HostForm host = new HostForm();
+                                host.Show();
+                                tryAgain = false;
+                                break;
+                            case "Cook":
+                                CookForm cookie = new CookForm();
+                                cookie.Show();
+                                tryAgain = false;
+                                break;
                         }
 
                     }
 
-                    //do
-                    //    {
-                    //        if (table.Rows.Count == 1)
-                    //        {
-                    //            ManagerForm emp = new ManagerForm();
-                    //            emp.Show();
-                    //            tryAgain = false;
-                    //        //if (reader.GetString(2) == busboy)
-                    //        //{
-                    //        //    BusboyForm emp = new BusboyForm();
-                    //        //    emp.Show();
-                    //        //    tryAgain = false;
-                    //        //}
-                    //        //if (reader.GetString(2).role == host)
-                    //        //{
-                    //        //    HostForm emp = new HostForm();
-                    //        //    emp.Show();
-                    //        //    tryAgain = false;
-                    //        //}
-                    //        //if (reader.GetString(2).role == cook)
-                    //        //{
-                    //        //    CookForm emp = new CookForm();
-                    //        //    emp.Show();
-                    //        //    tryAgain = false;
-                    //        //}
-                    //        //if (reader.GetString(2).role == waiter)
-                    //        //{
-                    //        //    WaiterForm emp = new WaiterForm();
-                    //        //    host.Show();
-                    //        //    tryAgain = false;
-                    //        //}
-                    //        //if (reader.GetString(2).role == host)
-                    //        //{
-                    //        //    ManagerForm emp = new ManagerForm();
-                    //        //    emp.Show();
-                    //        //    tryAgain = false;
-                    //        //}
-                    //    }
-                    //    else
-                    //        {
-                    //            MessageBox.Show("User or password incorrect, please try again.");
-                    //        }
-
-                    //    }
-                    //    while (tryAgain);
                 }
+
+
             }
+
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
