@@ -36,7 +36,7 @@
             // 
             // txtResponse
             // 
-            this.txtResponse.Location = new System.Drawing.Point(73, 105);
+            this.txtResponse.Location = new System.Drawing.Point(70, 89);
             this.txtResponse.Name = "txtResponse";
             this.txtResponse.Size = new System.Drawing.Size(144, 20);
             this.txtResponse.TabIndex = 0;
@@ -45,7 +45,7 @@
             // lblChallenge
             // 
             this.lblChallenge.AutoSize = true;
-            this.lblChallenge.Location = new System.Drawing.Point(93, 66);
+            this.lblChallenge.Location = new System.Drawing.Point(90, 50);
             this.lblChallenge.Name = "lblChallenge";
             this.lblChallenge.Size = new System.Drawing.Size(108, 13);
             this.lblChallenge.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(73, 162);
+            this.btnEnter.Location = new System.Drawing.Point(70, 146);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(144, 23);
             this.btnEnter.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // btnDecline
             // 
-            this.btnDecline.Location = new System.Drawing.Point(114, 207);
+            this.btnDecline.Location = new System.Drawing.Point(111, 191);
             this.btnDecline.Name = "btnDecline";
             this.btnDecline.Size = new System.Drawing.Size(54, 23);
             this.btnDecline.TabIndex = 3;
