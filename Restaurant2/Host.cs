@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.SqlClient;
 
 namespace Restaurant2
 {
@@ -19,6 +20,7 @@ namespace Restaurant2
         public void SetTableToOccupied()
         {
             throw new System.NotImplementedException();
+
         }
 
         public void RemoveFromQueue()
