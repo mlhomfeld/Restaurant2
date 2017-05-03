@@ -64,8 +64,8 @@ namespace Restaurant2
                                 wait.Show();
                                 break;
                             case "Manager":
-                                ManagerForm man = new ManagerForm();
-                                man.Show();
+                               // ManagerForm man = new ManagerForm();
+                               // man.Show();
                                 break;
                             case "Host":
                                 HostForm host = new HostForm();
@@ -89,6 +89,18 @@ namespace Restaurant2
                 MessageBox.Show(err.Message);
             }
         }
+
+        // Trying something out here.... 
+
+        //public void Manager()
+        //{
+        //    int randoNum;
+        //    Random rng = new Random();
+        //    rng.Next(100000,999999);
+            
+
+
+        //}
 
         // If any user hits the logout button on their home form, it will restart the application.
         public void LogOut()
