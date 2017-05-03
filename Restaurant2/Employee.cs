@@ -14,13 +14,7 @@ namespace Restaurant2
     // Making a comment
     public class Employee
     {
-        //public int userInput { get; set; }
-        //private string employeeID { get; set; }
-        //private string lastName { get; set; }
-        //private string firstName { get; set; }
-        //private string role { get; set; }
-        //private decimal payRate { get; set; }
-        //private double hours { get; set; }
+
         bool tryAgain = true;
 
         //public void TimeClock()
@@ -28,12 +22,15 @@ namespace Restaurant2
          
         //}
 
-        //public void LogIn(int employeeID, string password)
+           // This will receive input (employeeID and password) from LoginForm and pass it into the below SQL statement
            public void LogIn(int employeeID, string password)
         {
             try
             {
-                // need employee table created... 
+                
+                // This will look up employeeID and password based on input from LoginForm. If both match
+                // the database entries, then based on the role associated with that employee,
+                // the required form will open for the employee to perform their job. 
 
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
@@ -98,6 +95,7 @@ namespace Restaurant2
             }
         }
 
+        // If any user hits the logout button on their home form, it will restart the application.
         public void LogOut()
         {
            Application.Restart();

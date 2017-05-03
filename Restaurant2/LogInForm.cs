@@ -23,6 +23,8 @@ namespace Restaurant2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Creates a new employee object and runs the Login method, passing along the
+            // employee's ID and password. The password field is obscured and only * are shown
             Employee emp = new Employee();
             emp.LogIn(Convert.ToInt32(txtID.Text), txtPass.PasswordChar.ToString());
 
