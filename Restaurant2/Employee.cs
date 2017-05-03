@@ -14,13 +14,13 @@ namespace Restaurant2
     // Making a comment
     public class Employee
     {
-        public int userInput;
-        private string employeeID;
-        private string lastName;
-        private string firstName;
-        private string role;
-        private decimal payRate;
-        private double hours;
+        public int userInput { get; set; }
+        private string employeeID { get; set; }
+        private string lastName { get; set; }
+        private string firstName { get; set; }
+        private string role { get; set; }
+        private decimal payRate { get; set; }
+        private double hours { get; set; }
         bool tryAgain = true;
 
         public void TimeClock()
@@ -42,73 +42,73 @@ namespace Restaurant2
                 {
                     // Playing around with a couple of ways to do this... 
 
-                    readEmployeeRecords.CommandText = "select * from TABLE where employeeID = " + employeeID + " and password = " + password + " ;";
-                    SqlDataAdapter reader = new SqlDataAdapter();
-                    DataTable table = new DataTable();
-                    reader.Fill(table);
-
-                    //readEmployeeRecords.CommandText = "select * from TABLE where employeeID = @employeeID and password = @password;";
-                    //var fnameParam = new SqlParameter(employeeID.ToString(), password);
-                    //readEmployeeRecords.Parameters.Add(fnameParam);
-                    //SqlDataAdapter adapter = new SqlDataAdapter();
+                    //readEmployeeRecords.CommandText = "select * from dbo.Employee where employeeID = " + employeeID + " and password = " + password + " ;";
+                    //SqlDataAdapter reader = new SqlDataAdapter();
                     //DataTable table = new DataTable();
+                    //reader.Fill(table);
 
-                    //using (SqlDataReader reader = readEmployeeRecords.ExecuteReader())
-                    //{
-                    //    string rec = "";
-                    //    while(reader.Read())
-                    //    {
-                    //        rec = reader.GetString(1);
-                    //        rec += reader.GetString(2);
-                    //    }
+                    readEmployeeRecords.CommandText = "select * from TABLE where employeeID = @employeeID and password = @password;";
+                    var fnameParam = new SqlParameter(employeeID.ToString(), password);
+                    readEmployeeRecords.Parameters.Add(fnameParam);
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    DataTable table = new DataTable();
 
-                    //}
-
-                    do
+                    using (SqlDataReader reader = readEmployeeRecords.ExecuteReader())
+                    {
+                        string rec = "";
+                        while (reader.Read())
                         {
-                            if (table.Rows.Count == 1)
-                            {
-                                ManagerForm emp = new ManagerForm();
-                                emp.Show();
-                                tryAgain = false;
-                            //if (reader.GetString(2) == busboy)
-                            //{
-                            //    BusboyForm emp = new BusboyForm();
-                            //    emp.Show();
-                            //    tryAgain = false;
-                            //}
-                            //if (reader.GetString(2).role == host)
-                            //{
-                            //    HostForm emp = new HostForm();
-                            //    emp.Show();
-                            //    tryAgain = false;
-                            //}
-                            //if (reader.GetString(2).role == cook)
-                            //{
-                            //    CookForm emp = new CookForm();
-                            //    emp.Show();
-                            //    tryAgain = false;
-                            //}
-                            //if (reader.GetString(2).role == waiter)
-                            //{
-                            //    WaiterForm emp = new WaiterForm();
-                            //    host.Show();
-                            //    tryAgain = false;
-                            //}
-                            //if (reader.GetString(2).role == host)
-                            //{
-                            //    ManagerForm emp = new ManagerForm();
-                            //    emp.Show();
-                            //    tryAgain = false;
-                            //}
+                            rec = reader.GetString(1);
+                            rec += reader.GetString(2);
                         }
-                        else
-                            {
-                                MessageBox.Show("User or password incorrect, please try again.");
-                            }
 
-                        }
-                        while (tryAgain);
+                    }
+
+                    //do
+                    //    {
+                    //        if (table.Rows.Count == 1)
+                    //        {
+                    //            ManagerForm emp = new ManagerForm();
+                    //            emp.Show();
+                    //            tryAgain = false;
+                    //        //if (reader.GetString(2) == busboy)
+                    //        //{
+                    //        //    BusboyForm emp = new BusboyForm();
+                    //        //    emp.Show();
+                    //        //    tryAgain = false;
+                    //        //}
+                    //        //if (reader.GetString(2).role == host)
+                    //        //{
+                    //        //    HostForm emp = new HostForm();
+                    //        //    emp.Show();
+                    //        //    tryAgain = false;
+                    //        //}
+                    //        //if (reader.GetString(2).role == cook)
+                    //        //{
+                    //        //    CookForm emp = new CookForm();
+                    //        //    emp.Show();
+                    //        //    tryAgain = false;
+                    //        //}
+                    //        //if (reader.GetString(2).role == waiter)
+                    //        //{
+                    //        //    WaiterForm emp = new WaiterForm();
+                    //        //    host.Show();
+                    //        //    tryAgain = false;
+                    //        //}
+                    //        //if (reader.GetString(2).role == host)
+                    //        //{
+                    //        //    ManagerForm emp = new ManagerForm();
+                    //        //    emp.Show();
+                    //        //    tryAgain = false;
+                    //        //}
+                    //    }
+                    //    else
+                    //        {
+                    //            MessageBox.Show("User or password incorrect, please try again.");
+                    //        }
+
+                    //    }
+                    //    while (tryAgain);
                 }
             }
             catch (Exception err)
