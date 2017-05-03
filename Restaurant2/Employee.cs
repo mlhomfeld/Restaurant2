@@ -58,27 +58,22 @@ namespace Restaurant2
                             case "Busboy":
                                 BusboyForm bus = new BusboyForm();
                                 bus.Show();
-                                tryAgain = false;
                                 break;
                             case "Waiter":
                                 WaiterForm wait = new WaiterForm();
                                 wait.Show();
-                                tryAgain = false;
                                 break;
                             case "Manager":
                                 ManagerForm man = new ManagerForm();
                                 man.Show();
-                                tryAgain = false;
                                 break;
                             case "Host":
                                 HostForm host = new HostForm();
                                 host.Show();
-                                tryAgain = false;
                                 break;
                             case "Cook":
                                 CookForm cookie = new CookForm();
                                 cookie.Show();
-                                tryAgain = false;
                                 break;
                         }
 
