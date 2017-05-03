@@ -26,15 +26,44 @@ namespace Restaurant2
 
         private void btnTableOne_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show( "Are you sure you want to set this table to dirty?", "!!!", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                //do something
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
-            }
+            Waiter wait = new Waiter();
+            wait.SetTableToDirty(1);
+        }
+
+        private void btnTableTwo_Click(object sender, EventArgs e)
+        {
+            Waiter wait = new Waiter();
+            wait.SetTableToDirty(2);
+        }
+
+        private void btnTableThree_Click(object sender, EventArgs e)
+        {
+            Waiter wait = new Waiter();
+            wait.SetTableToDirty(3);
+        }
+
+        private void btnTableFour_Click(object sender, EventArgs e)
+        {
+            Waiter wait = new Waiter();
+            wait.SetTableToDirty(4);
+        }
+
+        private void btnTableFive_Click(object sender, EventArgs e)
+        {
+            Waiter wait = new Waiter();
+            wait.SetTableToDirty(5);
+        }
+
+        private void btnTableSix_Click(object sender, EventArgs e)
+        {
+            Waiter wait = new Waiter();
+            wait.SetTableToDirty(6);
+        }
+
+        private void btnTableSeven_Click(object sender, EventArgs e)
+        {
+            Waiter wait = new Waiter();
+            wait.SetTableToDirty(7);
         }
     }
 }
