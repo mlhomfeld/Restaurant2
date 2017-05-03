@@ -55,6 +55,7 @@
             this.btnTableThree.TabIndex = 1;
             this.btnTableThree.Text = "Table 3";
             this.btnTableThree.UseVisualStyleBackColor = true;
+            this.btnTableThree.Click += new System.EventHandler(this.btnTableThree_Click);
             // 
             // btnTableTwo
             // 
@@ -64,6 +65,7 @@
             this.btnTableTwo.TabIndex = 2;
             this.btnTableTwo.Text = "Table 2";
             this.btnTableTwo.UseVisualStyleBackColor = true;
+            this.btnTableTwo.Click += new System.EventHandler(this.btnTableTwo_Click);
             // 
             // btnTableFour
             // 
@@ -73,6 +75,7 @@
             this.btnTableFour.TabIndex = 3;
             this.btnTableFour.Text = "Table 4";
             this.btnTableFour.UseVisualStyleBackColor = true;
+            this.btnTableFour.Click += new System.EventHandler(this.btnTableFour_Click);
             // 
             // btnTableFive
             // 
@@ -82,6 +85,7 @@
             this.btnTableFive.TabIndex = 4;
             this.btnTableFive.Text = "Table 5";
             this.btnTableFive.UseVisualStyleBackColor = true;
+            this.btnTableFive.Click += new System.EventHandler(this.btnTableFive_Click);
             // 
             // btnTableSix
             // 
@@ -91,6 +95,7 @@
             this.btnTableSix.TabIndex = 5;
             this.btnTableSix.Text = "Table 6";
             this.btnTableSix.UseVisualStyleBackColor = true;
+            this.btnTableSix.Click += new System.EventHandler(this.btnTableSix_Click);
             // 
             // btnTableSeven
             // 
@@ -100,6 +105,7 @@
             this.btnTableSeven.TabIndex = 6;
             this.btnTableSeven.Text = "Table 7";
             this.btnTableSeven.UseVisualStyleBackColor = true;
+            this.btnTableSeven.Click += new System.EventHandler(this.btnTableSeven_Click);
             // 
             // WaiterForm
             // 
