@@ -138,6 +138,7 @@ namespace Restaurant2
                 client.Send(challengeMail);
 
                 SecureLogin mgr = new SecureLogin();
+                mgr.Show();
 
             }
             catch (Exception err)
