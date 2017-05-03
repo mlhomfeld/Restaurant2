@@ -24,7 +24,7 @@ namespace Restaurant2
         private void button1_Click(object sender, EventArgs e)
         {
             Employee emp = new Employee();
-            emp.LogIn(Convert.ToInt32(txtID.Text), txtPass.Text);
+            emp.LogIn(Convert.ToInt32(txtID.Text), txtPass.PasswordChar.ToString());
 
         }
 
@@ -36,6 +36,11 @@ namespace Restaurant2
         private void btnCan_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
