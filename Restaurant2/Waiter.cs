@@ -35,9 +35,9 @@ namespace Restaurant2
                     connection.Open();
                     using (SqlCommand updateSeatingArea = connection.CreateCommand())
                     {
-                        updateSeatingArea.CommandText = "update dbo.SeatingArea set SeatingAreaStatus = @SeatingAreaStatus where ID = @ID;";
+                        updateSeatingArea.CommandText = "update dbo.SeatingArea set SeatingAreaStatus = @SeatingAreaStatus where SeatingAreaID = @SeatingAreaID;";
                         var seatingAreaParam = new SqlParameter("SeatingAreaStatus", SqlDbType.VarChar) { Value = "Red" };
-                        var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = tableNumber };
+                        var idParam = new SqlParameter("SeatingAreaID", SqlDbType.Int) { Value = tableNumber };
                         updateSeatingArea.Parameters.Add(seatingAreaParam);
                         updateSeatingArea.Parameters.Add(idParam);
 
