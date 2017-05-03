@@ -54,31 +54,30 @@ namespace Restaurant2
                 MessageBox.Show("You change is " + remainingBalance.ToString());
             }
             //if the customers pay less then they own
-            else if(remainingBalance > 0)
-            {
+            //else if(remainingBalance > 0)
+            //{
 
-                    remainingBalance = groupTotal - Payment;
-                    MessageBox.Show("You own " + remainingBalance.ToString());
-              
+            //        remainingBalance = groupTotal - Payment;
+            //        MessageBox.Show("You own " + remainingBalance.ToString());
 
-            }
-            else
+            //}
+            //else
 
-            if (Payment >=  groupTotal)
-            {
-                    groupTotal = groupTotal - Payment;
-                    MessageBox.Show("Your change is " + groupTotal );
+            //if (Payment >=  groupTotal)
+            //{
+            //        groupTotal = groupTotal - Payment;
+            //        MessageBox.Show("Your change is " + groupTotal );
                     
 
-                    //break;
+            //        //break;
                 
-            }
-            else
-            {
-                    groupTotal = groupTotal - Payment;
-                    MessageBox.Show("Thank you");
+            //}
+            //else
+            //{
+            //        groupTotal = groupTotal - Payment;
+            //        MessageBox.Show("Thank you");
                     
-            }
+            //}
         }
     }
 }
