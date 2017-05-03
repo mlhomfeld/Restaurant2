@@ -44,7 +44,7 @@ namespace Restaurant2
                         updateSeatingArea.ExecuteNonQuery();
                         connection.Close();
                     }
-                    MessageBox.Show("Table 1 has been set to dirty.");
+                    MessageBox.Show("Table " + tableNumber + " has been set to dirty.");
                 }
                 catch (Exception err)
                 {
