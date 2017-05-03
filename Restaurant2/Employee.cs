@@ -117,8 +117,10 @@ namespace Restaurant2
                     updateManager.Parameters.Add(challenge);
 
                     updateManager.ExecuteNonQuery();
+                   
                 }
 
+                con.Close();
 
                 SmtpClient client = new SmtpClient();
                 string from = "bjbrooks17@gmail.com";
