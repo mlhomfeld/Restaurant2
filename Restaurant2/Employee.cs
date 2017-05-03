@@ -34,7 +34,8 @@ namespace Restaurant2
                 // the required form will open for the employee to perform their job. 
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                // con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                con.ConnectionString = "Server=localhost;Database=project2;User Id=bj.brooks;Password = db20;";
                 con.Open();
 
                 using (SqlCommand readEmployeeRecords = con.CreateCommand())
@@ -106,7 +107,8 @@ namespace Restaurant2
                 randoNum = rng.Next(100000, 999999);
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                // con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                con.ConnectionString = "Server=localhost;Database=project2;User Id=bj.brooks;Password = db20;";
                 con.Open();
                 using (SqlCommand updateManager = con.CreateCommand())
                 {
@@ -163,7 +165,8 @@ namespace Restaurant2
             {
 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                // con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                con.ConnectionString = "Server=localhost;Database=project2;User Id=bj.brooks;Password = db20;";
                 con.Open();
 
                 using (SqlCommand readEmployeeRecords = con.CreateCommand())

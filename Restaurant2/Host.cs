@@ -56,11 +56,11 @@ namespace Restaurant2
 
         }
 
-    }
+    //}
 
-        public void RemoveFromQueue()
-        {
-            throw new System.NotImplementedException();
-        }
+        //public void RemoveFromQueue()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
     }
 }
