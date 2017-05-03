@@ -133,6 +133,7 @@ namespace Restaurant2
                 client.Timeout = 1000;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 MailMessage challengeMail = new MailMessage(from, to, subject, body);
+                client.Send(challengeMail);
 
                 SecureLogin mgr = new SecureLogin();
 
