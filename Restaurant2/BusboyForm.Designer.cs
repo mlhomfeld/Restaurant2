@@ -36,13 +36,15 @@
             this.btnTable6 = new System.Windows.Forms.Button();
             this.btnTable7 = new System.Windows.Forms.Button();
             this.btnBusboyRefresh = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTable1
             // 
-            this.btnTable1.Location = new System.Drawing.Point(62, 75);
+            this.btnTable1.Location = new System.Drawing.Point(83, 92);
+            this.btnTable1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTable1.Name = "btnTable1";
-            this.btnTable1.Size = new System.Drawing.Size(77, 69);
+            this.btnTable1.Size = new System.Drawing.Size(103, 85);
             this.btnTable1.TabIndex = 0;
             this.btnTable1.Text = "Table 1";
             this.btnTable1.UseVisualStyleBackColor = true;
@@ -50,9 +52,10 @@
             // 
             // btnTable3
             // 
-            this.btnTable3.Location = new System.Drawing.Point(194, 75);
+            this.btnTable3.Location = new System.Drawing.Point(259, 92);
+            this.btnTable3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTable3.Name = "btnTable3";
-            this.btnTable3.Size = new System.Drawing.Size(79, 69);
+            this.btnTable3.Size = new System.Drawing.Size(105, 85);
             this.btnTable3.TabIndex = 1;
             this.btnTable3.Text = "Table 3";
             this.btnTable3.UseVisualStyleBackColor = true;
@@ -60,9 +63,10 @@
             // 
             // btnTable5
             // 
-            this.btnTable5.Location = new System.Drawing.Point(345, 46);
+            this.btnTable5.Location = new System.Drawing.Point(460, 57);
+            this.btnTable5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTable5.Name = "btnTable5";
-            this.btnTable5.Size = new System.Drawing.Size(75, 50);
+            this.btnTable5.Size = new System.Drawing.Size(100, 62);
             this.btnTable5.TabIndex = 2;
             this.btnTable5.Text = "Table 5";
             this.btnTable5.UseVisualStyleBackColor = true;
@@ -70,9 +74,10 @@
             // 
             // btnTable2
             // 
-            this.btnTable2.Location = new System.Drawing.Point(62, 208);
+            this.btnTable2.Location = new System.Drawing.Point(83, 256);
+            this.btnTable2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTable2.Name = "btnTable2";
-            this.btnTable2.Size = new System.Drawing.Size(75, 62);
+            this.btnTable2.Size = new System.Drawing.Size(100, 76);
             this.btnTable2.TabIndex = 3;
             this.btnTable2.Text = "Table 2";
             this.btnTable2.UseVisualStyleBackColor = true;
@@ -80,9 +85,10 @@
             // 
             // btnTable4
             // 
-            this.btnTable4.Location = new System.Drawing.Point(198, 208);
+            this.btnTable4.Location = new System.Drawing.Point(264, 256);
+            this.btnTable4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTable4.Name = "btnTable4";
-            this.btnTable4.Size = new System.Drawing.Size(75, 62);
+            this.btnTable4.Size = new System.Drawing.Size(100, 76);
             this.btnTable4.TabIndex = 4;
             this.btnTable4.Text = "Table 4";
             this.btnTable4.UseVisualStyleBackColor = true;
@@ -90,9 +96,10 @@
             // 
             // btnTable6
             // 
-            this.btnTable6.Location = new System.Drawing.Point(345, 152);
+            this.btnTable6.Location = new System.Drawing.Point(460, 187);
+            this.btnTable6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTable6.Name = "btnTable6";
-            this.btnTable6.Size = new System.Drawing.Size(75, 50);
+            this.btnTable6.Size = new System.Drawing.Size(100, 62);
             this.btnTable6.TabIndex = 5;
             this.btnTable6.Text = "Table 6";
             this.btnTable6.UseVisualStyleBackColor = true;
@@ -100,9 +107,10 @@
             // 
             // btnTable7
             // 
-            this.btnTable7.Location = new System.Drawing.Point(345, 247);
+            this.btnTable7.Location = new System.Drawing.Point(460, 304);
+            this.btnTable7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTable7.Name = "btnTable7";
-            this.btnTable7.Size = new System.Drawing.Size(75, 52);
+            this.btnTable7.Size = new System.Drawing.Size(100, 64);
             this.btnTable7.TabIndex = 6;
             this.btnTable7.Text = "Table 7";
             this.btnTable7.UseVisualStyleBackColor = true;
@@ -110,19 +118,31 @@
             // 
             // btnBusboyRefresh
             // 
-            this.btnBusboyRefresh.Location = new System.Drawing.Point(541, 98);
+            this.btnBusboyRefresh.Location = new System.Drawing.Point(721, 121);
+            this.btnBusboyRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBusboyRefresh.Name = "btnBusboyRefresh";
-            this.btnBusboyRefresh.Size = new System.Drawing.Size(77, 46);
+            this.btnBusboyRefresh.Size = new System.Drawing.Size(103, 57);
             this.btnBusboyRefresh.TabIndex = 7;
             this.btnBusboyRefresh.Text = "Refresh";
             this.btnBusboyRefresh.UseVisualStyleBackColor = true;
             this.btnBusboyRefresh.Click += new System.EventHandler(this.btnBusboyRefresh_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(723, 238);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(100, 33);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "LogOut";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // BusboyForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 493);
+            this.ClientSize = new System.Drawing.Size(991, 455);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnBusboyRefresh);
             this.Controls.Add(this.btnTable7);
             this.Controls.Add(this.btnTable6);
@@ -131,6 +151,7 @@
             this.Controls.Add(this.btnTable5);
             this.Controls.Add(this.btnTable3);
             this.Controls.Add(this.btnTable1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BusboyForm";
             this.Text = "BusboyForm";
             this.ResumeLayout(false);
@@ -147,5 +168,6 @@
         private System.Windows.Forms.Button btnTable6;
         private System.Windows.Forms.Button btnTable7;
         private System.Windows.Forms.Button btnBusboyRefresh;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
