@@ -30,5 +30,11 @@ namespace Restaurant2
             modifyFrm.Show();
             this.Hide();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.LogOut();
+        }
     }
 }

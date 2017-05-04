@@ -31,6 +31,7 @@
             this.btnCreateEmployee = new System.Windows.Forms.Button();
             this.btn = new System.Windows.Forms.Button();
             this.btnModifyEmployee = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreateEmployee
@@ -62,11 +63,22 @@
             this.btnModifyEmployee.UseVisualStyleBackColor = true;
             this.btnModifyEmployee.Click += new System.EventHandler(this.btnModifyEmployee_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(12, 210);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(138, 56);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 252);
+            this.ClientSize = new System.Drawing.Size(423, 297);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.btn);
             this.Controls.Add(this.btnCreateEmployee);
@@ -81,5 +93,6 @@
         private System.Windows.Forms.Button btnCreateEmployee;
         private System.Windows.Forms.Button btn;
         private System.Windows.Forms.Button btnModifyEmployee;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
