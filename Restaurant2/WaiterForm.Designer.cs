@@ -35,6 +35,7 @@
             this.btnTableFive = new System.Windows.Forms.Button();
             this.btnTableSix = new System.Windows.Forms.Button();
             this.btnTableSeven = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTableOne
@@ -107,11 +108,22 @@
             this.btnTableSeven.UseVisualStyleBackColor = true;
             this.btnTableSeven.Click += new System.EventHandler(this.btnTableSeven_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(555, 141);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(79, 35);
+            this.btnRefresh.TabIndex = 7;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // WaiterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 307);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnTableSeven);
             this.Controls.Add(this.btnTableSix);
             this.Controls.Add(this.btnTableFive);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Button btnTableFive;
         private System.Windows.Forms.Button btnTableSix;
         private System.Windows.Forms.Button btnTableSeven;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
