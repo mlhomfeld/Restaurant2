@@ -114,8 +114,9 @@ namespace Restaurant2
                 {
 
                     updateManager.CommandText = "update dbo.Employee set Passcode = @Passcode where ID = @ID;";
+                    var empID = new SqlParameter("employeeID", employeeID);
                     var challenge = new SqlParameter("Passcode", SqlDbType.Int) { Value = randoNum };
-                    var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 4 }; // valule needs to match manager's ID. I don't recall what it was.
+                   // var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 4 }; // valule needs to match manager's ID. I don't recall what it was.
                     updateManager.Parameters.Add(challenge);
 
                     updateManager.ExecuteNonQuery();
