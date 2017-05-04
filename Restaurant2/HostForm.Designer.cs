@@ -36,6 +36,7 @@
             this.btnTable6 = new System.Windows.Forms.Button();
             this.btnTable7 = new System.Windows.Forms.Button();
             this.btnHostRefresh = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTable1
@@ -125,7 +126,7 @@
             // btnHostRefresh
             // 
             this.btnHostRefresh.BackColor = System.Drawing.SystemColors.Info;
-            this.btnHostRefresh.Location = new System.Drawing.Point(449, 367);
+            this.btnHostRefresh.Location = new System.Drawing.Point(458, 266);
             this.btnHostRefresh.Name = "btnHostRefresh";
             this.btnHostRefresh.Size = new System.Drawing.Size(89, 41);
             this.btnHostRefresh.TabIndex = 7;
@@ -133,12 +134,24 @@
             this.btnHostRefresh.UseVisualStyleBackColor = false;
             this.btnHostRefresh.Click += new System.EventHandler(this.btnHostRefresh_Click);
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.SystemColors.Info;
+            this.btnLogOut.Location = new System.Drawing.Point(458, 330);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(89, 39);
+            this.btnLogOut.TabIndex = 8;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // HostForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(592, 438);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnHostRefresh);
             this.Controls.Add(this.btnTable7);
             this.Controls.Add(this.btnTable6);
@@ -164,5 +177,6 @@
         private System.Windows.Forms.Button btnTable6;
         private System.Windows.Forms.Button btnTable7;
         private System.Windows.Forms.Button btnHostRefresh;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }
