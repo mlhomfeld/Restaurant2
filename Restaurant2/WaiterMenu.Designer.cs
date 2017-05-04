@@ -54,6 +54,7 @@
             this.btnburger.TabIndex = 2;
             this.btnburger.Text = "Burger $6";
             this.btnburger.UseVisualStyleBackColor = true;
+            this.btnburger.Click += new System.EventHandler(this.btnburger_Click);
             // 
             // btncheeseBurger
             // 

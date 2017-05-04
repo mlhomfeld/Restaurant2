@@ -21,5 +21,10 @@ namespace Restaurant2
         {
 
         }
+
+        private void btnburger_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
