@@ -113,10 +113,10 @@ namespace Restaurant2
                 using (SqlCommand updateManager = con.CreateCommand())
                 {
 
-                    updateManager.CommandText = "update dbo.Employee set Passcode = @Passcode where ID = @ID;";
-                    var empID = new SqlParameter("employeeID", employeeID);
+                    updateManager.CommandText = "update dbo.Employee set Passcode = @Passcode where Role = Manager;";
+                    //var role = new SqlParameter("Role", "Manager");
                     var challenge = new SqlParameter("Passcode", SqlDbType.Int) { Value = randoNum };
-                   // var idParam = new SqlParameter("ID", SqlDbType.Int) { Value = 4 }; // valule needs to match manager's ID. I don't recall what it was.
+                    
                     updateManager.Parameters.Add(challenge);
 
                     updateManager.ExecuteNonQuery();
