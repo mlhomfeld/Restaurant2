@@ -28,7 +28,7 @@ namespace Restaurant2
                     insertNewEmployee.CommandText = "insert into dbo.Employee values (@FirstName, @LastName, @PayRate, @Password, @Role);";
                     var fnameParam = new SqlParameter("FirstName", SqlDbType.VarChar) { Value = firstName };
                     var lnameParam = new SqlParameter("LastName", SqlDbType.VarChar) { Value = lastName };
-                    var prateParam = new SqlParameter("PayRate", SqlDbType.VarChar) { Value = payRate };
+                    var prateParam = new SqlParameter("PayRate", SqlDbType.Money) { Value = payRate };
                     var passParam = new SqlParameter("Password", SqlDbType.VarChar) { Value = passWord };
                     var roleParam = new SqlParameter("Role", SqlDbType.VarChar) { Value = role };
                     insertNewEmployee.Parameters.Add(fnameParam);
@@ -76,9 +76,37 @@ namespace Restaurant2
 
         }
 
-        public void ModifyEmployee()
+        public void ModifyEmployee(string firstName, string lastName, string payRate, string passWord, string role)
         {
-            throw new System.NotImplementedException();
+            //try
+            //{
+            //    SqlConnection connection = new SqlConnection();
+            //    //Server = myServerAddress; Database = myDataBase; User Id = myUsername; Password = myPassword;
+            //    connection.ConnectionString = "Server=cis1.actx.edu;Database=project1;User Id=db2;Password = db20;";
+            //    connection.Open();
+            //    MessageBox.Show(connection.ServerVersion);
+
+            //    Console.WriteLine("---SQL UPDATE---");
+            //    using (SqlCommand updateEmployee = connection.CreateCommand())
+            //    {
+            //        updateEmployee.CommandText = " i'll need to ask group about how to set up this database code.;";
+            //        var fnameParam = new SqlParameter("FirstName", SqlDbType.VarChar) { Value = firstName };
+            //        var lnameParam = new SqlParameter("LastName", SqlDbType.VarChar) { Value = lastName };
+            //        var prateParam = new SqlParameter("PayRate", SqlDbType.Money) { Value = payRate };
+            //        var passParam = new SqlParameter("Password", SqlDbType.VarChar) { Value = passWord };
+            //        var roleParam = new SqlParameter("Role", SqlDbType.VarChar) { Value = role };
+            //        updateEmployee.Parameters.Add(fnameParam);
+            //        updateEmployee.Parameters.Add(lnameParam);
+            //        updateEmployee.Parameters.Add(prateParam);
+            //        updateEmployee.Parameters.Add(passParam);
+            //        updateEmployee.Parameters.Add(roleParam);
+            //        updateEmployee.ExecuteNonQuery();
+            //    }
+            //}
+            //catch (Exception err)
+            //{
+            //    MessageBox.Show(err.Message);
+            //}
         }
 
         public void CheckSales()

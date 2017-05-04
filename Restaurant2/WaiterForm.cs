@@ -158,5 +158,11 @@ namespace Restaurant2
                     break;
             }
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.LogOut();
+        }
     }
 }

@@ -36,6 +36,7 @@
             this.btnTableSix = new System.Windows.Forms.Button();
             this.btnTableSeven = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTableOne
@@ -110,7 +111,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(555, 141);
+            this.btnRefresh.Location = new System.Drawing.Point(554, 181);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(79, 35);
             this.btnRefresh.TabIndex = 7;
@@ -118,11 +119,22 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(554, 230);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(79, 35);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // WaiterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 307);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnTableSeven);
             this.Controls.Add(this.btnTableSix);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Button btnTableSix;
         private System.Windows.Forms.Button btnTableSeven;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

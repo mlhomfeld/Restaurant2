@@ -53,7 +53,7 @@ namespace Restaurant2
             }
             else if (dialogResult == DialogResult.No)
             {
-                // Close?
+                // Close
             }
         }
     }
