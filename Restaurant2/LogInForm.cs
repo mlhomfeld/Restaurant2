@@ -26,7 +26,7 @@ namespace Restaurant2
             // Creates a new employee object and runs the Login method, passing along the
             // employee's ID and password. The password field is obscured and only * are shown
             Employee emp = new Employee();
-            emp.LogIn(Convert.ToInt32(txtID.Text), txtPass.PasswordChar.ToString());
+            emp.LogIn(Convert.ToInt32(txtID.Text), txtPass.Text);
 
         }
 
