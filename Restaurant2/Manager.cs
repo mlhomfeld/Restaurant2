@@ -54,14 +54,14 @@ namespace Restaurant2
             {
                 SqlConnection connection = new SqlConnection();
                 //Server = myServerAddress; Database = myDataBase; User Id = myUsername; Password = myPassword;
-                connection.ConnectionString = "Server=cis1.actx.edu;Database=project1;User Id=db2;Password = db20;";
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 connection.Open();
-                MessageBox.Show(connection.ServerVersion);
+                
 
                 Console.WriteLine("---SQL UPDATE---");
                 using (SqlCommand updateEmployee = connection.CreateCommand())
                 {
-                    updateEmployee.CommandText = "update dbo.Employee set EmployeeStatus = @EmployeeStatus where EmployeeID = @" + employeeID + ";";
+                    updateEmployee.CommandText = "update dbo.Employee set EmployeeStatus = @EmployeeStatus where EmployeeID = " + employeeID + ";";
                     var empIDParam = new SqlParameter("EmployeeStatus", SqlDbType.VarChar) { Value = "Inactive" };                   
                     updateEmployee.Parameters.Add(empIDParam);
                     
