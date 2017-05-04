@@ -35,6 +35,7 @@
             this.btnTable4 = new System.Windows.Forms.Button();
             this.btnTable6 = new System.Windows.Forms.Button();
             this.btnTable7 = new System.Windows.Forms.Button();
+            this.btnBusboyRefresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTable1
@@ -107,11 +108,22 @@
             this.btnTable7.UseVisualStyleBackColor = true;
             this.btnTable7.Click += new System.EventHandler(this.btnTable7_Click);
             // 
+            // btnBusboyRefresh
+            // 
+            this.btnBusboyRefresh.Location = new System.Drawing.Point(541, 98);
+            this.btnBusboyRefresh.Name = "btnBusboyRefresh";
+            this.btnBusboyRefresh.Size = new System.Drawing.Size(77, 46);
+            this.btnBusboyRefresh.TabIndex = 7;
+            this.btnBusboyRefresh.Text = "Refresh";
+            this.btnBusboyRefresh.UseVisualStyleBackColor = true;
+            this.btnBusboyRefresh.Click += new System.EventHandler(this.btnBusboyRefresh_Click);
+            // 
             // BusboyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 493);
+            this.Controls.Add(this.btnBusboyRefresh);
             this.Controls.Add(this.btnTable7);
             this.Controls.Add(this.btnTable6);
             this.Controls.Add(this.btnTable4);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Button btnTable4;
         private System.Windows.Forms.Button btnTable6;
         private System.Windows.Forms.Button btnTable7;
+        private System.Windows.Forms.Button btnBusboyRefresh;
     }
 }

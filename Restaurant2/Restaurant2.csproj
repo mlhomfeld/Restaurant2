@@ -112,6 +112,9 @@
     <Compile Include="WaiterForm.Designer.cs">
       <DependentUpon>WaiterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BusboyForm.resx">
+      <DependentUpon>BusboyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CookForm.resx">
       <DependentUpon>CookForm.cs</DependentUpon>
     </EmbeddedResource>
