@@ -66,7 +66,9 @@ namespace Restaurant2
                                 wait.Show();
                                 break;
                             case "Manager":
-                                RandomChallenge();
+                                ManagerForm man = new ManagerForm();
+                                man.Show();
+                               // RandomChallenge();
                                 break;
                             case "Host":
                                 HostForm host = new HostForm();
@@ -235,7 +237,7 @@ namespace Restaurant2
         //    }
 
         //}
-        // This method refreshes table status for all table-inclusive classes
+        //This method refreshes table status for all table-inclusive classes
         public List<string> RefreshTableStatuses()
         {
             List<string> status = new List<string>();
