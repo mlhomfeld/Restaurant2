@@ -34,8 +34,8 @@ namespace Restaurant2
                 // the required form will open for the employee to perform their job. 
 
                 SqlConnection con = new SqlConnection();
-                // con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
-                con.ConnectionString = "Server=localhost;Database=project2;User Id=bj.brooks;Password = db20;";
+                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+
                 con.Open();
 
                 using (SqlCommand readEmployeeRecords = con.CreateCommand())
@@ -82,7 +82,7 @@ namespace Restaurant2
 
                 }
 
-
+                con.Close();
             }
 
             catch (Exception err)
@@ -107,8 +107,8 @@ namespace Restaurant2
                 randoNum = rng.Next(100000, 999999);
 
                 SqlConnection con = new SqlConnection();
-                // con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
-                con.ConnectionString = "Server=localhost;Database=project2;User Id=bj.brooks;Password = db20;";
+                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+
                 con.Open();
                 using (SqlCommand updateManager = con.CreateCommand())
                 {
@@ -127,7 +127,7 @@ namespace Restaurant2
                 SmtpClient client = new SmtpClient();
                 string from = "bjbrooks17@gmail.com";
                 string to = "7193228584@vtext.com";
-                string subject = randoNum.ToString();
+                string subject = "Your one-time passcode is: " + randoNum.ToString();
                 string body = "";
                 client.Host = "smtp.gmail.com";
                 client.Port = 587;
@@ -165,8 +165,7 @@ namespace Restaurant2
             {
 
                 SqlConnection con = new SqlConnection();
-                // con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
-                con.ConnectionString = "Server=localhost;Database=project2;User Id=bj.brooks;Password = db20;";
+                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 con.Open();
 
                 using (SqlCommand readEmployeeRecords = con.CreateCommand())
@@ -196,14 +195,14 @@ namespace Restaurant2
                     }
 
                 }
-
-
+                con.Close();
             }
 
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }
+            
         }
 
         // If any user hits the logout button on their home form, it will restart the application.
