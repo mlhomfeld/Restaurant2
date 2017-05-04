@@ -41,7 +41,7 @@
             this.btnLog.Location = new System.Drawing.Point(37, 190);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(75, 23);
-            this.btnLog.TabIndex = 0;
+            this.btnLog.TabIndex = 2;
             this.btnLog.Text = "Login";
             this.btnLog.UseVisualStyleBackColor = true;
             this.btnLog.Click += new System.EventHandler(this.button1_Click);
@@ -60,7 +60,7 @@
             this.txtID.Location = new System.Drawing.Point(110, 49);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 2;
+            this.txtID.TabIndex = 0;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // lblEId
@@ -69,7 +69,7 @@
             this.lblEId.Location = new System.Drawing.Point(24, 52);
             this.lblEId.Name = "lblEId";
             this.lblEId.Size = new System.Drawing.Size(70, 13);
-            this.lblEId.TabIndex = 3;
+            this.lblEId.TabIndex = 4;
             this.lblEId.Text = "Employee ID:";
             // 
             // lblPass
@@ -78,7 +78,7 @@
             this.lblPass.Location = new System.Drawing.Point(37, 122);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(57, 13);
-            this.lblPass.TabIndex = 4;
+            this.lblPass.TabIndex = 5;
             this.lblPass.Text = "Passcode:";
             // 
             // btnCan
@@ -86,7 +86,7 @@
             this.btnCan.Location = new System.Drawing.Point(160, 190);
             this.btnCan.Name = "btnCan";
             this.btnCan.Size = new System.Drawing.Size(75, 23);
-            this.btnCan.TabIndex = 5;
+            this.btnCan.TabIndex = 3;
             this.btnCan.Text = "Cancel";
             this.btnCan.UseVisualStyleBackColor = true;
             this.btnCan.Click += new System.EventHandler(this.btnCan_Click);
@@ -105,7 +105,7 @@
             this.Controls.Add(this.btnLog);
             this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "`";
+            this.Text = "LogInForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
