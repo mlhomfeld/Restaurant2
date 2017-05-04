@@ -50,28 +50,28 @@ namespace Restaurant2
 
         public void RemoveEmployee()
         {
-            //try
-            //{
-            //    SqlConnection connection = new SqlConnection();
-            //    //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
-            //    connection.ConnectionString = "Server=cis1.actx.edu;Database=project1;User Id=db2;Password = db20;";
-            //    connection.Open();
-            //    MessageBox.Show(connection.ServerVersion);
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project1;User Id=db2;Password = db20;";
+                connection.Open();
+                MessageBox.Show(connection.ServerVersion);
 
-            //    MessageBox.Show("---SQL INSERT---");
-            //    using (SqlCommand insertNewEmployee = connection.CreateCommand())
-            //    {
-            //        insertNewEmployee.CommandText = "insert into dbo.Employee values (@EmployeeStatus);";
-            //        var empStatusParam = new SqlParameter("EmployeeStatus", SqlDbType.VarChar) { Value = "Inactive" };                    
-            //        insertNewEmployee.Parameters.Add(empStatusParam);
-            //        insertNewEmployee.ExecuteNonQuery();
-            //        connection.Close();
-            //    }
-            //}
-            //catch (Exception err)
-            //{
-            //    MessageBox.Show(err.Message);
-            //}
+                MessageBox.Show("---SQL INSERT---");
+                using (SqlCommand insertNewEmployee = connection.CreateCommand())
+                {
+                    insertNewEmployee.CommandText = "insert into dbo.Employee values (@EmployeeStatus);";
+                    var empStatusParam = new SqlParameter("EmployeeStatus", SqlDbType.VarChar) { Value = "Inactive" };
+                    insertNewEmployee.Parameters.Add(empStatusParam);
+                    insertNewEmployee.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
 
 
         }

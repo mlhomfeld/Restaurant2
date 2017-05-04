@@ -40,9 +40,9 @@ namespace Restaurant2
                         var idParam = new SqlParameter("SeatingAreaID", SqlDbType.Int) { Value = tableNumber };
                         updateSeatingArea.Parameters.Add(seatingAreaParam);
                         updateSeatingArea.Parameters.Add(idParam);
-
                         updateSeatingArea.ExecuteNonQuery();
                         connection.Close();
+
                     }
                     MessageBox.Show("Table " + tableNumber + " has been set to dirty.");
                 }
