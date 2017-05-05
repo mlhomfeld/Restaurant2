@@ -36,5 +36,11 @@ namespace Restaurant2
             Employee emp = new Employee();
             emp.LogOut();
         }
+
+        private void txtRmvEmployee_TextChanged(object sender, EventArgs e)
+        {
+            Manager man = new Manager();
+            man.RemoveEmployee(txtRmvEmployee.Text);
+        }
     }
 }
