@@ -151,7 +151,8 @@ namespace Restaurant2
 
                 SmtpClient client = new SmtpClient();
                 string from = "bjbrooks17@gmail.com";
-                string to = "7193228584@vtext.com"; 
+                string to = "7193228584@vtext.com";
+                // string to = email;
                 string subject = "Your one-time passcode is: " + randoNum.ToString();
                 string body = "";
                 client.Host = "smtp.gmail.com";
