@@ -64,7 +64,6 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="FloorPlan.cs" />
     <Compile Include="HostForm.cs">
       <SubType>Form</SubType>
     </Compile>
