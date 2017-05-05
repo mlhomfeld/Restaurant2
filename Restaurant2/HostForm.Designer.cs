@@ -158,7 +158,7 @@
             // btnAddCustomerParty
             // 
             this.btnAddCustomerParty.BackColor = System.Drawing.SystemColors.Info;
-            this.btnAddCustomerParty.Location = new System.Drawing.Point(879, 425);
+            this.btnAddCustomerParty.Location = new System.Drawing.Point(771, 419);
             this.btnAddCustomerParty.Name = "btnAddCustomerParty";
             this.btnAddCustomerParty.Size = new System.Drawing.Size(125, 37);
             this.btnAddCustomerParty.TabIndex = 13;
@@ -169,7 +169,7 @@
             // btnRemoveCustomerParty
             // 
             this.btnRemoveCustomerParty.BackColor = System.Drawing.SystemColors.Info;
-            this.btnRemoveCustomerParty.Location = new System.Drawing.Point(805, 103);
+            this.btnRemoveCustomerParty.Location = new System.Drawing.Point(755, 103);
             this.btnRemoveCustomerParty.Name = "btnRemoveCustomerParty";
             this.btnRemoveCustomerParty.Size = new System.Drawing.Size(130, 41);
             this.btnRemoveCustomerParty.TabIndex = 12;
@@ -181,7 +181,7 @@
             // 
             this.lblCustomerQueue.AutoSize = true;
             this.lblCustomerQueue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerQueue.Location = new System.Drawing.Point(532, 44);
+            this.lblCustomerQueue.Location = new System.Drawing.Point(492, 42);
             this.lblCustomerQueue.Name = "lblCustomerQueue";
             this.lblCustomerQueue.Size = new System.Drawing.Size(130, 20);
             this.lblCustomerQueue.TabIndex = 14;
@@ -190,7 +190,7 @@
             // lstCustomerQueue
             // 
             this.lstCustomerQueue.FormattingEnabled = true;
-            this.lstCustomerQueue.Location = new System.Drawing.Point(536, 103);
+            this.lstCustomerQueue.Location = new System.Drawing.Point(496, 103);
             this.lstCustomerQueue.Name = "lstCustomerQueue";
             this.lstCustomerQueue.Size = new System.Drawing.Size(237, 264);
             this.lstCustomerQueue.TabIndex = 15;
@@ -198,7 +198,7 @@
             // lblPartyNameLegend
             // 
             this.lblPartyNameLegend.AutoSize = true;
-            this.lblPartyNameLegend.Location = new System.Drawing.Point(533, 71);
+            this.lblPartyNameLegend.Location = new System.Drawing.Point(493, 71);
             this.lblPartyNameLegend.Name = "lblPartyNameLegend";
             this.lblPartyNameLegend.Size = new System.Drawing.Size(62, 13);
             this.lblPartyNameLegend.TabIndex = 16;
@@ -207,7 +207,7 @@
             // lblPartySizeLegend
             // 
             this.lblPartySizeLegend.AutoSize = true;
-            this.lblPartySizeLegend.Location = new System.Drawing.Point(668, 71);
+            this.lblPartySizeLegend.Location = new System.Drawing.Point(640, 71);
             this.lblPartySizeLegend.Name = "lblPartySizeLegend";
             this.lblPartySizeLegend.Size = new System.Drawing.Size(54, 13);
             this.lblPartySizeLegend.TabIndex = 17;
@@ -215,14 +215,14 @@
             // 
             // txtPartyName
             // 
-            this.txtPartyName.Location = new System.Drawing.Point(879, 315);
+            this.txtPartyName.Location = new System.Drawing.Point(843, 315);
             this.txtPartyName.Name = "txtPartyName";
             this.txtPartyName.Size = new System.Drawing.Size(125, 20);
             this.txtPartyName.TabIndex = 18;
             // 
             // txtPartySize
             // 
-            this.txtPartySize.Location = new System.Drawing.Point(879, 369);
+            this.txtPartySize.Location = new System.Drawing.Point(843, 368);
             this.txtPartySize.Name = "txtPartySize";
             this.txtPartySize.Size = new System.Drawing.Size(125, 20);
             this.txtPartySize.TabIndex = 19;
@@ -230,7 +230,7 @@
             // lblCustomerPartyName
             // 
             this.lblCustomerPartyName.AutoSize = true;
-            this.lblCustomerPartyName.Location = new System.Drawing.Point(802, 318);
+            this.lblCustomerPartyName.Location = new System.Drawing.Point(763, 318);
             this.lblCustomerPartyName.Name = "lblCustomerPartyName";
             this.lblCustomerPartyName.Size = new System.Drawing.Size(62, 13);
             this.lblCustomerPartyName.TabIndex = 20;
@@ -239,7 +239,7 @@
             // lblPartySize
             // 
             this.lblPartySize.AutoSize = true;
-            this.lblPartySize.Location = new System.Drawing.Point(802, 376);
+            this.lblPartySize.Location = new System.Drawing.Point(771, 376);
             this.lblPartySize.Name = "lblPartySize";
             this.lblPartySize.Size = new System.Drawing.Size(54, 13);
             this.lblPartySize.TabIndex = 21;
@@ -250,7 +250,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1065, 506);
+            this.ClientSize = new System.Drawing.Size(1000, 506);
             this.Controls.Add(this.lblPartySize);
             this.Controls.Add(this.lblCustomerPartyName);
             this.Controls.Add(this.txtPartySize);
