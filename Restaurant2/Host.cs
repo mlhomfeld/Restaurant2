@@ -19,6 +19,20 @@ namespace Restaurant2
 
         }
 
+        // This method checks to make sure Party Size is a whole number.
+        public bool CheckCustomerPartySize(string rawPartySize)
+        {
+            int partySize;
+            bool answer = false;
+            if (int.TryParse(rawPartySize, out partySize))
+            {
+                answer = true;
+            }
+            // It only returns a bool, because we still want Party Size to be a string value.
+            return answer;
+        }
+
+
         public void SetTableToOccupied(int tableNumber)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to set this table to Occupied?", "!!!", MessageBoxButtons.YesNo);
