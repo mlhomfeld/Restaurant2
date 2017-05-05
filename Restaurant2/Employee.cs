@@ -126,11 +126,32 @@ namespace Restaurant2
                    
                 }
 
-                con.Close();
+                // Added code to test pulling email address from DB instead of hardcoding. Need to add varchar field to Employee Table to work.
+                // May need to modify index location, think it should end up being 7. 
+
+                //using (SqlCommand readEmployeeRecords = con.CreateCommand())
+                //{
+
+                //    readEmployeeRecords.CommandText = "select * from dbo.Employee where employeeID = @employeeID;";
+                //    var empID = new SqlParameter("employeeID", employeeID);
+                //    readEmployeeRecords.Parameters.Add(empID);
+
+                //    using (SqlDataReader reader = readEmployeeRecords.ExecuteReader())
+                //    {
+                //        string email = "";
+                //        while (reader.Read())
+                //        {
+                //            email = reader.GetString(7);
+                //        }
+                //    }
+
+                //}
+
+                        con.Close();
 
                 SmtpClient client = new SmtpClient();
                 string from = "bjbrooks17@gmail.com";
-                string to = "7193228584@vtext.com";
+                string to = "7193228584@vtext.com"; 
                 string subject = "Your one-time passcode is: " + randoNum.ToString();
                 string body = "";
                 client.Host = "smtp.gmail.com";
