@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInForm));
             this.btnLog = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -38,9 +39,10 @@
             // 
             // btnLog
             // 
-            this.btnLog.Location = new System.Drawing.Point(37, 190);
+            this.btnLog.Location = new System.Drawing.Point(476, 315);
+            this.btnLog.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(75, 23);
+            this.btnLog.Size = new System.Drawing.Size(69, 28);
             this.btnLog.TabIndex = 2;
             this.btnLog.Text = "Login";
             this.btnLog.UseVisualStyleBackColor = true;
@@ -48,44 +50,49 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(110, 119);
+            this.txtPass.Location = new System.Drawing.Point(227, 384);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(100, 20);
+            this.txtPass.Size = new System.Drawing.Size(180, 28);
             this.txtPass.TabIndex = 1;
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(110, 49);
+            this.txtID.Location = new System.Drawing.Point(227, 316);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(180, 28);
             this.txtID.TabIndex = 0;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // lblEId
             // 
             this.lblEId.AutoSize = true;
-            this.lblEId.Location = new System.Drawing.Point(24, 52);
+            this.lblEId.Location = new System.Drawing.Point(44, 323);
+            this.lblEId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblEId.Name = "lblEId";
-            this.lblEId.Size = new System.Drawing.Size(70, 13);
+            this.lblEId.Size = new System.Drawing.Size(117, 21);
             this.lblEId.TabIndex = 4;
             this.lblEId.Text = "Employee ID:";
             // 
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Location = new System.Drawing.Point(37, 122);
+            this.lblPass.Location = new System.Drawing.Point(44, 391);
+            this.lblPass.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(57, 13);
+            this.lblPass.Size = new System.Drawing.Size(83, 21);
             this.lblPass.TabIndex = 5;
             this.lblPass.Text = "Passcode:";
             // 
             // btnCan
             // 
-            this.btnCan.Location = new System.Drawing.Point(160, 190);
+            this.btnCan.Location = new System.Drawing.Point(476, 383);
+            this.btnCan.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnCan.Name = "btnCan";
-            this.btnCan.Size = new System.Drawing.Size(75, 23);
+            this.btnCan.Size = new System.Drawing.Size(69, 28);
             this.btnCan.TabIndex = 3;
             this.btnCan.Text = "Cancel";
             this.btnCan.UseVisualStyleBackColor = true;
@@ -94,15 +101,19 @@
             // LogInForm
             // 
             this.AcceptButton = this.btnLog;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(600, 450);
             this.Controls.Add(this.btnCan);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblEId);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.btnLog);
+            this.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogInForm";

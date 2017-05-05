@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SecureLogin));
             this.txtResponse = new System.Windows.Forms.TextBox();
             this.lblChallenge = new System.Windows.Forms.Label();
             this.btnEnter = new System.Windows.Forms.Button();
@@ -36,26 +37,29 @@
             // 
             // txtResponse
             // 
-            this.txtResponse.Location = new System.Drawing.Point(70, 89);
+            this.txtResponse.Location = new System.Drawing.Point(218, 316);
+            this.txtResponse.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtResponse.Name = "txtResponse";
-            this.txtResponse.Size = new System.Drawing.Size(144, 20);
+            this.txtResponse.Size = new System.Drawing.Size(367, 28);
             this.txtResponse.TabIndex = 0;
             this.txtResponse.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblChallenge
             // 
             this.lblChallenge.AutoSize = true;
-            this.lblChallenge.Location = new System.Drawing.Point(90, 50);
+            this.lblChallenge.Location = new System.Drawing.Point(15, 323);
+            this.lblChallenge.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblChallenge.Name = "lblChallenge";
-            this.lblChallenge.Size = new System.Drawing.Size(108, 13);
+            this.lblChallenge.Size = new System.Drawing.Size(166, 21);
             this.lblChallenge.TabIndex = 1;
             this.lblChallenge.Text = "Challenge Response:";
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(70, 146);
+            this.btnEnter.Location = new System.Drawing.Point(289, 375);
+            this.btnEnter.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(144, 23);
+            this.btnEnter.Size = new System.Drawing.Size(219, 28);
             this.btnEnter.TabIndex = 2;
             this.btnEnter.Text = "Enter The Thunderdome";
             this.btnEnter.UseVisualStyleBackColor = true;
@@ -63,9 +67,10 @@
             // 
             // btnDecline
             // 
-            this.btnDecline.Location = new System.Drawing.Point(111, 191);
+            this.btnDecline.Location = new System.Drawing.Point(15, 378);
+            this.btnDecline.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnDecline.Name = "btnDecline";
-            this.btnDecline.Size = new System.Drawing.Size(54, 23);
+            this.btnDecline.Size = new System.Drawing.Size(99, 25);
             this.btnDecline.TabIndex = 3;
             this.btnDecline.Text = "Cancel";
             this.btnDecline.UseVisualStyleBackColor = true;
@@ -73,13 +78,17 @@
             // 
             // SecureLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(600, 456);
             this.Controls.Add(this.btnDecline);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.lblChallenge);
             this.Controls.Add(this.txtResponse);
+            this.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "SecureLogin";
             this.Text = "SecureLogin";
             this.ResumeLayout(false);

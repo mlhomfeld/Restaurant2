@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerAdd));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,99 +45,99 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 276);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(97, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(12, 314);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(94, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Last Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 56);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(13, 351);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Pay Rate";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 77);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(12, 391);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(82, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "Password";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 104);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(13, 436);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.Size = new System.Drawing.Size(46, 21);
             this.label5.TabIndex = 4;
             this.label5.Text = "Role";
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(69, 12);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFirstName.Location = new System.Drawing.Point(170, 269);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(68, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(392, 28);
             this.txtFirstName.TabIndex = 5;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(69, 33);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLastName.Location = new System.Drawing.Point(170, 307);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(68, 20);
+            this.txtLastName.Size = new System.Drawing.Size(392, 28);
             this.txtLastName.TabIndex = 6;
             // 
             // txtPayRate
             // 
-            this.txtPayRate.Location = new System.Drawing.Point(69, 53);
-            this.txtPayRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPayRate.Location = new System.Drawing.Point(170, 344);
+            this.txtPayRate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPayRate.Name = "txtPayRate";
-            this.txtPayRate.Size = new System.Drawing.Size(68, 20);
+            this.txtPayRate.Size = new System.Drawing.Size(392, 28);
             this.txtPayRate.TabIndex = 7;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(69, 77);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPass.Location = new System.Drawing.Point(170, 384);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(68, 20);
+            this.txtPass.Size = new System.Drawing.Size(392, 28);
             this.txtPass.TabIndex = 8;
             // 
             // txtRole
             // 
-            this.txtRole.Location = new System.Drawing.Point(69, 100);
-            this.txtRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRole.Location = new System.Drawing.Point(170, 426);
+            this.txtRole.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtRole.Name = "txtRole";
-            this.txtRole.Size = new System.Drawing.Size(68, 20);
+            this.txtRole.Size = new System.Drawing.Size(392, 28);
             this.txtRole.TabIndex = 9;
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(216, 83);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Location = new System.Drawing.Point(238, 467);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(77, 34);
+            this.btnSubmit.Size = new System.Drawing.Size(219, 35);
             this.btnSubmit.TabIndex = 10;
             this.btnSubmit.Text = "Submit New Employee";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -144,9 +145,10 @@
             // 
             // ManagerAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 132);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(601, 514);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtRole);
             this.Controls.Add(this.txtPass);
@@ -158,7 +160,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ManagerAdd";
             this.Text = "ManagerAdd";
             this.ResumeLayout(false);

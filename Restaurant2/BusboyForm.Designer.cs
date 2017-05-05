@@ -42,9 +42,9 @@
             // 
             // btnTable1
             // 
-            this.btnTable1.Location = new System.Drawing.Point(23, 38);
+            this.btnTable1.Location = new System.Drawing.Point(12, 295);
             this.btnTable1.Name = "btnTable1";
-            this.btnTable1.Size = new System.Drawing.Size(79, 41);
+            this.btnTable1.Size = new System.Drawing.Size(79, 31);
             this.btnTable1.TabIndex = 0;
             this.btnTable1.Text = "Table 1";
             this.btnTable1.UseVisualStyleBackColor = true;
@@ -52,9 +52,9 @@
             // 
             // btnTable3
             // 
-            this.btnTable3.Location = new System.Drawing.Point(25, 176);
+            this.btnTable3.Location = new System.Drawing.Point(12, 398);
             this.btnTable3.Name = "btnTable3";
-            this.btnTable3.Size = new System.Drawing.Size(79, 42);
+            this.btnTable3.Size = new System.Drawing.Size(79, 29);
             this.btnTable3.TabIndex = 1;
             this.btnTable3.Text = "Table 3";
             this.btnTable3.UseVisualStyleBackColor = true;
@@ -62,9 +62,9 @@
             // 
             // btnTable5
             // 
-            this.btnTable5.Location = new System.Drawing.Point(465, 106);
+            this.btnTable5.Location = new System.Drawing.Point(492, 342);
             this.btnTable5.Name = "btnTable5";
-            this.btnTable5.Size = new System.Drawing.Size(79, 38);
+            this.btnTable5.Size = new System.Drawing.Size(79, 33);
             this.btnTable5.TabIndex = 2;
             this.btnTable5.Text = "Table 5";
             this.btnTable5.UseVisualStyleBackColor = true;
@@ -72,9 +72,9 @@
             // 
             // btnTable2
             // 
-            this.btnTable2.Location = new System.Drawing.Point(23, 106);
+            this.btnTable2.Location = new System.Drawing.Point(12, 342);
             this.btnTable2.Name = "btnTable2";
-            this.btnTable2.Size = new System.Drawing.Size(79, 38);
+            this.btnTable2.Size = new System.Drawing.Size(79, 33);
             this.btnTable2.TabIndex = 3;
             this.btnTable2.Text = "Table 2";
             this.btnTable2.UseVisualStyleBackColor = true;
@@ -82,9 +82,9 @@
             // 
             // btnTable4
             // 
-            this.btnTable4.Location = new System.Drawing.Point(465, 38);
+            this.btnTable4.Location = new System.Drawing.Point(492, 295);
             this.btnTable4.Name = "btnTable4";
-            this.btnTable4.Size = new System.Drawing.Size(79, 41);
+            this.btnTable4.Size = new System.Drawing.Size(79, 31);
             this.btnTable4.TabIndex = 4;
             this.btnTable4.Text = "Table 4";
             this.btnTable4.UseVisualStyleBackColor = true;
@@ -92,9 +92,9 @@
             // 
             // btnTable6
             // 
-            this.btnTable6.Location = new System.Drawing.Point(465, 176);
+            this.btnTable6.Location = new System.Drawing.Point(492, 398);
             this.btnTable6.Name = "btnTable6";
-            this.btnTable6.Size = new System.Drawing.Size(75, 42);
+            this.btnTable6.Size = new System.Drawing.Size(79, 29);
             this.btnTable6.TabIndex = 5;
             this.btnTable6.Text = "Table 6";
             this.btnTable6.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@
             // 
             // btnTable7
             // 
-            this.btnTable7.Location = new System.Drawing.Point(218, 88);
+            this.btnTable7.Location = new System.Drawing.Point(220, 384);
             this.btnTable7.Name = "btnTable7";
-            this.btnTable7.Size = new System.Drawing.Size(133, 56);
+            this.btnTable7.Size = new System.Drawing.Size(179, 56);
             this.btnTable7.TabIndex = 6;
             this.btnTable7.Text = "Table 7";
             this.btnTable7.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@
             // 
             // btnBusboyRefresh
             // 
-            this.btnBusboyRefresh.Location = new System.Drawing.Point(173, 344);
+            this.btnBusboyRefresh.Location = new System.Drawing.Point(220, 459);
             this.btnBusboyRefresh.Name = "btnBusboyRefresh";
-            this.btnBusboyRefresh.Size = new System.Drawing.Size(77, 29);
+            this.btnBusboyRefresh.Size = new System.Drawing.Size(77, 36);
             this.btnBusboyRefresh.TabIndex = 7;
             this.btnBusboyRefresh.Text = "Refresh";
             this.btnBusboyRefresh.UseVisualStyleBackColor = true;
@@ -122,10 +122,10 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(337, 344);
+            this.btnLogout.Location = new System.Drawing.Point(324, 459);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 29);
+            this.btnLogout.Size = new System.Drawing.Size(75, 36);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "LogOut";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(599, 398);
+            this.ClientSize = new System.Drawing.Size(599, 517);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnBusboyRefresh);
             this.Controls.Add(this.btnTable7);
