@@ -3,7 +3,7 @@
   <Class Name="Restaurant2.Busboy">
     <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Busboy.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,7 +24,7 @@
   <Class Name="Restaurant2.Host">
     <Position X="5.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAQAA=</HashCode>
       <FileName>Host.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -38,21 +38,14 @@
   <Class Name="Restaurant2.Customer">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAAAAAAgAAACAAAAAAAgAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Customer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Restaurant2.FloorPlan">
-    <Position X="6.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
-      <FileName>FloorPlan.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Restaurant2.Employee">
     <Position X="4" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAABACAgBAAAAAAgACABAAAAAAAhAQAAAACAAAAAg=</HashCode>
+      <HashCode>AQAAAEAAAAAAAAAAAgACAAAAAAAAABAAAAAAAQAAAAA=</HashCode>
       <FileName>Employee.cs</FileName>
     </TypeIdentifier>
   </Class>
