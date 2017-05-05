@@ -215,29 +215,35 @@ namespace Restaurant2
            Application.Restart();
         }
 
-        //public void Timestamp(string target, int order)
-        //{
-        //    try
-        //    {
-        //        string date = "";
-        //        date = System.DateTime.Now.ToString();
-        //        SqlConnection con = new SqlConnection();
-        //        con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
-        //        con.Open();
-        //        using (SqlCommand stampIt = con.CreateCommand())
-        //        {
-        //            stampIt.CommandText = "update TABLE" + target + "set " + date + " where " + order + " = " + order + ";";
-        //            var timeStamp = new SqlParameter("TimeStamp", SqlDbType.Date) { Value = date };
-        //            stampIt.Parameters.Add(timeStamp);
-        //            stampIt.ExecuteNonQuery();
-        //        }
-        //    }
-        //    catch (Exception err)
-        //    {
-        //        MessageBox.Show(err.Message);
-        //    }
+        // This method will timestamp activities that employees perform during their day.
+        public void Timestamp(int employeeID, string activity)
+        {
+            try
+            {
+                string date = "";
+                date = System.DateTime.Now.ToString();
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                con.Open();
 
-        //}
+                using (SqlCommand timeStampActivity = con.CreateCommand())
+                {
+                    timeStampActivity.CommandText = "insert into dbo.EmployeeTimeStamps values (@EmployeeID, @Activity, @Date);";
+                    var empID = new SqlParameter("EmployeeID", SqlDbType.VarChar) { Value = employeeID };
+                    var action = new SqlParameter("Activity", SqlDbType.VarChar) { Value = activity };
+                    var time = new SqlParameter("Date", SqlDbType.VarChar) { Value = date };
+                    timeStampActivity.Parameters.Add(empID);
+                    timeStampActivity.Parameters.Add(action);
+                    timeStampActivity.Parameters.Add(date);
+                    timeStampActivity.ExecuteNonQuery();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
+        }
         //This method refreshes table status for all table-inclusive classes
         public List<string> RefreshTableStatuses()
         {
