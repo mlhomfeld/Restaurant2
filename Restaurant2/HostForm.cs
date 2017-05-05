@@ -165,5 +165,24 @@ namespace Restaurant2
             Employee emp = new Employee();
             emp.LogOut();
         }
+
+       
+        private void btnRemoveCustomerParty_Click(object sender, EventArgs e)
+        {
+            lstCustomerQueue.Items.Remove(lstCustomerQueue.SelectedItem);
+        }
+
+        private void btnAddCustomerParty_Click(object sender, EventArgs e)
+        {
+            Host hst = new Host();
+            if (hst.CheckCustomerPartySize(txtPartySize.Text) && txtPartyName.Text != "")
+            {
+                lstCustomerQueue.Items.Add(txtPartyName.Text + txtPartySize.Text.PadLeft(35));
+            }
+            else
+            {
+                MessageBox.Show("Please ensure all parties have a name and a whole number.", "Error");
+            }
+        }
     }
 }
