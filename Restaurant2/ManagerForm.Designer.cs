@@ -41,7 +41,7 @@
             // btnCreateEmployee
             // 
             this.btnCreateEmployee.Location = new System.Drawing.Point(8, 18);
-            this.btnCreateEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateEmployee.Name = "btnCreateEmployee";
             this.btnCreateEmployee.Size = new System.Drawing.Size(92, 36);
             this.btnCreateEmployee.TabIndex = 0;
@@ -52,7 +52,7 @@
             // btn
             // 
             this.btn.Location = new System.Drawing.Point(8, 58);
-            this.btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn.Margin = new System.Windows.Forms.Padding(2);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(92, 36);
             this.btn.TabIndex = 1;
@@ -63,7 +63,7 @@
             // btnModifyEmployee
             // 
             this.btnModifyEmployee.Location = new System.Drawing.Point(8, 97);
-            this.btnModifyEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModifyEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnModifyEmployee.Name = "btnModifyEmployee";
             this.btnModifyEmployee.Size = new System.Drawing.Size(92, 35);
             this.btnModifyEmployee.TabIndex = 2;
@@ -74,7 +74,7 @@
             // btnLogout
             // 
             this.btnLogout.Location = new System.Drawing.Point(8, 136);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(92, 36);
             this.btnLogout.TabIndex = 3;
@@ -115,7 +115,7 @@
             this.Controls.Add(this.btnModifyEmployee);
             this.Controls.Add(this.btn);
             this.Controls.Add(this.btnCreateEmployee);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManagerForm";
             this.Text = "ManagerForm";
             this.ResumeLayout(false);

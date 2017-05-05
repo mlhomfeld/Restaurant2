@@ -65,7 +65,7 @@ namespace Restaurant2
                 connection.Open();
 
 
-                Console.WriteLine("---SQL UPDATE---");
+                Console.WriteLine("Attempting to change employee status.");
                 using (SqlCommand updateEmployee = connection.CreateCommand())
                 {
                     updateEmployee.CommandText = "update dbo.Employee set EmployeeStatus = @EmployeeStatus where EmployeeID = " + employeeID + ";";
@@ -73,7 +73,7 @@ namespace Restaurant2
                     updateEmployee.Parameters.Add(empIDParam);
 
                     updateEmployee.ExecuteNonQuery();
-                    MessageBox.Show("Employee set to inactive");
+                    MessageBox.Show("Employee set to inactive.");
                 }
             }
             catch (Exception err)
@@ -90,25 +90,30 @@ namespace Restaurant2
             {
                 SqlConnection connection = new SqlConnection();
                 //Server = myServerAddress; Database = myDataBase; User Id = myUsername; Password = myPassword;
-                connection.ConnectionString = "update dbo.Employee set FirstName = @FirstName, LastName = @LastName, PayRate = @PayRate, Password = @Password, Role = @Role where EmployeeID = " + employeeID + "; ";
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 connection.Open();
-                MessageBox.Show(connection.ServerVersion);
+                
 
-                Console.WriteLine("---SQL UPDATE---");
+                Console.WriteLine("Attempting to update employee.");
                 using (SqlCommand updateEmployee = connection.CreateCommand())
                 {
-                    updateEmployee.CommandText = " i'll need to ask group about how to set up this database code.;";
+                    updateEmployee.CommandText = "update dbo.Employee set FirstName = @FirstName, LastName = @LastName, PayRate = @PayRate, Password = @Password, Role = @Role, EmployeeStatus = @EmployeeStatus, Passcode = @Passcode where EmployeeID = " + employeeID + "; ";
                     var fnameParam = new SqlParameter("FirstName", SqlDbType.VarChar) { Value = firstName };
                     var lnameParam = new SqlParameter("LastName", SqlDbType.VarChar) { Value = lastName };
                     var prateParam = new SqlParameter("PayRate", SqlDbType.Money) { Value = payRate };
                     var passParam = new SqlParameter("Password", SqlDbType.VarChar) { Value = passWord };
                     var roleParam = new SqlParameter("Role", SqlDbType.VarChar) { Value = role };
+                    var empStatusParam = new SqlParameter("EmployeeStatus", SqlDbType.VarChar) { Value = "Active" };
+                    var passcodeParam = new SqlParameter("Passcode", SqlDbType.Int) { Value = 2 };
                     updateEmployee.Parameters.Add(fnameParam);
                     updateEmployee.Parameters.Add(lnameParam);
                     updateEmployee.Parameters.Add(prateParam);
                     updateEmployee.Parameters.Add(passParam);
                     updateEmployee.Parameters.Add(roleParam);
+                    updateEmployee.Parameters.Add(empStatusParam);
+                    updateEmployee.Parameters.Add(passcodeParam);
                     updateEmployee.ExecuteNonQuery();
+                    MessageBox.Show("Employee updated.");
                 }
             }
             catch (Exception err)
