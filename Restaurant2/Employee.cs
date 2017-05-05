@@ -229,7 +229,7 @@ namespace Restaurant2
                 using (SqlCommand timeStampActivity = con.CreateCommand())
                 {
                     timeStampActivity.CommandText = "insert into dbo.EmployeeTimeStamps values (@EmployeeID, @Activity, @Date);";
-                    var empID = new SqlParameter("EmployeeID", SqlDbType.VarChar) { Value = employeeID };
+                    var empID = new SqlParameter("EmployeeID", SqlDbType.Int) { Value = employeeID };
                     var action = new SqlParameter("Activity", SqlDbType.VarChar) { Value = activity };
                     var time = new SqlParameter("Date", SqlDbType.VarChar) { Value = date };
                     timeStampActivity.Parameters.Add(empID);
