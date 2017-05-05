@@ -27,6 +27,7 @@ namespace Restaurant2
             // employee's ID and password. The password field is obscured and only * are shown
             Employee emp = new Employee();
             emp.LogIn(Convert.ToInt32(txtID.Text), txtPass.Text);
+            
 
         }
 
