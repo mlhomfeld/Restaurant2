@@ -68,7 +68,7 @@ namespace Restaurant2
                             case "Manager":
                                 ManagerForm man = new ManagerForm();
                                 man.Show();
-                               // RandomChallenge();
+                                RandomChallenge(employeeID);                              
                                 break;
                             case "Host":
                                 HostForm host = new HostForm();
@@ -99,7 +99,7 @@ namespace Restaurant2
        //  manager will be presented the SecureLogin form. The Manager's email will need to be maintained here
        //  in the employee class, one of the many shortcomings. 
 
-        public void RandomChallenge()
+        public void RandomChallenge(int employeeID)
         {
 
             try
@@ -115,7 +115,8 @@ namespace Restaurant2
                 using (SqlCommand updateManager = con.CreateCommand())
                 {
 
-                    updateManager.CommandText = "update dbo.Employee set Passcode = @Passcode where Role = Manager;";
+                    //updateManager.CommandText = "update dbo.Employee set Passcode = @Passcode where Role = Manager;";
+                    updateManager.CommandText = "update dbo.Employee set Passcode = @Passcode where employeeID = " + employeeID +" ;";
                     //var role = new SqlParameter("Role", "Manager");
                     var challenge = new SqlParameter("Passcode", SqlDbType.Int) { Value = randoNum };
                     
@@ -137,7 +138,7 @@ namespace Restaurant2
                 client.EnableSsl = true;
                 client.UseDefaultCredentials = false;
                 client.Credentials = new System.Net.NetworkCredential(from, "nyfzafnzohxaycik"); // this password can't be used interactively, it's controlled for app use only
-                client.Timeout = 100;
+                client.Timeout = 10000;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 MailMessage challengeMail = new MailMessage(from, to, subject, body);
                 client.Send(challengeMail);

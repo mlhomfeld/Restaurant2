@@ -18,26 +18,33 @@ namespace Restaurant2
             {
                 SqlConnection connection = new SqlConnection();
                 //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
-                connection.ConnectionString = "Server=cis1.actx.edu;Database=project1;User Id=db2;Password = db20;";
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 connection.Open();
-                MessageBox.Show(connection.ServerVersion);
+                
 
-                MessageBox.Show("---SQL INSERT---");
+                MessageBox.Show("Attempting to insert employee");
                 using (SqlCommand insertNewEmployee = connection.CreateCommand())
                 {
-                    insertNewEmployee.CommandText = "insert into dbo.Employee values (@FirstName, @LastName, @PayRate, @Password, @Role);";
+                    insertNewEmployee.CommandText = "insert into dbo.Employee values (@FirstName, @LastName, @PayRate, @Password, @Role, @EmployeeStatus, @Passcode);";
+                    //var idParam = new SqlParameter("EmployeeID", SqlDbType.VarChar) { Value = "*" };
                     var fnameParam = new SqlParameter("FirstName", SqlDbType.VarChar) { Value = firstName };
                     var lnameParam = new SqlParameter("LastName", SqlDbType.VarChar) { Value = lastName };
                     var prateParam = new SqlParameter("PayRate", SqlDbType.Money) { Value = payRate };
                     var passParam = new SqlParameter("Password", SqlDbType.VarChar) { Value = passWord };
                     var roleParam = new SqlParameter("Role", SqlDbType.VarChar) { Value = role };
+                    var empStatusParam = new SqlParameter("EmployeeStatus", SqlDbType.VarChar) { Value = "Active" };
+                    var passcodeParam = new SqlParameter("Passcode", SqlDbType.Int) { Value = 23 };
+                    //insertNewEmployee.Parameters.Add(idParam);
                     insertNewEmployee.Parameters.Add(fnameParam);
                     insertNewEmployee.Parameters.Add(lnameParam);
                     insertNewEmployee.Parameters.Add(prateParam);
                     insertNewEmployee.Parameters.Add(passParam);
                     insertNewEmployee.Parameters.Add(roleParam);
+                    insertNewEmployee.Parameters.Add(empStatusParam);
+                    insertNewEmployee.Parameters.Add(passcodeParam);
                     insertNewEmployee.ExecuteNonQuery();
                     connection.Close();
+                    MessageBox.Show("Employee added succesfully");
                 }
             }
             catch(Exception err)
@@ -66,6 +73,7 @@ namespace Restaurant2
                     updateEmployee.Parameters.Add(empIDParam);
                     
                     updateEmployee.ExecuteNonQuery();
+                    MessageBox.Show("Employee set to inactive");
                 }
             }
             catch (Exception err)
@@ -76,13 +84,13 @@ namespace Restaurant2
 
         }
 
-        public void ModifyEmployee(string firstName, string lastName, string payRate, string passWord, string role)
+        public void ModifyEmployee(string employeeID, string firstName, string lastName, string payRate, string passWord, string role)
         {
             try
             {
                 SqlConnection connection = new SqlConnection();
                 //Server = myServerAddress; Database = myDataBase; User Id = myUsername; Password = myPassword;
-                connection.ConnectionString = "Server=cis1.actx.edu;Database=project1;User Id=db2;Password = db20;";
+                connection.ConnectionString = "update dbo.Employee set FirstName = @FirstName, LastName = @LastName, PayRate = @PayRate, Password = @Password, Role = @Role where EmployeeID = " + employeeID + "; ";
                 connection.Open();
                 MessageBox.Show(connection.ServerVersion);
 

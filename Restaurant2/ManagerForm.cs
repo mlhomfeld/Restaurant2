@@ -39,6 +39,11 @@ namespace Restaurant2
 
         private void txtRmvEmployee_TextChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
             Manager man = new Manager();
             man.RemoveEmployee(txtRmvEmployee.Text);
         }
