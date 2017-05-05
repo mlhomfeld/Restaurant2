@@ -24,6 +24,9 @@ namespace Restaurant2
         {
             Employee emp = new Employee();
             emp.ManagerResponse(Convert.ToInt32(txtResponse.Text));
+            this.Hide();
+            
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

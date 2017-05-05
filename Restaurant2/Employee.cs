@@ -68,8 +68,7 @@ namespace Restaurant2
                             case "Manager":
                                 ManagerForm man = new ManagerForm();
                                 man.Show();
-                                RandomChallenge(employeeID);
-                               // RandomChallenge();
+                                RandomChallenge(employeeID);                              
                                 break;
                             case "Host":
                                 HostForm host = new HostForm();
@@ -139,7 +138,7 @@ namespace Restaurant2
                 client.EnableSsl = true;
                 client.UseDefaultCredentials = false;
                 client.Credentials = new System.Net.NetworkCredential(from, "nyfzafnzohxaycik"); // this password can't be used interactively, it's controlled for app use only
-                client.Timeout = 100;
+                client.Timeout = 10000;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 MailMessage challengeMail = new MailMessage(from, to, subject, body);
                 client.Send(challengeMail);
