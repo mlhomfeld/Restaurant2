@@ -44,7 +44,7 @@ namespace Restaurant2
                     insertNewEmployee.Parameters.Add(passcodeParam);
                     insertNewEmployee.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Employee added succesfully");.
+                    MessageBox.Show("Employee added succesfully");
                 }
             }
             catch (Exception err)
