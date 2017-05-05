@@ -16,5 +16,11 @@ namespace Restaurant2
         {
             InitializeComponent();
         }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            Manager man = new Manager();
+            //man.ModifyEmployee(txtEmployeeID.Text, txtFirstName.Text, txtLastName.Text, txtPayRate.Text, txtPass.Text, txtRole.Text);
+        }
     }
 }
