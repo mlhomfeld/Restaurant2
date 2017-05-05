@@ -20,7 +20,7 @@ namespace Restaurant2
                 //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
                 connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 connection.Open();
-                
+
 
                 MessageBox.Show("Attempting to insert employee");
                 using (SqlCommand insertNewEmployee = connection.CreateCommand())
@@ -44,10 +44,10 @@ namespace Restaurant2
                     insertNewEmployee.Parameters.Add(passcodeParam);
                     insertNewEmployee.ExecuteNonQuery();
                     connection.Close();
-                    MessageBox.Show("Employee added succesfully");
+                    MessageBox.Show("Employee added succesfully");.
                 }
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }
@@ -63,15 +63,15 @@ namespace Restaurant2
                 //Server = myServerAddress; Database = myDataBase; User Id = myUsername; Password = myPassword;
                 connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 connection.Open();
-                
+
 
                 Console.WriteLine("---SQL UPDATE---");
                 using (SqlCommand updateEmployee = connection.CreateCommand())
                 {
                     updateEmployee.CommandText = "update dbo.Employee set EmployeeStatus = @EmployeeStatus where EmployeeID = " + employeeID + ";";
-                    var empIDParam = new SqlParameter("EmployeeStatus", SqlDbType.VarChar) { Value = "Inactive" };                   
+                    var empIDParam = new SqlParameter("EmployeeStatus", SqlDbType.VarChar) { Value = "Inactive" };
                     updateEmployee.Parameters.Add(empIDParam);
-                    
+
                     updateEmployee.ExecuteNonQuery();
                     MessageBox.Show("Employee set to inactive");
                 }
