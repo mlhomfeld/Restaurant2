@@ -66,8 +66,8 @@ namespace Restaurant2
                                 wait.Show();
                                 break;
                             case "Manager":
-                                ManagerForm man = new ManagerForm();
-                                man.Show();
+                                //ManagerForm man = new ManagerForm();
+                                //man.Show();
                                 RandomChallenge(employeeID);                              
                                 break;
                             case "Host":
