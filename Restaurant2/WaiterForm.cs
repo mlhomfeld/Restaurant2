@@ -28,6 +28,8 @@ namespace Restaurant2
         {
             Waiter wait = new Waiter();
             wait.SetTableToDirty(1);
+            WaiterMenu Menu = new WaiterMenu();
+            Menu.Show();
         }
 
         private void btnTableTwo_Click(object sender, EventArgs e)

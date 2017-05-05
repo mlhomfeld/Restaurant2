@@ -28,27 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstOrder = new System.Windows.Forms.ListView();
             this.btnburger = new System.Windows.Forms.Button();
             this.btncheeseBurger = new System.Windows.Forms.Button();
             this.btnmilkShake = new System.Windows.Forms.Button();
             this.btnsoftDrink = new System.Windows.Forms.Button();
             this.btnfries = new System.Windows.Forms.Button();
             this.btnsalad = new System.Windows.Forms.Button();
+            this.lstOrder = new System.Windows.Forms.ListView();
             this.SuspendLayout();
-            // 
-            // lstOrder
-            // 
-            this.lstOrder.Location = new System.Drawing.Point(12, 12);
-            this.lstOrder.Name = "lstOrder";
-            this.lstOrder.Size = new System.Drawing.Size(174, 313);
-            this.lstOrder.TabIndex = 1;
-            this.lstOrder.UseCompatibleStateImageBehavior = false;
             // 
             // btnburger
             // 
             this.btnburger.Location = new System.Drawing.Point(222, 24);
-            this.btnburger.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnburger.Margin = new System.Windows.Forms.Padding(2);
             this.btnburger.Name = "btnburger";
             this.btnburger.Size = new System.Drawing.Size(97, 28);
             this.btnburger.TabIndex = 2;
@@ -59,27 +51,29 @@
             // btncheeseBurger
             // 
             this.btncheeseBurger.Location = new System.Drawing.Point(222, 81);
-            this.btncheeseBurger.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btncheeseBurger.Margin = new System.Windows.Forms.Padding(2);
             this.btncheeseBurger.Name = "btncheeseBurger";
             this.btncheeseBurger.Size = new System.Drawing.Size(97, 28);
             this.btncheeseBurger.TabIndex = 3;
             this.btncheeseBurger.Text = "CheeseBurger $7";
             this.btncheeseBurger.UseVisualStyleBackColor = true;
+            this.btncheeseBurger.Click += new System.EventHandler(this.btncheeseBurger_Click);
             // 
             // btnmilkShake
             // 
             this.btnmilkShake.Location = new System.Drawing.Point(222, 137);
-            this.btnmilkShake.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmilkShake.Margin = new System.Windows.Forms.Padding(2);
             this.btnmilkShake.Name = "btnmilkShake";
             this.btnmilkShake.Size = new System.Drawing.Size(97, 28);
             this.btnmilkShake.TabIndex = 4;
             this.btnmilkShake.Text = "MilkShake $3.50";
             this.btnmilkShake.UseVisualStyleBackColor = true;
+            this.btnmilkShake.Click += new System.EventHandler(this.btnmilkShake_Click);
             // 
             // btnsoftDrink
             // 
             this.btnsoftDrink.Location = new System.Drawing.Point(222, 189);
-            this.btnsoftDrink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsoftDrink.Margin = new System.Windows.Forms.Padding(2);
             this.btnsoftDrink.Name = "btnsoftDrink";
             this.btnsoftDrink.Size = new System.Drawing.Size(97, 28);
             this.btnsoftDrink.TabIndex = 5;
@@ -90,22 +84,32 @@
             // btnfries
             // 
             this.btnfries.Location = new System.Drawing.Point(222, 242);
-            this.btnfries.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnfries.Margin = new System.Windows.Forms.Padding(2);
             this.btnfries.Name = "btnfries";
             this.btnfries.Size = new System.Drawing.Size(97, 28);
             this.btnfries.TabIndex = 6;
             this.btnfries.Text = "Fries $2.00";
             this.btnfries.UseVisualStyleBackColor = true;
+            this.btnfries.Click += new System.EventHandler(this.btnfries_Click);
             // 
             // btnsalad
             // 
             this.btnsalad.Location = new System.Drawing.Point(222, 297);
-            this.btnsalad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsalad.Margin = new System.Windows.Forms.Padding(2);
             this.btnsalad.Name = "btnsalad";
             this.btnsalad.Size = new System.Drawing.Size(97, 28);
             this.btnsalad.TabIndex = 7;
             this.btnsalad.Text = "Salad $5";
             this.btnsalad.UseVisualStyleBackColor = true;
+            this.btnsalad.Click += new System.EventHandler(this.btnsalad_Click);
+            // 
+            // lstOrder
+            // 
+            this.lstOrder.Location = new System.Drawing.Point(12, 12);
+            this.lstOrder.Name = "lstOrder";
+            this.lstOrder.Size = new System.Drawing.Size(174, 313);
+            this.lstOrder.TabIndex = 1;
+            this.lstOrder.UseCompatibleStateImageBehavior = false;
             // 
             // WaiterMenu
             // 
@@ -126,13 +130,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView lstOrder;
         private System.Windows.Forms.Button btnburger;
         private System.Windows.Forms.Button btncheeseBurger;
         private System.Windows.Forms.Button btnmilkShake;
         private System.Windows.Forms.Button btnsoftDrink;
         private System.Windows.Forms.Button btnfries;
         private System.Windows.Forms.Button btnsalad;
+        private System.Windows.Forms.ListView lstOrder;
     }
 }
