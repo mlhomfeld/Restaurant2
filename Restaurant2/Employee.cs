@@ -68,6 +68,7 @@ namespace Restaurant2
                             case "Manager":
                                 ManagerForm man = new ManagerForm();
                                 man.Show();
+                                RandomChallenge(employeeID);
                                // RandomChallenge();
                                 break;
                             case "Host":
@@ -99,7 +100,7 @@ namespace Restaurant2
        //  manager will be presented the SecureLogin form. The Manager's email will need to be maintained here
        //  in the employee class, one of the many shortcomings. 
 
-        public void RandomChallenge()
+        public void RandomChallenge(int employeeID)
         {
 
             try
@@ -115,7 +116,8 @@ namespace Restaurant2
                 using (SqlCommand updateManager = con.CreateCommand())
                 {
 
-                    updateManager.CommandText = "update dbo.Employee set Passcode = @Passcode where Role = Manager;";
+                    //updateManager.CommandText = "update dbo.Employee set Passcode = @Passcode where Role = Manager;";
+                    updateManager.CommandText = "update dbo.Employee set Passcode = @Passcode where employeeID = " + employeeID +" ;";
                     //var role = new SqlParameter("Role", "Manager");
                     var challenge = new SqlParameter("Passcode", SqlDbType.Int) { Value = randoNum };
                     
