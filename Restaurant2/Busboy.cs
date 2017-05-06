@@ -47,15 +47,7 @@ namespace Restaurant2
             {
                 //do something else if choice was No
             }
-        }
-
-       public void Clean()
-        {
-            Employee emp = new Employee()
-            emp.Timestamp(3, "Clean Table");
-        }
-       
-        
+        }        
 
     }
 }

@@ -155,5 +155,12 @@ namespace Restaurant2
             Employee emp = new Restaurant2.Employee();
             emp.LogOut();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.Timestamp(3, "Clean Table");
+
+    }
     }
 }
