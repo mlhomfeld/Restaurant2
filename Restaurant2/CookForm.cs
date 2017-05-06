@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Restaurant2
 {
     public partial class CookForm : Form
@@ -16,7 +17,7 @@ namespace Restaurant2
         {
             InitializeComponent();
         }
-        Cook cook = new Cook();
+        
 
         private void btnRetrieveOrder_Click(object sender, EventArgs e)
         {
@@ -30,6 +31,7 @@ namespace Restaurant2
 
         private void btnOrderReady_Click(object sender, EventArgs e)
         {
+            Cook cook = new Cook();
             cook.SetOrderToReady(2);
         }
     }
