@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using System.IO;
 
 namespace Restaurant2
 {
@@ -34,6 +35,29 @@ namespace Restaurant2
                         updateSeatingArea.ExecuteNonQuery();
                         connection.Close();
                     }
+
+                    string path = "Busboy.txt";
+                    string employeeID;
+                    try
+                    {
+                        using (StreamReader reader = new StreamReader(path))
+                        {
+                            while ((employeeID = reader.ReadLine()) != null)
+                            
+                            {
+                                employeeID.ToString();
+                                Employee emp = new Employee();
+                                emp.Timestamp(Convert.ToInt32(employeeID), "Table was cleaned");
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Cannot read the session ID file at  " + path);
+
+                    }
+                      
+
                     MessageBox.Show("Table " + Row + " has been set to Open");
 
                 }
