@@ -48,6 +48,9 @@
             this.txtPartySize = new System.Windows.Forms.TextBox();
             this.lblCustomerPartyName = new System.Windows.Forms.Label();
             this.lblPartySize = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTable1
@@ -167,7 +170,7 @@
             // 
             this.btnAddCustomerParty.BackColor = System.Drawing.SystemColors.Control;
             this.btnAddCustomerParty.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCustomerParty.Location = new System.Drawing.Point(408, 376);
+            this.btnAddCustomerParty.Location = new System.Drawing.Point(400, 424);
             this.btnAddCustomerParty.Name = "btnAddCustomerParty";
             this.btnAddCustomerParty.Size = new System.Drawing.Size(136, 40);
             this.btnAddCustomerParty.TabIndex = 13;
@@ -179,7 +182,7 @@
             // 
             this.btnRemoveCustomerParty.BackColor = System.Drawing.SystemColors.Control;
             this.btnRemoveCustomerParty.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveCustomerParty.Location = new System.Drawing.Point(416, 488);
+            this.btnRemoveCustomerParty.Location = new System.Drawing.Point(400, 488);
             this.btnRemoveCustomerParty.Name = "btnRemoveCustomerParty";
             this.btnRemoveCustomerParty.Size = new System.Drawing.Size(136, 40);
             this.btnRemoveCustomerParty.TabIndex = 12;
@@ -229,14 +232,14 @@
             // 
             // txtPartyName
             // 
-            this.txtPartyName.Location = new System.Drawing.Point(352, 352);
+            this.txtPartyName.Location = new System.Drawing.Point(352, 328);
             this.txtPartyName.Name = "txtPartyName";
             this.txtPartyName.Size = new System.Drawing.Size(236, 19);
             this.txtPartyName.TabIndex = 18;
             // 
             // txtPartySize
             // 
-            this.txtPartySize.Location = new System.Drawing.Point(352, 456);
+            this.txtPartySize.Location = new System.Drawing.Point(352, 384);
             this.txtPartySize.Name = "txtPartySize";
             this.txtPartySize.Size = new System.Drawing.Size(236, 19);
             this.txtPartySize.TabIndex = 19;
@@ -245,7 +248,7 @@
             // 
             this.lblCustomerPartyName.AutoSize = true;
             this.lblCustomerPartyName.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerPartyName.Location = new System.Drawing.Point(432, 328);
+            this.lblCustomerPartyName.Location = new System.Drawing.Point(432, 304);
             this.lblCustomerPartyName.Name = "lblCustomerPartyName";
             this.lblCustomerPartyName.Size = new System.Drawing.Size(80, 15);
             this.lblCustomerPartyName.TabIndex = 20;
@@ -255,11 +258,44 @@
             // 
             this.lblPartySize.AutoSize = true;
             this.lblPartySize.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPartySize.Location = new System.Drawing.Point(440, 432);
+            this.lblPartySize.Location = new System.Drawing.Point(432, 360);
             this.lblPartySize.Name = "lblPartySize";
             this.lblPartySize.Size = new System.Drawing.Size(71, 15);
             this.lblPartySize.TabIndex = 21;
             this.lblPartySize.Text = "Party Size";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LimeGreen;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(432, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 18);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "TABLE OCCUPIED";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Yellow;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(432, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 18);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "TABLE OPEN";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(432, 176);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 18);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "TABLE DIRTY";
             // 
             // HostForm
             // 
@@ -268,6 +304,9 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(602, 551);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPartySize);
             this.Controls.Add(this.lblCustomerPartyName);
             this.Controls.Add(this.txtPartySize);
@@ -318,5 +357,8 @@
         private System.Windows.Forms.TextBox txtPartySize;
         private System.Windows.Forms.Label lblCustomerPartyName;
         private System.Windows.Forms.Label lblPartySize;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
