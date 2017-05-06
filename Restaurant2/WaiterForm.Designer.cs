@@ -217,6 +217,7 @@
             this.label3.Size = new System.Drawing.Size(130, 18);
             this.label3.TabIndex = 14;
             this.label3.Text = "TABLE DIRTY";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // WaiterForm
             // 
