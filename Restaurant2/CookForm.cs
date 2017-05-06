@@ -26,7 +26,12 @@ namespace Restaurant2
 
         private void btnPreppingOrder_Click(object sender, EventArgs e)
         {
-
+            Cook cook = new Cook();
+            List<int> orderContent = cook.ConvertOrders((int)lstPendingOrders.SelectedItem);
+            for(int i = 0; i < orderContent.Count; i++)
+            {
+                lstMenuItemsDisplay.Items.Add(orderContent[i].ToString());
+            }           
         }
 
         private void btnOrderReady_Click(object sender, EventArgs e)
