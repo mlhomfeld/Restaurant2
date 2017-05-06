@@ -65,8 +65,8 @@ namespace Restaurant2
                 {
                     //for (int i = 1; i < 8; i++)
                     //{
-                    readOrderID.CommandText = "select * from dbo.Purchase where MenuItemID = @MenuItemID;";
-                    var orderContentParam = new SqlParameter("OrderId", orderID);
+                    readOrderID.CommandText = "select * from dbo.Purchase where OrderID = @OrderID;";
+                    var orderContentParam = new SqlParameter("OrderID", orderID);
                     //var fnameParam = new SqlParameter("TableID", SqlDbType.VarChar) { Value = i };
                     readOrderID.Parameters.Add(orderContentParam);
 
@@ -74,7 +74,7 @@ namespace Restaurant2
                     {
                         while (reader.Read())
                         {
-                            ordercontent.Add(reader.GetInt32(0));
+                            ordercontent.Add(reader.GetInt32(2));
                         }
                     }
 
