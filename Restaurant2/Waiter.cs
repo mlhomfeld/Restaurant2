@@ -192,9 +192,63 @@ namespace Restaurant2
             }
         }
 
-        public void RetrieveOrder()
+        public List<int> RetrieveReadyOrders()
         {
-            throw new System.NotImplementedException();
+            List<int> orderIDs = new List<int>();
+            try
+            {
+                //SqlConnection connection = new SqlConnection();
+                ////Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
+                //connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                //connection.Open();
+                //using (SqlCommand selectReadyOrders = connection.CreateCommand())
+                //{
+                //    selectReadyOrders.CommandText = "select * from dbo.RestaurantOrder where OrderStatus = @OrderStatus;";
+                //    var orderIDParam = new SqlParameter("OrderStatus", "Ready");
+                //    //var fnameParam = new SqlParameter("FirstName", SqlDbType.VarChar) { Value = "Dewayne" };
+                //    selectReadyOrders.Parameters.Add(orderIDParam);
+
+                //    using (SqlDataReader reader = selectReadyOrders.ExecuteReader())
+                //    {
+                //        string rec = "";
+                //        while (reader.Read())
+                //        {
+                //            rec = reader.GetString(3) + " earned by ";
+                //            rec += reader.GetString(1) + " ";
+                //            rec += reader.GetString(2);
+                //            Console.WriteLine(rec);
+                //        }
+                //    }
+                //}
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand readOrderStatus = connection.CreateCommand())
+                {
+                    //for (int i = 1; i < 8; i++)
+                    //{
+                    readOrderStatus.CommandText = "select * from dbo.RestaurantOrder where OrderStatus = @OrderStatus;";
+                    var orderStatusParam = new SqlParameter("OrderStatus", "Ready");
+                    //var fnameParam = new SqlParameter("TableID", SqlDbType.VarChar) { Value = i };
+                    readOrderStatus.Parameters.Add(orderStatusParam);
+
+                    using (SqlDataReader reader = readOrderStatus.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            orderIDs.Add(reader.GetInt32(0));
+                        }
+                    }
+
+                    //}
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            return orderIDs;
         }
 
         public void SetTableToDirty(int tableNumber)
