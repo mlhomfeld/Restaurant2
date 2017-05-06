@@ -33,7 +33,7 @@ namespace Restaurant2
                     var passParam = new SqlParameter("Password", SqlDbType.VarChar) { Value = passWord };
                     var roleParam = new SqlParameter("Role", SqlDbType.VarChar) { Value = role };
                     var empStatusParam = new SqlParameter("EmployeeStatus", SqlDbType.VarChar) { Value = "Active" };
-                    var passcodeParam = new SqlParameter("Passcode", SqlDbType.Int) { Value = 23 };
+                    var passcodeParam = new SqlParameter("Passcode", SqlDbType.Int) { Value = null }; // changed to null, set value if error arises and try again.
                     //insertNewEmployee.Parameters.Add(idParam);
                     insertNewEmployee.Parameters.Add(fnameParam);
                     insertNewEmployee.Parameters.Add(lnameParam);

@@ -243,8 +243,12 @@ namespace Restaurant2
         {
             try
             {
-                string date = "";
-                date = System.DateTime.Now.ToString();
+                //string date = "";
+                //activity.ToString();
+                DateTime dt = DateTime.Now;
+                var date = dt;
+               
+               
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 con.Open();
@@ -254,10 +258,10 @@ namespace Restaurant2
                     timeStampActivity.CommandText = "insert into dbo.EmployeeTimeStamps values (@EmployeeID, @Activity, @DateTime);";
                     var empID = new SqlParameter("EmployeeID", SqlDbType.Int) { Value = employeeID };
                     var action = new SqlParameter("Activity", SqlDbType.VarChar) { Value = activity };
-                    var time = new SqlParameter("DateTime", SqlDbType.DateTime) { Value = date };
+                    var time = new SqlParameter("DateTime", SqlDbType.VarChar) { Value = dt.ToString() };
                     timeStampActivity.Parameters.Add(empID);
                     timeStampActivity.Parameters.Add(action);
-                    timeStampActivity.Parameters.Add(date);
+                    timeStampActivity.Parameters.Add(dt);
                     timeStampActivity.ExecuteNonQuery();
                 }
             }
