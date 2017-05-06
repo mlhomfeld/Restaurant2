@@ -14,14 +14,13 @@ namespace Restaurant2
     {
         public Cook()
         {
-            throw new System.NotImplementedException();
-        }
 
+        }
+       
         public void SetOrderToReady(int orderNumber)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to set this order to finish?", "!!!", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
+            
+           
                 try
                 {
                     //Opens connection to the database to update the status
@@ -40,18 +39,14 @@ namespace Restaurant2
                         connection.Close();
                     }
                     MessageBox.Show("Order "+ orderNumber + " has been set to Ready");
-
+                    
                 }
                 catch (Exception err)
                 {
                     //Error box if connections fail
                     MessageBox.Show(err.Message);
                 }
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else if choice was No
-            }
+           
         }
     }
 }
