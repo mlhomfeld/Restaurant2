@@ -38,6 +38,9 @@
             this.btnTable7 = new System.Windows.Forms.Button();
             this.btnBusboyRefresh = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTable1
@@ -140,12 +143,42 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(496, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 14);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(496, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 14);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(496, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 14);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "label3";
+            // 
             // BusboyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(599, 517);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnBusboyRefresh);
             this.Controls.Add(this.btnTable7);
@@ -161,6 +194,7 @@
             this.Text = "BusboyForm";
             this.TransparencyKey = System.Drawing.Color.White;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -175,5 +209,8 @@
         private System.Windows.Forms.Button btnTable7;
         private System.Windows.Forms.Button btnBusboyRefresh;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

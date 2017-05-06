@@ -41,9 +41,9 @@
             this.btnCreateOrder = new System.Windows.Forms.Button();
             this.btnCheckReadyOrders = new System.Windows.Forms.Button();
             this.btnOrderPayment = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTableOpenWaiter = new System.Windows.Forms.Label();
+            this.lblTableOccupiedWaiter = new System.Windows.Forms.Label();
+            this.lblTableDirtyWaiter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTableOne
@@ -184,40 +184,40 @@
             this.btnOrderPayment.Text = "Order Payment";
             this.btnOrderPayment.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblTableOpenWaiter
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Yellow;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(432, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 18);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "TABLE OPEN";
+            this.lblTableOpenWaiter.AutoSize = true;
+            this.lblTableOpenWaiter.BackColor = System.Drawing.Color.Yellow;
+            this.lblTableOpenWaiter.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableOpenWaiter.Location = new System.Drawing.Point(432, 72);
+            this.lblTableOpenWaiter.Name = "lblTableOpenWaiter";
+            this.lblTableOpenWaiter.Size = new System.Drawing.Size(119, 18);
+            this.lblTableOpenWaiter.TabIndex = 12;
+            this.lblTableOpenWaiter.Text = "TABLE OPEN";
             // 
-            // label2
+            // lblTableOccupiedWaiter
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LimeGreen;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(432, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 18);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "TABLE OCCUPIED";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTableOccupiedWaiter.AutoSize = true;
+            this.lblTableOccupiedWaiter.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblTableOccupiedWaiter.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableOccupiedWaiter.Location = new System.Drawing.Point(432, 112);
+            this.lblTableOccupiedWaiter.Name = "lblTableOccupiedWaiter";
+            this.lblTableOccupiedWaiter.Size = new System.Drawing.Size(160, 18);
+            this.lblTableOccupiedWaiter.TabIndex = 13;
+            this.lblTableOccupiedWaiter.Text = "TABLE OCCUPIED";
+            this.lblTableOccupiedWaiter.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label3
+            // lblTableDirtyWaiter
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Red;
-            this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(432, 152);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 18);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "TABLE DIRTY";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblTableDirtyWaiter.AutoSize = true;
+            this.lblTableDirtyWaiter.BackColor = System.Drawing.Color.Red;
+            this.lblTableDirtyWaiter.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableDirtyWaiter.Location = new System.Drawing.Point(432, 152);
+            this.lblTableDirtyWaiter.Name = "lblTableDirtyWaiter";
+            this.lblTableDirtyWaiter.Size = new System.Drawing.Size(130, 18);
+            this.lblTableDirtyWaiter.TabIndex = 14;
+            this.lblTableDirtyWaiter.Text = "TABLE DIRTY";
+            this.lblTableDirtyWaiter.Click += new System.EventHandler(this.label3_Click);
             // 
             // WaiterForm
             // 
@@ -225,9 +225,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(599, 503);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTableDirtyWaiter);
+            this.Controls.Add(this.lblTableOccupiedWaiter);
+            this.Controls.Add(this.lblTableOpenWaiter);
             this.Controls.Add(this.btnOrderPayment);
             this.Controls.Add(this.btnCheckReadyOrders);
             this.Controls.Add(this.btnCreateOrder);
@@ -264,8 +264,8 @@
         private System.Windows.Forms.Button btnCreateOrder;
         private System.Windows.Forms.Button btnCheckReadyOrders;
         private System.Windows.Forms.Button btnOrderPayment;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTableOpenWaiter;
+        private System.Windows.Forms.Label lblTableOccupiedWaiter;
+        private System.Windows.Forms.Label lblTableDirtyWaiter;
     }
 }
