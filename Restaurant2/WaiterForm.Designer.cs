@@ -75,7 +75,7 @@
             // btnTableTwo
             // 
             this.btnTableTwo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableTwo.Location = new System.Drawing.Point(280, 24);
+            this.btnTableTwo.Location = new System.Drawing.Point(144, 40);
             this.btnTableTwo.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableTwo.Name = "btnTableTwo";
             this.btnTableTwo.Size = new System.Drawing.Size(102, 80);
@@ -99,7 +99,7 @@
             // btnTableFive
             // 
             this.btnTableFive.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableFive.Location = new System.Drawing.Point(144, 40);
+            this.btnTableFive.Location = new System.Drawing.Point(280, 21);
             this.btnTableFive.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableFive.Name = "btnTableFive";
             this.btnTableFive.Size = new System.Drawing.Size(102, 80);
