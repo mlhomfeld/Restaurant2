@@ -52,11 +52,12 @@
             // 
             // btnTable1
             // 
-            this.btnTable1.BackColor = System.Drawing.SystemColors.Info;
-            this.btnTable1.Location = new System.Drawing.Point(6, 457);
+            this.btnTable1.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTable1.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTable1.Location = new System.Drawing.Point(16, 40);
             this.btnTable1.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable1.Name = "btnTable1";
-            this.btnTable1.Size = new System.Drawing.Size(76, 29);
+            this.btnTable1.Size = new System.Drawing.Size(96, 72);
             this.btnTable1.TabIndex = 0;
             this.btnTable1.Text = "Table 1";
             this.btnTable1.UseVisualStyleBackColor = false;
@@ -64,11 +65,12 @@
             // 
             // btnTable2
             // 
-            this.btnTable2.BackColor = System.Drawing.SystemColors.Info;
-            this.btnTable2.Location = new System.Drawing.Point(6, 501);
+            this.btnTable2.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTable2.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTable2.Location = new System.Drawing.Point(128, 40);
             this.btnTable2.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable2.Name = "btnTable2";
-            this.btnTable2.Size = new System.Drawing.Size(76, 32);
+            this.btnTable2.Size = new System.Drawing.Size(96, 72);
             this.btnTable2.TabIndex = 1;
             this.btnTable2.Text = "Table 2";
             this.btnTable2.UseVisualStyleBackColor = false;
@@ -76,11 +78,12 @@
             // 
             // btnTable3
             // 
-            this.btnTable3.BackColor = System.Drawing.SystemColors.Info;
-            this.btnTable3.Location = new System.Drawing.Point(112, 502);
+            this.btnTable3.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTable3.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTable3.Location = new System.Drawing.Point(16, 128);
             this.btnTable3.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable3.Name = "btnTable3";
-            this.btnTable3.Size = new System.Drawing.Size(76, 31);
+            this.btnTable3.Size = new System.Drawing.Size(96, 72);
             this.btnTable3.TabIndex = 2;
             this.btnTable3.Text = "Table 3";
             this.btnTable3.UseVisualStyleBackColor = false;
@@ -88,11 +91,12 @@
             // 
             // btnTable4
             // 
-            this.btnTable4.BackColor = System.Drawing.SystemColors.Info;
-            this.btnTable4.Location = new System.Drawing.Point(510, 457);
+            this.btnTable4.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTable4.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTable4.Location = new System.Drawing.Point(128, 128);
             this.btnTable4.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable4.Name = "btnTable4";
-            this.btnTable4.Size = new System.Drawing.Size(76, 29);
+            this.btnTable4.Size = new System.Drawing.Size(96, 72);
             this.btnTable4.TabIndex = 3;
             this.btnTable4.Text = "Table 4";
             this.btnTable4.UseVisualStyleBackColor = false;
@@ -100,11 +104,12 @@
             // 
             // btnTable5
             // 
-            this.btnTable5.BackColor = System.Drawing.SystemColors.Info;
-            this.btnTable5.Location = new System.Drawing.Point(417, 504);
+            this.btnTable5.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTable5.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTable5.Location = new System.Drawing.Point(240, 24);
             this.btnTable5.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable5.Name = "btnTable5";
-            this.btnTable5.Size = new System.Drawing.Size(79, 29);
+            this.btnTable5.Size = new System.Drawing.Size(96, 72);
             this.btnTable5.TabIndex = 4;
             this.btnTable5.Text = "Table 5";
             this.btnTable5.UseVisualStyleBackColor = false;
@@ -112,11 +117,12 @@
             // 
             // btnTable6
             // 
-            this.btnTable6.BackColor = System.Drawing.SystemColors.Info;
-            this.btnTable6.Location = new System.Drawing.Point(516, 504);
+            this.btnTable6.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTable6.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTable6.Location = new System.Drawing.Point(240, 112);
             this.btnTable6.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable6.Name = "btnTable6";
-            this.btnTable6.Size = new System.Drawing.Size(70, 29);
+            this.btnTable6.Size = new System.Drawing.Size(96, 72);
             this.btnTable6.TabIndex = 5;
             this.btnTable6.Text = "Table 6";
             this.btnTable6.UseVisualStyleBackColor = false;
@@ -124,11 +130,12 @@
             // 
             // btnTable7
             // 
-            this.btnTable7.BackColor = System.Drawing.SystemColors.Info;
-            this.btnTable7.Location = new System.Drawing.Point(241, 499);
+            this.btnTable7.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTable7.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTable7.Location = new System.Drawing.Point(240, 200);
             this.btnTable7.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable7.Name = "btnTable7";
-            this.btnTable7.Size = new System.Drawing.Size(141, 34);
+            this.btnTable7.Size = new System.Drawing.Size(96, 72);
             this.btnTable7.TabIndex = 6;
             this.btnTable7.Text = "Table 7";
             this.btnTable7.UseVisualStyleBackColor = false;
@@ -136,8 +143,8 @@
             // 
             // btnHostRefresh
             // 
-            this.btnHostRefresh.BackColor = System.Drawing.SystemColors.Info;
-            this.btnHostRefresh.Location = new System.Drawing.Point(480, 344);
+            this.btnHostRefresh.BackColor = System.Drawing.SystemColors.Control;
+            this.btnHostRefresh.Location = new System.Drawing.Point(456, 8);
             this.btnHostRefresh.Name = "btnHostRefresh";
             this.btnHostRefresh.Size = new System.Drawing.Size(64, 22);
             this.btnHostRefresh.TabIndex = 7;
@@ -147,8 +154,8 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.BackColor = System.Drawing.SystemColors.Info;
-            this.btnLogOut.Location = new System.Drawing.Point(480, 292);
+            this.btnLogOut.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogOut.Location = new System.Drawing.Point(528, 8);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(64, 23);
             this.btnLogOut.TabIndex = 8;
@@ -158,10 +165,11 @@
             // 
             // btnAddCustomerParty
             // 
-            this.btnAddCustomerParty.BackColor = System.Drawing.SystemColors.Info;
-            this.btnAddCustomerParty.Location = new System.Drawing.Point(241, 410);
+            this.btnAddCustomerParty.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddCustomerParty.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCustomerParty.Location = new System.Drawing.Point(408, 376);
             this.btnAddCustomerParty.Name = "btnAddCustomerParty";
-            this.btnAddCustomerParty.Size = new System.Drawing.Size(125, 40);
+            this.btnAddCustomerParty.Size = new System.Drawing.Size(136, 40);
             this.btnAddCustomerParty.TabIndex = 13;
             this.btnAddCustomerParty.Text = "Add Customer Party";
             this.btnAddCustomerParty.UseVisualStyleBackColor = false;
@@ -169,10 +177,11 @@
             // 
             // btnRemoveCustomerParty
             // 
-            this.btnRemoveCustomerParty.BackColor = System.Drawing.SystemColors.Info;
-            this.btnRemoveCustomerParty.Location = new System.Drawing.Point(418, 165);
+            this.btnRemoveCustomerParty.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRemoveCustomerParty.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveCustomerParty.Location = new System.Drawing.Point(416, 488);
             this.btnRemoveCustomerParty.Name = "btnRemoveCustomerParty";
-            this.btnRemoveCustomerParty.Size = new System.Drawing.Size(126, 31);
+            this.btnRemoveCustomerParty.Size = new System.Drawing.Size(136, 40);
             this.btnRemoveCustomerParty.TabIndex = 12;
             this.btnRemoveCustomerParty.Text = "Remove Customer Party";
             this.btnRemoveCustomerParty.UseVisualStyleBackColor = false;
@@ -181,26 +190,28 @@
             // lblCustomerQueue
             // 
             this.lblCustomerQueue.AutoSize = true;
-            this.lblCustomerQueue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerQueue.Location = new System.Drawing.Point(252, 10);
+            this.lblCustomerQueue.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lblCustomerQueue.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerQueue.Location = new System.Drawing.Point(56, 264);
             this.lblCustomerQueue.Name = "lblCustomerQueue";
-            this.lblCustomerQueue.Size = new System.Drawing.Size(130, 20);
+            this.lblCustomerQueue.Size = new System.Drawing.Size(110, 18);
             this.lblCustomerQueue.TabIndex = 14;
             this.lblCustomerQueue.Text = "Customer Queue";
             // 
             // lstCustomerQueue
             // 
+            this.lstCustomerQueue.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstCustomerQueue.FormattingEnabled = true;
-            this.lstCustomerQueue.ItemHeight = 14;
-            this.lstCustomerQueue.Location = new System.Drawing.Point(53, 57);
+            this.lstCustomerQueue.ItemHeight = 15;
+            this.lstCustomerQueue.Location = new System.Drawing.Point(8, 304);
             this.lstCustomerQueue.Name = "lstCustomerQueue";
-            this.lstCustomerQueue.Size = new System.Drawing.Size(491, 102);
+            this.lstCustomerQueue.Size = new System.Drawing.Size(224, 244);
             this.lstCustomerQueue.TabIndex = 15;
             // 
             // lblPartyNameLegend
             // 
             this.lblPartyNameLegend.AutoSize = true;
-            this.lblPartyNameLegend.Location = new System.Drawing.Point(176, 40);
+            this.lblPartyNameLegend.Location = new System.Drawing.Point(8, 288);
             this.lblPartyNameLegend.Name = "lblPartyNameLegend";
             this.lblPartyNameLegend.Size = new System.Drawing.Size(59, 14);
             this.lblPartyNameLegend.TabIndex = 16;
@@ -209,22 +220,23 @@
             // lblPartySizeLegend
             // 
             this.lblPartySizeLegend.AutoSize = true;
-            this.lblPartySizeLegend.Location = new System.Drawing.Point(378, 40);
+            this.lblPartySizeLegend.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPartySizeLegend.Location = new System.Drawing.Point(160, 288);
             this.lblPartySizeLegend.Name = "lblPartySizeLegend";
-            this.lblPartySizeLegend.Size = new System.Drawing.Size(53, 14);
+            this.lblPartySizeLegend.Size = new System.Drawing.Size(58, 15);
             this.lblPartySizeLegend.TabIndex = 17;
             this.lblPartySizeLegend.Text = "Party Size";
             // 
             // txtPartyName
             // 
-            this.txtPartyName.Location = new System.Drawing.Point(195, 293);
+            this.txtPartyName.Location = new System.Drawing.Point(352, 352);
             this.txtPartyName.Name = "txtPartyName";
             this.txtPartyName.Size = new System.Drawing.Size(236, 19);
             this.txtPartyName.TabIndex = 18;
             // 
             // txtPartySize
             // 
-            this.txtPartySize.Location = new System.Drawing.Point(195, 343);
+            this.txtPartySize.Location = new System.Drawing.Point(352, 456);
             this.txtPartySize.Name = "txtPartySize";
             this.txtPartySize.Size = new System.Drawing.Size(236, 19);
             this.txtPartySize.TabIndex = 19;
@@ -232,18 +244,20 @@
             // lblCustomerPartyName
             // 
             this.lblCustomerPartyName.AutoSize = true;
-            this.lblCustomerPartyName.Location = new System.Drawing.Point(68, 302);
+            this.lblCustomerPartyName.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerPartyName.Location = new System.Drawing.Point(432, 328);
             this.lblCustomerPartyName.Name = "lblCustomerPartyName";
-            this.lblCustomerPartyName.Size = new System.Drawing.Size(59, 14);
+            this.lblCustomerPartyName.Size = new System.Drawing.Size(80, 15);
             this.lblCustomerPartyName.TabIndex = 20;
             this.lblCustomerPartyName.Text = "Party Name";
             // 
             // lblPartySize
             // 
             this.lblPartySize.AutoSize = true;
-            this.lblPartySize.Location = new System.Drawing.Point(68, 348);
+            this.lblPartySize.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPartySize.Location = new System.Drawing.Point(440, 432);
             this.lblPartySize.Name = "lblPartySize";
-            this.lblPartySize.Size = new System.Drawing.Size(53, 14);
+            this.lblPartySize.Size = new System.Drawing.Size(71, 15);
             this.lblPartySize.TabIndex = 21;
             this.lblPartySize.Text = "Party Size";
             // 
@@ -253,7 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(598, 545);
+            this.ClientSize = new System.Drawing.Size(602, 551);
             this.Controls.Add(this.lblPartySize);
             this.Controls.Add(this.lblCustomerPartyName);
             this.Controls.Add(this.txtPartySize);
