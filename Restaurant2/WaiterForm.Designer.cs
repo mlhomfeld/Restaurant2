@@ -165,6 +165,7 @@
             this.btnCreateOrder.TabIndex = 9;
             this.btnCreateOrder.Text = "Create Order";
             this.btnCreateOrder.UseVisualStyleBackColor = true;
+            this.btnCreateOrder.Click += new System.EventHandler(this.btnCreateOrder_Click);
             // 
             // btnCheckReadyOrders
             // 

@@ -169,5 +169,10 @@ namespace Restaurant2
         {
 
         }
+
+        private void btnCreateOrder_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

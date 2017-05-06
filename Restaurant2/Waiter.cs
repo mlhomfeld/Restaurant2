@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Restaurant2
 {
@@ -17,6 +18,30 @@ namespace Restaurant2
             {
                 PlaceOrderPurchasesInPurchaseTable(menuItemIDs, createdOrderID);
                 AddMenuPricesToOrderTotal(menuItemIDs, createdOrderID);
+
+                // Enter timestamps for order submission. 
+                string path = "Waiter.txt";
+                string employeeID;
+                try
+                {
+                    using (StreamReader reader = new StreamReader(path))
+                    {
+                        while ((employeeID = reader.ReadLine()) != null)
+
+                        {
+                            employeeID.ToString();
+                            Employee emp = new Employee();
+                            emp.Timestamp(Convert.ToInt32(employeeID), "Order Submitted");
+                        }
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Cannot read the session ID file at  " + path);
+
+                }
+
+                // end timestamp entry
             }
             else
             {
@@ -79,6 +104,31 @@ namespace Restaurant2
             {
                 MessageBox.Show(errr.Message);
             }
+
+            // Enter timestamps for order submission. 
+            string path = "Waiter.txt";
+            string employeeID;
+            try
+            {
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    while ((employeeID = reader.ReadLine()) != null)
+
+                    {
+                        employeeID.ToString();
+                        Employee emp = new Employee();
+                        emp.Timestamp(Convert.ToInt32(employeeID), "Order Created");
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Cannot read the session ID file at  " + path);
+
+            }
+
+            // end timestamp entry
+
             //if(int.TryParse(rawNewID, out newID))
             //{
             //    return newID;
