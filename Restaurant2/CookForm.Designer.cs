@@ -35,6 +35,8 @@
             this.lstPendingOrders = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lstMenuItemsDisplay = new System.Windows.Forms.ListBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnrefresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPreppingOrder
@@ -103,6 +105,28 @@
             this.lstMenuItemsDisplay.Size = new System.Drawing.Size(156, 368);
             this.lstMenuItemsDisplay.TabIndex = 7;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(440, 429);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(148, 37);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnrefresh
+            // 
+            this.btnrefresh.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnrefresh.Location = new System.Drawing.Point(427, 46);
+            this.btnrefresh.Name = "btnrefresh";
+            this.btnrefresh.Size = new System.Drawing.Size(152, 44);
+            this.btnrefresh.TabIndex = 9;
+            this.btnrefresh.Text = "Refresh";
+            this.btnrefresh.UseVisualStyleBackColor = true;
+            this.btnrefresh.Click += new System.EventHandler(this.btnrefresh_Click);
+            // 
             // CookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -110,6 +134,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(600, 478);
+            this.Controls.Add(this.btnrefresh);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lstMenuItemsDisplay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstPendingOrders);
@@ -132,5 +158,7 @@
         private System.Windows.Forms.ListBox lstPendingOrders;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lstMenuItemsDisplay;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnrefresh;
     }
 }

@@ -17,6 +17,41 @@ namespace Restaurant2
 
         }
        
+        public List<int> ReceiveOrders()
+        {
+            List<int> orderIds = new List<int>();
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand readOrderStatus = connection.CreateCommand())
+                {
+                    //for (int i = 1; i < 8; i++)
+                    //{
+                        readOrderStatus.CommandText = "select * from dbo.RestaurantOrder where OrderStatus = @OrderStatus;";
+                        var orderStatusParam = new SqlParameter("OrderStatus", "Submitted");
+                        //var fnameParam = new SqlParameter("TableID", SqlDbType.VarChar) { Value = i };
+                        readOrderStatus.Parameters.Add(orderStatusParam);
+
+                        using (SqlDataReader reader = readOrderStatus.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                orderIds.Add(reader.GetInt32(1));
+                            }
+                        }
+                        
+                    //}
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            return orderIds;
+        }
         public void SetOrderToReady(int orderNumber)
         {
             

@@ -43,5 +43,20 @@ namespace Restaurant2
                 //do something else if choice was No
             }
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            //logs out the cook Form
+            Employee emp = new Restaurant2.Employee();
+            emp.LogOut();
+        }
+
+        private void btnrefresh_Click(object sender, EventArgs e)
+        {
+            Cook cook = new Cook();
+            List<int> orderIDs = new List<int>();
+            
+           
+        }
     }
 }
