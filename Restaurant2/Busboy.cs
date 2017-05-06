@@ -49,5 +49,10 @@ namespace Restaurant2
             }
         }        
 
+        public int Session(int employeeID)
+        {
+            return employeeID;
+        }
+
     }
 }

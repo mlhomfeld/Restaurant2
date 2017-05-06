@@ -52,6 +52,42 @@ namespace Restaurant2
             }
             return orderIds;
         }
+        
+        public List<int> ConvertOrders(int orderID)
+        {
+            List<int> ordercontent = new List<int>();
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand readOrderID = connection.CreateCommand())
+                {
+                    //for (int i = 1; i < 8; i++)
+                    //{
+                    readOrderID.CommandText = "select * from dbo.Purchase where MenuItemID = @MenuItemID;";
+                    var orderContentParam = new SqlParameter("OrderId", orderID);
+                    //var fnameParam = new SqlParameter("TableID", SqlDbType.VarChar) { Value = i };
+                    readOrderID.Parameters.Add(orderContentParam);
+
+                    using (SqlDataReader reader = readOrderID.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ordercontent.Add(reader.GetInt32(0));
+                        }
+                    }
+
+                    //}
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            return ordercontent;
+        }
         public void SetOrderToReady(int orderNumber)
         {
             
