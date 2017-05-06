@@ -68,7 +68,7 @@ namespace Restaurant2
                             case "Manager":
                                 ManagerForm man = new ManagerForm();
                                 man.Show();
-                                //RandomChallenge(employeeID);                              
+                                //RandomChallenge(employeeID);
                                 break;
                             case "Host":
                                 HostForm host = new HostForm();
@@ -253,7 +253,7 @@ namespace Restaurant2
                     timeStampActivity.CommandText = "insert into dbo.EmployeeTimeStamps values (@EmployeeID, @Activity, @Date);";
                     var empID = new SqlParameter("EmployeeID", SqlDbType.Int) { Value = employeeID };
                     var action = new SqlParameter("Activity", SqlDbType.VarChar) { Value = activity };
-                    var time = new SqlParameter("Date", SqlDbType.VarChar) { Value = date };
+                    var time = new SqlParameter("Date", SqlDbType.DateTime) { Value = date };
                     timeStampActivity.Parameters.Add(empID);
                     timeStampActivity.Parameters.Add(action);
                     timeStampActivity.Parameters.Add(date);
