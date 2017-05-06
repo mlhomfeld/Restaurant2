@@ -16,6 +16,7 @@ namespace Restaurant2
         {
             InitializeComponent();
         }
+        Cook cook = new Cook();
 
         private void btnRetrieveOrder_Click(object sender, EventArgs e)
         {
@@ -25,6 +26,11 @@ namespace Restaurant2
         private void btnPreppingOrder_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOrderReady_Click(object sender, EventArgs e)
+        {
+            cook.SetOrderToReady(2);
         }
     }
 }

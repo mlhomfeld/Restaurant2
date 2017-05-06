@@ -71,6 +71,7 @@
             this.btnOrderReady.TabIndex = 3;
             this.btnOrderReady.Text = "Order Ready";
             this.btnOrderReady.UseVisualStyleBackColor = false;
+            this.btnOrderReady.Click += new System.EventHandler(this.btnOrderReady_Click);
             // 
             // CookForm
             // 
