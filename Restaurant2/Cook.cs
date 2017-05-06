@@ -79,6 +79,9 @@ namespace Restaurant2
                             ordercontent.Add(reader.GetInt32(2));
                         }
                     }
+
+                    // Enter timestamp for prepping order 
+
                     string path = "Cook.txt";
                     string employeeID;
                     try
