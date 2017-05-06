@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 663);
+            this.ClientSize = new System.Drawing.Size(600, 596);
             this.Controls.Add(this.btnDisplaySelectedOrder);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.textTotalPaid);
