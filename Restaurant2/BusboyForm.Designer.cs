@@ -38,11 +38,6 @@
             this.btnTable7 = new System.Windows.Forms.Button();
             this.btnBusboyRefresh = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnClean = new System.Windows.Forms.Button();
-            this.txtEmpID = new System.Windows.Forms.TextBox();
-            this.txtTable = new System.Windows.Forms.TextBox();
-            this.lblEmpID = new System.Windows.Forms.Label();
-            this.lblTable = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTable1
@@ -136,60 +131,12 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnClean
-            // 
-            this.btnClean.Location = new System.Drawing.Point(12, 142);
-            this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(104, 37);
-            this.btnClean.TabIndex = 9;
-            this.btnClean.Text = "Clean Table";
-            this.btnClean.UseVisualStyleBackColor = true;
-            this.btnClean.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // txtEmpID
-            // 
-            this.txtEmpID.Location = new System.Drawing.Point(83, 86);
-            this.txtEmpID.Name = "txtEmpID";
-            this.txtEmpID.Size = new System.Drawing.Size(33, 19);
-            this.txtEmpID.TabIndex = 10;
-            // 
-            // txtTable
-            // 
-            this.txtTable.Location = new System.Drawing.Point(83, 112);
-            this.txtTable.Name = "txtTable";
-            this.txtTable.Size = new System.Drawing.Size(33, 19);
-            this.txtTable.TabIndex = 11;
-            // 
-            // lblEmpID
-            // 
-            this.lblEmpID.AutoSize = true;
-            this.lblEmpID.Location = new System.Drawing.Point(12, 86);
-            this.lblEmpID.Name = "lblEmpID";
-            this.lblEmpID.Size = new System.Drawing.Size(65, 14);
-            this.lblEmpID.TabIndex = 12;
-            this.lblEmpID.Text = "Employee ID";
-            this.lblEmpID.Click += new System.EventHandler(this.lblEmpID_Click);
-            // 
-            // lblTable
-            // 
-            this.lblTable.AutoSize = true;
-            this.lblTable.Location = new System.Drawing.Point(27, 115);
-            this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(50, 14);
-            this.lblTable.TabIndex = 13;
-            this.lblTable.Text = "Table No.";
-            // 
             // BusboyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(599, 517);
-            this.Controls.Add(this.lblTable);
-            this.Controls.Add(this.lblEmpID);
-            this.Controls.Add(this.txtTable);
-            this.Controls.Add(this.txtEmpID);
-            this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnBusboyRefresh);
             this.Controls.Add(this.btnTable7);
@@ -205,7 +152,6 @@
             this.Text = "BusboyForm";
             this.TransparencyKey = System.Drawing.Color.White;
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -220,10 +166,5 @@
         private System.Windows.Forms.Button btnTable7;
         private System.Windows.Forms.Button btnBusboyRefresh;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnClean;
-        private System.Windows.Forms.TextBox txtEmpID;
-        private System.Windows.Forms.TextBox txtTable;
-        private System.Windows.Forms.Label lblEmpID;
-        private System.Windows.Forms.Label lblTable;
     }
 }
