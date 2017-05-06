@@ -10,10 +10,186 @@ namespace Restaurant2
 {
     public class Waiter : Employee
     {
-        public void TakeOrder()
+        public void SubmitOrder(List<int> menuItemIDs)
         {
-            throw new System.NotImplementedException();           
+            int createdOrderID = CreateNewOrder();
+            if (createdOrderID != 0)
+            {
+                PlaceOrderPurchasesInPurchaseTable(menuItemIDs, createdOrderID);
+                AddMenuPricesToOrderTotal(menuItemIDs, createdOrderID);
+            }
+            else
+            {
+                MessageBox.Show("OrderID was not correctly collected.", "Error");
+            }
+        }
+        private int CreateNewOrder()
+        {
+            int newID = 0;
+            // Creates a new Order record in the Order table
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand insertNewOrder = connection.CreateCommand())
+                {
+                    insertNewOrder.CommandText = "insert into dbo.RestaurantOrder values (@Total, @OrderStatus);";
+                    var totalParam = new SqlParameter("Total", SqlDbType.Money) { Value = 0 };
+                    var orderStatusParam = new SqlParameter("OrderStatus", SqlDbType.VarChar) { Value = "Submitted" };
+                    insertNewOrder.Parameters.Add(totalParam);
+                    insertNewOrder.Parameters.Add(orderStatusParam);
+                    // Potential alternative that would cut out select statement block of code.
+                    //newID = (int)insertNewOrder.ExecuteScalar();
+                    insertNewOrder.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            // Grabs newest Order record number
+            //string rawNewID = "";
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand selectNewOrderID = connection.CreateCommand())
+                {
+                    selectNewOrderID.CommandText = "select * from dbo.RestaurantOrder where Total = @Total;";
+                    var totalParam = new SqlParameter("Total", SqlDbType.Money) { Value = 0 };
+                    selectNewOrderID.Parameters.Add(totalParam);
 
+                    using (SqlDataReader reader = selectNewOrderID.ExecuteReader())
+                    {
+
+                        while (reader.Read())
+                        {
+                            newID = reader.GetInt32(0);
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            catch (Exception errr)
+            {
+                MessageBox.Show(errr.Message);
+            }
+            //if(int.TryParse(rawNewID, out newID))
+            //{
+            //    return newID;
+            //}
+            //else
+            //{
+            //    return newID;
+            //}
+            return newID;
+
+        }
+        private void PlaceOrderPurchasesInPurchaseTable(List<int> menuItemIDs, int createdOrderID)
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                for (int i = 0; i < menuItemIDs.Count; i++)
+                {
+                    using (SqlCommand insertOrderPurchases = connection.CreateCommand())
+                    {
+                        //for (int i = 0; i < menuItemIDs.Count; i++)
+                        //{
+                        insertOrderPurchases.CommandText = "insert into dbo.Purchase values (@OrderID, @MenuItemID);";
+                        var orderIDParam = new SqlParameter("OrderID", SqlDbType.Int) { Value = createdOrderID };
+                        var menuItemParam = new SqlParameter("MenuItemID", SqlDbType.Int) { Value = menuItemIDs[i] };
+                        insertOrderPurchases.Parameters.Add(orderIDParam);
+                        insertOrderPurchases.Parameters.Add(menuItemParam);
+                        insertOrderPurchases.ExecuteNonQuery();
+                        //}
+                    }
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+        private void AddMenuPricesToOrderTotal(List<int> menuItemIDs, int orderID)
+        {
+            decimal total = 0M;
+            List<decimal> priceCollection = new List<decimal>();
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand readMenuPrices = connection.CreateCommand())
+                {
+                    //foreach (int item in menuItemIDs)
+                    //{
+                    for (int i = 0; i < menuItemIDs.Count; i++)
+                    {
+                        readMenuPrices.CommandText = "select * from dbo.MenuItem where MenuItemID = @MenuItemID" + i.ToString() + ";";
+                        var idParam = new SqlParameter("MenuItemID" + i.ToString(), menuItemIDs[i]);
+                        readMenuPrices.Parameters.Add(idParam);
+
+                        using (SqlDataReader reader = readMenuPrices.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                priceCollection.Add(reader.GetDecimal(2));
+                            }
+                            //}
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            for (int i = 0; i < priceCollection.Count; i++)
+            {
+                //string rawPrice = "";
+                //decimal price = 0M;
+                //price = priceCollection[i];
+                //if(decimal.TryParse(rawPrice, out price))
+                //{
+                total += priceCollection[i];
+                //}
+                //else
+                //{
+                //    MessageBox.Show("The following price: " + priceCollection[i].ToString() + "was not added to the total", "Error");
+                //}
+            }
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand updateTotal = connection.CreateCommand())
+                {
+                    updateTotal.CommandText = "update dbo.RestaurantOrder set Total = @Total where OrderID = @OrderID;";
+                    var totalParam = new SqlParameter("Total", SqlDbType.Money) { Value = total };
+                    var idParam = new SqlParameter("OrderID", SqlDbType.Int) { Value = orderID };
+                    updateTotal.Parameters.Add(totalParam);
+                    updateTotal.Parameters.Add(idParam);
+
+                    updateTotal.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+            catch (Exception errrr)
+            {
+                MessageBox.Show(errrr.Message);
+            }
         }
 
         public void RetrieveOrder()

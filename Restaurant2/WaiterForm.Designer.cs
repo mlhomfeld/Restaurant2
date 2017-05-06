@@ -42,10 +42,10 @@
             // 
             // btnTableOne
             // 
-            this.btnTableOne.Location = new System.Drawing.Point(27, 295);
-            this.btnTableOne.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTableOne.Location = new System.Drawing.Point(27, 47);
+            this.btnTableOne.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableOne.Name = "btnTableOne";
-            this.btnTableOne.Size = new System.Drawing.Size(63, 38);
+            this.btnTableOne.Size = new System.Drawing.Size(102, 80);
             this.btnTableOne.TabIndex = 0;
             this.btnTableOne.Text = "Table 1";
             this.btnTableOne.UseVisualStyleBackColor = true;
@@ -54,7 +54,7 @@
             // btnTableThree
             // 
             this.btnTableThree.Location = new System.Drawing.Point(27, 405);
-            this.btnTableThree.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTableThree.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableThree.Name = "btnTableThree";
             this.btnTableThree.Size = new System.Drawing.Size(61, 36);
             this.btnTableThree.TabIndex = 1;
@@ -65,7 +65,7 @@
             // btnTableTwo
             // 
             this.btnTableTwo.Location = new System.Drawing.Point(27, 347);
-            this.btnTableTwo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTableTwo.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableTwo.Name = "btnTableTwo";
             this.btnTableTwo.Size = new System.Drawing.Size(63, 36);
             this.btnTableTwo.TabIndex = 2;
@@ -76,7 +76,7 @@
             // btnTableFour
             // 
             this.btnTableFour.Location = new System.Drawing.Point(507, 295);
-            this.btnTableFour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTableFour.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableFour.Name = "btnTableFour";
             this.btnTableFour.Size = new System.Drawing.Size(61, 38);
             this.btnTableFour.TabIndex = 3;
@@ -87,7 +87,7 @@
             // btnTableFive
             // 
             this.btnTableFive.Location = new System.Drawing.Point(506, 347);
-            this.btnTableFive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTableFive.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableFive.Name = "btnTableFive";
             this.btnTableFive.Size = new System.Drawing.Size(62, 36);
             this.btnTableFive.TabIndex = 4;
@@ -98,7 +98,7 @@
             // btnTableSix
             // 
             this.btnTableSix.Location = new System.Drawing.Point(507, 405);
-            this.btnTableSix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTableSix.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableSix.Name = "btnTableSix";
             this.btnTableSix.Size = new System.Drawing.Size(62, 36);
             this.btnTableSix.TabIndex = 5;
@@ -109,7 +109,7 @@
             // btnTableSeven
             // 
             this.btnTableSeven.Location = new System.Drawing.Point(210, 395);
-            this.btnTableSeven.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTableSeven.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableSeven.Name = "btnTableSeven";
             this.btnTableSeven.Size = new System.Drawing.Size(167, 46);
             this.btnTableSeven.TabIndex = 6;
@@ -120,7 +120,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(210, 455);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(80, 37);
             this.btnRefresh.TabIndex = 7;
@@ -131,7 +131,7 @@
             // btnLogout
             // 
             this.btnLogout.Location = new System.Drawing.Point(303, 455);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(74, 37);
             this.btnLogout.TabIndex = 8;
@@ -156,7 +156,7 @@
             this.Controls.Add(this.btnTableOne);
             this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "WaiterForm";
             this.Text = "WaiterForm";
             this.ResumeLayout(false);
