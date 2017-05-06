@@ -164,5 +164,10 @@ namespace Restaurant2
             Employee emp = new Employee();
             emp.LogOut();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
