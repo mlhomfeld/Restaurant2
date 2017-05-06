@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listYourOrder = new System.Windows.Forms.ListBox();
+            this.lstOrders = new System.Windows.Forms.ListBox();
             this.txtYourTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblOrderList = new System.Windows.Forms.Label();
             this.btnPayOrder = new System.Windows.Forms.Button();
             this.listOrderedItems = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,16 +41,18 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBalance = new System.Windows.Forms.TextBox();
             this.textTotalPaid = new System.Windows.Forms.TextBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnDisplaySelectedOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listYourOrder
+            // lstOrders
             // 
-            this.listYourOrder.FormattingEnabled = true;
-            this.listYourOrder.Location = new System.Drawing.Point(38, 78);
-            this.listYourOrder.Name = "listYourOrder";
-            this.listYourOrder.Size = new System.Drawing.Size(198, 290);
-            this.listYourOrder.TabIndex = 0;
-            this.listYourOrder.SelectedIndexChanged += new System.EventHandler(this.listYourOrder_SelectedIndexChanged);
+            this.lstOrders.FormattingEnabled = true;
+            this.lstOrders.Location = new System.Drawing.Point(38, 78);
+            this.lstOrders.Name = "lstOrders";
+            this.lstOrders.Size = new System.Drawing.Size(198, 290);
+            this.lstOrders.TabIndex = 0;
+            this.lstOrders.SelectedIndexChanged += new System.EventHandler(this.listYourOrder_SelectedIndexChanged);
             // 
             // txtYourTotal
             // 
@@ -69,15 +71,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Your Total:";
             // 
-            // label2
+            // lblOrderList
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Your Order";
+            this.lblOrderList.AutoSize = true;
+            this.lblOrderList.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderList.Location = new System.Drawing.Point(33, 33);
+            this.lblOrderList.Name = "lblOrderList";
+            this.lblOrderList.Size = new System.Drawing.Size(97, 25);
+            this.lblOrderList.TabIndex = 3;
+            this.lblOrderList.Text = "Order List";
             // 
             // btnPayOrder
             // 
@@ -160,11 +162,32 @@
             this.textTotalPaid.TabIndex = 15;
             this.textTotalPaid.TextChanged += new System.EventHandler(this.textTotalPaid_TextChanged);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(38, 386);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 16;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
+            // btnDisplaySelectedOrder
+            // 
+            this.btnDisplaySelectedOrder.AutoSize = true;
+            this.btnDisplaySelectedOrder.Location = new System.Drawing.Point(119, 386);
+            this.btnDisplaySelectedOrder.Name = "btnDisplaySelectedOrder";
+            this.btnDisplaySelectedOrder.Size = new System.Drawing.Size(125, 23);
+            this.btnDisplaySelectedOrder.TabIndex = 17;
+            this.btnDisplaySelectedOrder.Text = "Display Selected Order";
+            this.btnDisplaySelectedOrder.UseVisualStyleBackColor = true;
+            // 
             // Pay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 663);
+            this.ClientSize = new System.Drawing.Size(600, 596);
+            this.Controls.Add(this.btnDisplaySelectedOrder);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.textTotalPaid);
             this.Controls.Add(this.textBalance);
             this.Controls.Add(this.label6);
@@ -174,10 +197,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listOrderedItems);
             this.Controls.Add(this.btnPayOrder);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblOrderList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtYourTotal);
-            this.Controls.Add(this.listYourOrder);
+            this.Controls.Add(this.lstOrders);
             this.Name = "Pay";
             this.Text = "Pay";
             this.ResumeLayout(false);
@@ -187,10 +210,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listYourOrder;
+        private System.Windows.Forms.ListBox lstOrders;
         private System.Windows.Forms.TextBox txtYourTotal;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblOrderList;
         private System.Windows.Forms.Button btnPayOrder;
         private System.Windows.Forms.ListBox listOrderedItems;
         private System.Windows.Forms.Label label3;
@@ -200,5 +223,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBalance;
         private System.Windows.Forms.TextBox textTotalPaid;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnDisplaySelectedOrder;
     }
 }

@@ -48,9 +48,10 @@
             this.txtPartySize = new System.Windows.Forms.TextBox();
             this.lblCustomerPartyName = new System.Windows.Forms.Label();
             this.lblPartySize = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTableOccupiedHost = new System.Windows.Forms.Label();
+            this.lblTableOpenHost = new System.Windows.Forms.Label();
+            this.lblTableDirtyHost = new System.Windows.Forms.Label();
+            this.lblTableStatusHost = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTable1
@@ -264,39 +265,52 @@
             this.lblPartySize.TabIndex = 21;
             this.lblPartySize.Text = "Party Size";
             // 
-            // label1
+            // lblTableOccupiedHost
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LimeGreen;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(432, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 18);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "TABLE OCCUPIED";
+            this.lblTableOccupiedHost.AutoSize = true;
+            this.lblTableOccupiedHost.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblTableOccupiedHost.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableOccupiedHost.Location = new System.Drawing.Point(432, 136);
+            this.lblTableOccupiedHost.Name = "lblTableOccupiedHost";
+            this.lblTableOccupiedHost.Size = new System.Drawing.Size(95, 18);
+            this.lblTableOccupiedHost.TabIndex = 25;
+            this.lblTableOccupiedHost.Text = "OCCUPIED";
             // 
-            // label2
+            // lblTableOpenHost
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Yellow;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(432, 96);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 18);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "TABLE OPEN";
+            this.lblTableOpenHost.AutoSize = true;
+            this.lblTableOpenHost.BackColor = System.Drawing.Color.Yellow;
+            this.lblTableOpenHost.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableOpenHost.ForeColor = System.Drawing.Color.Black;
+            this.lblTableOpenHost.Location = new System.Drawing.Point(432, 96);
+            this.lblTableOpenHost.Name = "lblTableOpenHost";
+            this.lblTableOpenHost.Size = new System.Drawing.Size(54, 18);
+            this.lblTableOpenHost.TabIndex = 26;
+            this.lblTableOpenHost.Text = "OPEN";
             // 
-            // label3
+            // lblTableDirtyHost
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(432, 176);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 18);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "TABLE DIRTY";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblTableDirtyHost.AutoSize = true;
+            this.lblTableDirtyHost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblTableDirtyHost.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableDirtyHost.Location = new System.Drawing.Point(432, 176);
+            this.lblTableDirtyHost.Name = "lblTableDirtyHost";
+            this.lblTableDirtyHost.Size = new System.Drawing.Size(65, 18);
+            this.lblTableDirtyHost.TabIndex = 27;
+            this.lblTableDirtyHost.Text = "DIRTY";
+            this.lblTableDirtyHost.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // lblTableStatusHost
+            // 
+            this.lblTableStatusHost.AutoSize = true;
+            this.lblTableStatusHost.BackColor = System.Drawing.Color.Transparent;
+            this.lblTableStatusHost.Font = new System.Drawing.Font("Modern No. 20", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableStatusHost.ForeColor = System.Drawing.Color.White;
+            this.lblTableStatusHost.Location = new System.Drawing.Point(432, 56);
+            this.lblTableStatusHost.Name = "lblTableStatusHost";
+            this.lblTableStatusHost.Size = new System.Drawing.Size(119, 21);
+            this.lblTableStatusHost.TabIndex = 28;
+            this.lblTableStatusHost.Text = "Table Status";
             // 
             // HostForm
             // 
@@ -305,9 +319,10 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(602, 551);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTableStatusHost);
+            this.Controls.Add(this.lblTableDirtyHost);
+            this.Controls.Add(this.lblTableOpenHost);
+            this.Controls.Add(this.lblTableOccupiedHost);
             this.Controls.Add(this.lblPartySize);
             this.Controls.Add(this.lblCustomerPartyName);
             this.Controls.Add(this.txtPartySize);
@@ -358,8 +373,9 @@
         private System.Windows.Forms.TextBox txtPartySize;
         private System.Windows.Forms.Label lblCustomerPartyName;
         private System.Windows.Forms.Label lblPartySize;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTableOccupiedHost;
+        private System.Windows.Forms.Label lblTableOpenHost;
+        private System.Windows.Forms.Label lblTableDirtyHost;
+        private System.Windows.Forms.Label lblTableStatusHost;
     }
 }
