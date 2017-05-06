@@ -41,12 +41,15 @@
             this.btnCreateOrder = new System.Windows.Forms.Button();
             this.btnCheckReadyOrders = new System.Windows.Forms.Button();
             this.btnOrderPayment = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTableOne
             // 
             this.btnTableOne.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableOne.Location = new System.Drawing.Point(27, 89);
+            this.btnTableOne.Location = new System.Drawing.Point(16, 40);
             this.btnTableOne.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableOne.Name = "btnTableOne";
             this.btnTableOne.Size = new System.Drawing.Size(102, 80);
@@ -58,7 +61,7 @@
             // btnTableThree
             // 
             this.btnTableThree.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableThree.Location = new System.Drawing.Point(27, 205);
+            this.btnTableThree.Location = new System.Drawing.Point(16, 152);
             this.btnTableThree.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableThree.Name = "btnTableThree";
             this.btnTableThree.Size = new System.Drawing.Size(102, 80);
@@ -70,7 +73,7 @@
             // btnTableTwo
             // 
             this.btnTableTwo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableTwo.Location = new System.Drawing.Point(312, 56);
+            this.btnTableTwo.Location = new System.Drawing.Point(280, 24);
             this.btnTableTwo.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableTwo.Name = "btnTableTwo";
             this.btnTableTwo.Size = new System.Drawing.Size(102, 80);
@@ -82,7 +85,7 @@
             // btnTableFour
             // 
             this.btnTableFour.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableFour.Location = new System.Drawing.Point(165, 205);
+            this.btnTableFour.Location = new System.Drawing.Point(144, 152);
             this.btnTableFour.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableFour.Name = "btnTableFour";
             this.btnTableFour.Size = new System.Drawing.Size(103, 80);
@@ -94,7 +97,7 @@
             // btnTableFive
             // 
             this.btnTableFive.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableFive.Location = new System.Drawing.Point(168, 88);
+            this.btnTableFive.Location = new System.Drawing.Point(144, 40);
             this.btnTableFive.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableFive.Name = "btnTableFive";
             this.btnTableFive.Size = new System.Drawing.Size(102, 80);
@@ -106,7 +109,7 @@
             // btnTableSix
             // 
             this.btnTableSix.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableSix.Location = new System.Drawing.Point(312, 152);
+            this.btnTableSix.Location = new System.Drawing.Point(280, 128);
             this.btnTableSix.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableSix.Name = "btnTableSix";
             this.btnTableSix.Size = new System.Drawing.Size(104, 80);
@@ -118,7 +121,7 @@
             // btnTableSeven
             // 
             this.btnTableSeven.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableSeven.Location = new System.Drawing.Point(312, 264);
+            this.btnTableSeven.Location = new System.Drawing.Point(280, 240);
             this.btnTableSeven.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableSeven.Name = "btnTableSeven";
             this.btnTableSeven.Size = new System.Drawing.Size(104, 80);
@@ -181,12 +184,49 @@
             this.btnOrderPayment.Text = "Order Payment";
             this.btnOrderPayment.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Yellow;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(432, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 18);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "TABLE OPEN";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LimeGreen;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(432, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 18);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "TABLE OCCUPIED";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Red;
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(432, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 18);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "TABLE DIRTY";
+            // 
             // WaiterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(599, 503);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOrderPayment);
             this.Controls.Add(this.btnCheckReadyOrders);
             this.Controls.Add(this.btnCreateOrder);
@@ -205,6 +245,7 @@
             this.Name = "WaiterForm";
             this.Text = "WaiterForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -222,5 +263,8 @@
         private System.Windows.Forms.Button btnCreateOrder;
         private System.Windows.Forms.Button btnCheckReadyOrders;
         private System.Windows.Forms.Button btnOrderPayment;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

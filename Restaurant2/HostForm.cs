@@ -184,5 +184,10 @@ namespace Restaurant2
                 MessageBox.Show("Please ensure all parties have a name and a whole number.", "Error");
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
