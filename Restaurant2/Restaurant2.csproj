@@ -122,12 +122,6 @@
     <Compile Include="WaiterMenu.Designer.cs">
       <DependentUpon>WaiterMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="WaiterOrderPayment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WaiterOrderPayment.Designer.cs">
-      <DependentUpon>WaiterOrderPayment.cs</DependentUpon>
-    </Compile>
     <Compile Include="WaiterOrderReady.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,9 +169,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WaiterMenu.resx">
       <DependentUpon>WaiterMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WaiterOrderPayment.resx">
-      <DependentUpon>WaiterOrderPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WaiterOrderReady.resx">
       <DependentUpon>WaiterOrderReady.cs</DependentUpon>
