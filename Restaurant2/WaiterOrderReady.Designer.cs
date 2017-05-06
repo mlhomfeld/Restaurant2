@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WaiterOrderReady));
             this.lblReadyOrders = new System.Windows.Forms.Label();
             this.lstReadyOrders = new System.Windows.Forms.ListBox();
             this.btnDeliverOrder = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             // 
             this.lblReadyOrders.AutoSize = true;
             this.lblReadyOrders.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReadyOrders.Location = new System.Drawing.Point(13, 13);
+            this.lblReadyOrders.Location = new System.Drawing.Point(13, 14);
             this.lblReadyOrders.Name = "lblReadyOrders";
             this.lblReadyOrders.Size = new System.Drawing.Size(113, 21);
             this.lblReadyOrders.TabIndex = 0;
@@ -47,18 +48,20 @@
             // 
             // lstReadyOrders
             // 
+            this.lstReadyOrders.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lstReadyOrders.FormattingEnabled = true;
-            this.lstReadyOrders.Location = new System.Drawing.Point(17, 59);
+            this.lstReadyOrders.ItemHeight = 14;
+            this.lstReadyOrders.Location = new System.Drawing.Point(17, 64);
             this.lstReadyOrders.Name = "lstReadyOrders";
-            this.lstReadyOrders.Size = new System.Drawing.Size(200, 316);
+            this.lstReadyOrders.Size = new System.Drawing.Size(200, 340);
             this.lstReadyOrders.TabIndex = 1;
             // 
             // btnDeliverOrder
             // 
             this.btnDeliverOrder.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeliverOrder.Location = new System.Drawing.Point(245, 173);
+            this.btnDeliverOrder.Location = new System.Drawing.Point(245, 340);
             this.btnDeliverOrder.Name = "btnDeliverOrder";
-            this.btnDeliverOrder.Size = new System.Drawing.Size(194, 56);
+            this.btnDeliverOrder.Size = new System.Drawing.Size(194, 60);
             this.btnDeliverOrder.TabIndex = 2;
             this.btnDeliverOrder.Text = "Deliver Order";
             this.btnDeliverOrder.UseVisualStyleBackColor = true;
@@ -67,9 +70,9 @@
             // btnReturn
             // 
             this.btnReturn.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.Location = new System.Drawing.Point(349, 377);
+            this.btnReturn.Location = new System.Drawing.Point(349, 407);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(90, 32);
+            this.btnReturn.Size = new System.Drawing.Size(90, 34);
             this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -77,9 +80,9 @@
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(245, 59);
+            this.btnRefresh.Location = new System.Drawing.Point(245, 64);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(194, 61);
+            this.btnRefresh.Size = new System.Drawing.Size(194, 66);
             this.btnRefresh.TabIndex = 4;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -87,14 +90,17 @@
             // 
             // WaiterOrderReady
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 421);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(472, 453);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnDeliverOrder);
             this.Controls.Add(this.lstReadyOrders);
             this.Controls.Add(this.lblReadyOrders);
+            this.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WaiterOrderReady";
             this.Text = "WaiterOrderReady";
             this.ResumeLayout(false);

@@ -204,6 +204,7 @@
             // 
             // lstCustomerQueue
             // 
+            this.lstCustomerQueue.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lstCustomerQueue.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstCustomerQueue.FormattingEnabled = true;
             this.lstCustomerQueue.ItemHeight = 15;

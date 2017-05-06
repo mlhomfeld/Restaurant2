@@ -78,6 +78,7 @@
             // 
             // lstPendingOrders
             // 
+            this.lstPendingOrders.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lstPendingOrders.FormattingEnabled = true;
             this.lstPendingOrders.ItemHeight = 14;
             this.lstPendingOrders.Location = new System.Drawing.Point(12, 46);
@@ -98,6 +99,7 @@
             // 
             // lstMenuItemsDisplay
             // 
+            this.lstMenuItemsDisplay.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lstMenuItemsDisplay.FormattingEnabled = true;
             this.lstMenuItemsDisplay.ItemHeight = 14;
             this.lstMenuItemsDisplay.Location = new System.Drawing.Point(213, 46);
