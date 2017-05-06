@@ -191,7 +191,7 @@ namespace Restaurant2
                 MessageBox.Show(errrr.Message);
             }
         }
-
+        // Retrieves Orders with a OrderStatus of Ready
         public List<int> RetrieveReadyOrders()
         {
             List<int> orderIDs = new List<int>();
@@ -250,7 +250,34 @@ namespace Restaurant2
             }
             return orderIDs;
         }
+        public void SetOrderToDelivered(int orderNumber)
+        {
+            try
+            {
+                //Opens connection to the database to update the status
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=Project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand updateToDeliverOrder = connection.CreateCommand())
+                {
+                    updateToDeliverOrder.CommandText = "update dbo.RestaurantOrder set OrderStatus = @OrderStatus where OrderID = @OrderID;";
+                    var orderParam = new SqlParameter("OrderStatus", SqlDbType.VarChar) { Value = "Delivered" };
+                    var idParam = new SqlParameter("OrderID", SqlDbType.Int) { Value = orderNumber };
+                    updateToDeliverOrder.Parameters.Add(orderParam);
+                    updateToDeliverOrder.Parameters.Add(idParam);
 
+                    updateToDeliverOrder.ExecuteNonQuery();
+                }
+                connection.Close();
+                MessageBox.Show("Order " + orderNumber + " has been delivered.");
+
+            }
+            catch (Exception err)
+            {
+                //Error box if connections fail
+                MessageBox.Show(err.Message);
+            }
+        }
         public void SetTableToDirty(int tableNumber)
         {
             // This method will change the status of the table in the database.

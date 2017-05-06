@@ -99,7 +99,8 @@ namespace Restaurant2
        //  The first is the password (something you know), second is challenge email (something you have).
        //  The random number will be emailed / sms'ed to the manager. After sending the random challenge, the 
        //  manager will be presented the SecureLogin form. The Manager's email will need to be maintained here
-       //  in the employee class, one of the many shortcomings. 
+       //  in the employee class, unless we decided to rebuild the table and include email addresses. Code
+       //  should also be commented out.  
 
         public void RandomChallenge(int employeeID)
         {
@@ -345,8 +346,7 @@ namespace Restaurant2
   
                 }
                 con.Close();
-
-            
+                            
             }
 
             catch (Exception err)

@@ -19,7 +19,8 @@ namespace Restaurant2
 
         private void btnDeliverOrder_Click(object sender, EventArgs e)
         {
-
+            Waiter wt = new Waiter();
+            wt.SetOrderToDelivered(int.Parse(lstReadyOrders.SelectedItem.ToString()));
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
