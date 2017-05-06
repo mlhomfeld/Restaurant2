@@ -38,11 +38,14 @@
             this.btnTableSeven = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnCreateOrder = new System.Windows.Forms.Button();
+            this.btnCheckReadyOrders = new System.Windows.Forms.Button();
+            this.btnOrderPayment = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTableOne
             // 
-            this.btnTableOne.Location = new System.Drawing.Point(27, 47);
+            this.btnTableOne.Location = new System.Drawing.Point(27, 89);
             this.btnTableOne.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableOne.Name = "btnTableOne";
             this.btnTableOne.Size = new System.Drawing.Size(102, 80);
@@ -53,10 +56,10 @@
             // 
             // btnTableThree
             // 
-            this.btnTableThree.Location = new System.Drawing.Point(27, 405);
+            this.btnTableThree.Location = new System.Drawing.Point(27, 205);
             this.btnTableThree.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableThree.Name = "btnTableThree";
-            this.btnTableThree.Size = new System.Drawing.Size(61, 36);
+            this.btnTableThree.Size = new System.Drawing.Size(102, 80);
             this.btnTableThree.TabIndex = 1;
             this.btnTableThree.Text = "Table 3";
             this.btnTableThree.UseVisualStyleBackColor = true;
@@ -64,10 +67,10 @@
             // 
             // btnTableTwo
             // 
-            this.btnTableTwo.Location = new System.Drawing.Point(27, 347);
+            this.btnTableTwo.Location = new System.Drawing.Point(166, 89);
             this.btnTableTwo.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableTwo.Name = "btnTableTwo";
-            this.btnTableTwo.Size = new System.Drawing.Size(63, 36);
+            this.btnTableTwo.Size = new System.Drawing.Size(102, 80);
             this.btnTableTwo.TabIndex = 2;
             this.btnTableTwo.Text = "Table 2";
             this.btnTableTwo.UseVisualStyleBackColor = true;
@@ -75,10 +78,10 @@
             // 
             // btnTableFour
             // 
-            this.btnTableFour.Location = new System.Drawing.Point(507, 295);
+            this.btnTableFour.Location = new System.Drawing.Point(165, 205);
             this.btnTableFour.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableFour.Name = "btnTableFour";
-            this.btnTableFour.Size = new System.Drawing.Size(61, 38);
+            this.btnTableFour.Size = new System.Drawing.Size(103, 80);
             this.btnTableFour.TabIndex = 3;
             this.btnTableFour.Text = "Table 4";
             this.btnTableFour.UseVisualStyleBackColor = true;
@@ -86,10 +89,10 @@
             // 
             // btnTableFive
             // 
-            this.btnTableFive.Location = new System.Drawing.Point(506, 347);
+            this.btnTableFive.Location = new System.Drawing.Point(322, 64);
             this.btnTableFive.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableFive.Name = "btnTableFive";
-            this.btnTableFive.Size = new System.Drawing.Size(62, 36);
+            this.btnTableFive.Size = new System.Drawing.Size(87, 60);
             this.btnTableFive.TabIndex = 4;
             this.btnTableFive.Text = "Table 5";
             this.btnTableFive.UseVisualStyleBackColor = true;
@@ -97,10 +100,10 @@
             // 
             // btnTableSix
             // 
-            this.btnTableSix.Location = new System.Drawing.Point(507, 405);
+            this.btnTableSix.Location = new System.Drawing.Point(322, 156);
             this.btnTableSix.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableSix.Name = "btnTableSix";
-            this.btnTableSix.Size = new System.Drawing.Size(62, 36);
+            this.btnTableSix.Size = new System.Drawing.Size(87, 59);
             this.btnTableSix.TabIndex = 5;
             this.btnTableSix.Text = "Table 6";
             this.btnTableSix.UseVisualStyleBackColor = true;
@@ -108,10 +111,10 @@
             // 
             // btnTableSeven
             // 
-            this.btnTableSeven.Location = new System.Drawing.Point(210, 395);
+            this.btnTableSeven.Location = new System.Drawing.Point(322, 250);
             this.btnTableSeven.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableSeven.Name = "btnTableSeven";
-            this.btnTableSeven.Size = new System.Drawing.Size(167, 46);
+            this.btnTableSeven.Size = new System.Drawing.Size(87, 60);
             this.btnTableSeven.TabIndex = 6;
             this.btnTableSeven.Text = "Table 7";
             this.btnTableSeven.UseVisualStyleBackColor = true;
@@ -119,10 +122,10 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(210, 455);
+            this.btnRefresh.Location = new System.Drawing.Point(471, 64);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(80, 37);
+            this.btnRefresh.Size = new System.Drawing.Size(80, 49);
             this.btnRefresh.TabIndex = 7;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -130,14 +133,41 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(303, 455);
+            this.btnLogout.Location = new System.Drawing.Point(471, 455);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(74, 37);
+            this.btnLogout.Size = new System.Drawing.Size(96, 37);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnCreateOrder
+            // 
+            this.btnCreateOrder.Location = new System.Drawing.Point(27, 454);
+            this.btnCreateOrder.Name = "btnCreateOrder";
+            this.btnCreateOrder.Size = new System.Drawing.Size(102, 37);
+            this.btnCreateOrder.TabIndex = 9;
+            this.btnCreateOrder.Text = "Create Order";
+            this.btnCreateOrder.UseVisualStyleBackColor = true;
+            // 
+            // btnCheckReadyOrders
+            // 
+            this.btnCheckReadyOrders.Location = new System.Drawing.Point(165, 454);
+            this.btnCheckReadyOrders.Name = "btnCheckReadyOrders";
+            this.btnCheckReadyOrders.Size = new System.Drawing.Size(103, 38);
+            this.btnCheckReadyOrders.TabIndex = 10;
+            this.btnCheckReadyOrders.Text = "Ready Order";
+            this.btnCheckReadyOrders.UseVisualStyleBackColor = true;
+            // 
+            // btnOrderPayment
+            // 
+            this.btnOrderPayment.Location = new System.Drawing.Point(309, 455);
+            this.btnOrderPayment.Name = "btnOrderPayment";
+            this.btnOrderPayment.Size = new System.Drawing.Size(100, 38);
+            this.btnOrderPayment.TabIndex = 11;
+            this.btnOrderPayment.Text = "Order Payment";
+            this.btnOrderPayment.UseVisualStyleBackColor = true;
             // 
             // WaiterForm
             // 
@@ -145,6 +175,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(599, 503);
+            this.Controls.Add(this.btnOrderPayment);
+            this.Controls.Add(this.btnCheckReadyOrders);
+            this.Controls.Add(this.btnCreateOrder);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnTableSeven);
@@ -174,5 +207,8 @@
         private System.Windows.Forms.Button btnTableSeven;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnCreateOrder;
+        private System.Windows.Forms.Button btnCheckReadyOrders;
+        private System.Windows.Forms.Button btnOrderPayment;
     }
 }
