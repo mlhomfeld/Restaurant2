@@ -38,7 +38,7 @@ namespace Restaurant2
                         {
                             while (reader.Read())
                             {
-                                orderIds.Add(reader.GetInt32(1));
+                                orderIds.Add(reader.GetInt32(0));
                             }
                         }
                         
