@@ -161,12 +161,17 @@ namespace Restaurant2
             Employee emp = new Employee();
             emp.Timestamp(3, "Clean Table");
 
-    }
+        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             Employee emp = new Employee();
             emp.Timestamp(3, "clean");
+        }
+
+        private void lblEmpID_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
