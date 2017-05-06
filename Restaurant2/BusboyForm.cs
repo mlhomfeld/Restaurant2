@@ -163,15 +163,5 @@ namespace Restaurant2
 
         //}
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Employee emp = new Employee();
-            emp.Timestamp(Convert.ToInt32(txtEmpID.Text), "Cleaned Table");
-        }
-
-        private void lblEmpID_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
