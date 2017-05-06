@@ -47,8 +47,7 @@ namespace Restaurant2
             {
                 //do something else if choice was No
             }
-        }
-        
+        }        
 
     }
 }

@@ -62,7 +62,6 @@
       <DependentUpon>CookForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
-    <Compile Include="Database.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="HostForm.cs">
       <SubType>Form</SubType>
