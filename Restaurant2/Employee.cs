@@ -16,14 +16,7 @@ namespace Restaurant2
     // Making a comment
     public class Employee
     {
-
-      //  bool tryAgain = true;
-
-        //public void TimeClock()
-        //{
-         
-        //}
-
+        
            // This will receive input (employeeID and password) from LoginForm and pass it into the below SQL statement
            public void LogIn(int employeeID, string password)
         {
