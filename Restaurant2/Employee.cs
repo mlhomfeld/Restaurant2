@@ -304,6 +304,10 @@ namespace Restaurant2
             return status;
         }
 
+
+        // This will be called during login and will create a text file with the employees ID so it can be referenced
+        // later and used to insert the employeeID into the timestamp field of the DB record... it's ugly but 
+        // it works. 
         public void SessionID(int employeeID)
         {
                         

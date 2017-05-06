@@ -36,6 +36,7 @@ namespace Restaurant2
                         connection.Close();
                     }
 
+                    // Beginning timestamp entry code. 
                     string path = "Busboy.txt";
                     string employeeID;
                     try
@@ -56,6 +57,8 @@ namespace Restaurant2
                         MessageBox.Show("Cannot read the session ID file at  " + path);
 
                     }
+
+                    // End timestamp entry code
                       
 
                     MessageBox.Show("Table " + Row + " has been set to Open");

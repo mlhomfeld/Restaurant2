@@ -103,6 +103,8 @@ namespace Restaurant2
 
                     }
 
+                    // end timestamp entry code. 
+
                     //}
                 }
                 connection.Close();
@@ -167,6 +169,8 @@ namespace Restaurant2
                 MessageBox.Show("Cannot read the session ID file at  " + path);
 
             }
+
+            // end timestamp entry code.. 
 
         }
     }

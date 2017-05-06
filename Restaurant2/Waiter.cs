@@ -41,7 +41,7 @@ namespace Restaurant2
 
                 }
 
-                // end timestamp entry
+                // end timestamp entry code
             }
             else
             {
@@ -127,7 +127,7 @@ namespace Restaurant2
 
             }
 
-            // end timestamp entry
+            // end timestamp entry code
 
             //if(int.TryParse(rawNewID, out newID))
             //{
