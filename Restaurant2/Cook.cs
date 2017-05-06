@@ -140,6 +140,10 @@ namespace Restaurant2
                     MessageBox.Show(err.Message);
                 }
 
+
+            // Enter the timestamp that the order was set to ready. 
+
+
             string path = "Cook.txt";
             string employeeID;
             try
