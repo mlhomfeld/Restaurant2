@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Data;
 using System.Net.Mail;
+using System.IO;
 
 
 namespace Restaurant2
@@ -304,6 +305,55 @@ namespace Restaurant2
                 MessageBox.Show(err.Message);
             }
             return status;
+        }
+
+        public void SessionID(int employeeID)
+        {
+                        
+            bool appendToContent = false;
+
+            try
+            {
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                con.Open();
+
+                using (SqlCommand readEmployeeRecords = con.CreateCommand())
+                {
+
+                    readEmployeeRecords.CommandText = "select * from dbo.Employee where EmployeeID = "+ employeeID+";";
+                    var empID = new SqlParameter("EmployeeID", employeeID);
+                    readEmployeeRecords.Parameters.Add(empID);
+
+                    using (SqlDataReader reader = readEmployeeRecords.ExecuteReader())
+                    {
+                        string role = "";
+                        while (reader.Read())
+                        {
+                            role = reader.GetString(5);
+                        }
+
+                        string path = role + ".txt";
+
+                        using (StreamWriter writer = new StreamWriter(path, appendToContent))
+                        {
+                            writer.WriteLine(employeeID);
+                        }
+                    }
+
+  
+                }
+                con.Close();
+
+            
+            }
+
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+
         }
     }
 }
