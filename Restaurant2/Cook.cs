@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Windows.Forms;
+using System.IO;
 
 
 namespace Restaurant2
@@ -41,7 +42,8 @@ namespace Restaurant2
                                 orderIds.Add(reader.GetInt32(0));
                             }
                         }
-                        
+
+
                     //}
                 }
                 connection.Close();
@@ -76,6 +78,26 @@ namespace Restaurant2
                         {
                             ordercontent.Add(reader.GetInt32(2));
                         }
+                    }
+                    string path = "Cook.txt";
+                    string employeeID;
+                    try
+                    {
+                        using (StreamReader reader = new StreamReader(path))
+                        {
+                            while ((employeeID = reader.ReadLine()) != null)
+
+                            {
+                                employeeID.ToString();
+                                Employee emp = new Employee();
+                                emp.Timestamp(Convert.ToInt32(employeeID), "Prepping Order");
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Cannot read the session ID file at  " + path);
+
                     }
 
                     //}
@@ -117,7 +139,28 @@ namespace Restaurant2
                     //Error box if connections fail
                     MessageBox.Show(err.Message);
                 }
-           
+
+            string path = "Cook.txt";
+            string employeeID;
+            try
+            {
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    while ((employeeID = reader.ReadLine()) != null)
+
+                    {
+                        employeeID.ToString();
+                        Employee emp = new Employee();
+                        emp.Timestamp(Convert.ToInt32(employeeID), "Order Set to Ready");
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Cannot read the session ID file at  " + path);
+
+            }
+
         }
     }
 }
