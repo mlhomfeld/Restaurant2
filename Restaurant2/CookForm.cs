@@ -53,10 +53,13 @@ namespace Restaurant2
 
         private void btnrefresh_Click(object sender, EventArgs e)
         {
+            lstPendingOrders.Items.Clear();
             Cook cook = new Cook();
-            List<int> orderIDs = new List<int>();
-            
-           
+            List<int> orderIDs = cook.ReceiveOrders();
+            for(int i = 0; i < orderIDs.Count; i++)
+            {
+                lstPendingOrders.Items.Add(orderIDs[i].ToString());
+            }           
         }
     }
 }
