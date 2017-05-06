@@ -41,6 +41,7 @@
             this.lblTableOpenBusboy = new System.Windows.Forms.Label();
             this.lblTableOccupiedBusboy = new System.Windows.Forms.Label();
             this.lblTableDirtyBusboy = new System.Windows.Forms.Label();
+            this.lblTableStatusBusboy = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTable1
@@ -150,9 +151,9 @@
             this.lblTableOpenBusboy.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOpenBusboy.Location = new System.Drawing.Point(440, 56);
             this.lblTableOpenBusboy.Name = "lblTableOpenBusboy";
-            this.lblTableOpenBusboy.Size = new System.Drawing.Size(119, 18);
+            this.lblTableOpenBusboy.Size = new System.Drawing.Size(54, 18);
             this.lblTableOpenBusboy.TabIndex = 9;
-            this.lblTableOpenBusboy.Text = "TABLE OPEN";
+            this.lblTableOpenBusboy.Text = "OPEN";
             // 
             // lblTableOccupiedBusboy
             // 
@@ -161,9 +162,9 @@
             this.lblTableOccupiedBusboy.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOccupiedBusboy.Location = new System.Drawing.Point(440, 96);
             this.lblTableOccupiedBusboy.Name = "lblTableOccupiedBusboy";
-            this.lblTableOccupiedBusboy.Size = new System.Drawing.Size(160, 18);
+            this.lblTableOccupiedBusboy.Size = new System.Drawing.Size(95, 18);
             this.lblTableOccupiedBusboy.TabIndex = 10;
-            this.lblTableOccupiedBusboy.Text = "TABLE OCCUPIED";
+            this.lblTableOccupiedBusboy.Text = "OCCUPIED";
             // 
             // lblTableDirtyBusboy
             // 
@@ -172,9 +173,21 @@
             this.lblTableDirtyBusboy.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableDirtyBusboy.Location = new System.Drawing.Point(440, 136);
             this.lblTableDirtyBusboy.Name = "lblTableDirtyBusboy";
-            this.lblTableDirtyBusboy.Size = new System.Drawing.Size(130, 18);
+            this.lblTableDirtyBusboy.Size = new System.Drawing.Size(65, 18);
             this.lblTableDirtyBusboy.TabIndex = 11;
-            this.lblTableDirtyBusboy.Text = "TABLE DIRTY";
+            this.lblTableDirtyBusboy.Text = "DIRTY";
+            // 
+            // lblTableStatusBusboy
+            // 
+            this.lblTableStatusBusboy.AutoSize = true;
+            this.lblTableStatusBusboy.BackColor = System.Drawing.Color.Transparent;
+            this.lblTableStatusBusboy.Font = new System.Drawing.Font("Modern No. 20", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableStatusBusboy.ForeColor = System.Drawing.Color.White;
+            this.lblTableStatusBusboy.Location = new System.Drawing.Point(440, 16);
+            this.lblTableStatusBusboy.Name = "lblTableStatusBusboy";
+            this.lblTableStatusBusboy.Size = new System.Drawing.Size(119, 21);
+            this.lblTableStatusBusboy.TabIndex = 12;
+            this.lblTableStatusBusboy.Text = "Table Status";
             // 
             // BusboyForm
             // 
@@ -182,6 +195,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(599, 517);
+            this.Controls.Add(this.lblTableStatusBusboy);
             this.Controls.Add(this.lblTableDirtyBusboy);
             this.Controls.Add(this.lblTableOccupiedBusboy);
             this.Controls.Add(this.lblTableOpenBusboy);
@@ -218,5 +232,6 @@
         private System.Windows.Forms.Label lblTableOpenBusboy;
         private System.Windows.Forms.Label lblTableOccupiedBusboy;
         private System.Windows.Forms.Label lblTableDirtyBusboy;
+        private System.Windows.Forms.Label lblTableStatusBusboy;
     }
 }
