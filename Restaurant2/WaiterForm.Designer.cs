@@ -44,7 +44,6 @@
             this.lblTableOpenWaiter = new System.Windows.Forms.Label();
             this.lblTableOccupiedWaiter = new System.Windows.Forms.Label();
             this.lblTableDirtyWaiter = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblTableStatusWaiter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -222,15 +221,6 @@
             this.lblTableDirtyWaiter.Text = "DIRTY";
             this.lblTableDirtyWaiter.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 14);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "label1";
-            // 
             // lblTableStatusWaiter
             // 
             this.lblTableStatusWaiter.AutoSize = true;
@@ -250,7 +240,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(599, 503);
             this.Controls.Add(this.lblTableStatusWaiter);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTableDirtyWaiter);
             this.Controls.Add(this.lblTableOccupiedWaiter);
             this.Controls.Add(this.lblTableOpenWaiter);
@@ -293,7 +282,6 @@
         private System.Windows.Forms.Label lblTableOpenWaiter;
         private System.Windows.Forms.Label lblTableOccupiedWaiter;
         private System.Windows.Forms.Label lblTableDirtyWaiter;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTableStatusWaiter;
     }
 }
