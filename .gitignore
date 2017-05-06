@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/Restaurant2/WaiterOrderPayment.resx
+/Restaurant2/WaiterOrderPayment.Designer.cs
+/Restaurant2/WaiterOrderPayment.cs
