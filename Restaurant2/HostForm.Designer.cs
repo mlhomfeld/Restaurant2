@@ -51,6 +51,7 @@
             this.lblTableOccupiedHost = new System.Windows.Forms.Label();
             this.lblTableOpenHost = new System.Windows.Forms.Label();
             this.lblTableDirtyHost = new System.Windows.Forms.Label();
+            this.lblTableStatusHost = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTable1
@@ -271,20 +272,21 @@
             this.lblTableOccupiedHost.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOccupiedHost.Location = new System.Drawing.Point(432, 136);
             this.lblTableOccupiedHost.Name = "lblTableOccupiedHost";
-            this.lblTableOccupiedHost.Size = new System.Drawing.Size(160, 18);
+            this.lblTableOccupiedHost.Size = new System.Drawing.Size(95, 18);
             this.lblTableOccupiedHost.TabIndex = 25;
-            this.lblTableOccupiedHost.Text = "TABLE OCCUPIED";
+            this.lblTableOccupiedHost.Text = "OCCUPIED";
             // 
             // lblTableOpenHost
             // 
             this.lblTableOpenHost.AutoSize = true;
             this.lblTableOpenHost.BackColor = System.Drawing.Color.Yellow;
             this.lblTableOpenHost.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableOpenHost.ForeColor = System.Drawing.Color.Black;
             this.lblTableOpenHost.Location = new System.Drawing.Point(432, 96);
             this.lblTableOpenHost.Name = "lblTableOpenHost";
-            this.lblTableOpenHost.Size = new System.Drawing.Size(119, 18);
+            this.lblTableOpenHost.Size = new System.Drawing.Size(54, 18);
             this.lblTableOpenHost.TabIndex = 26;
-            this.lblTableOpenHost.Text = "TABLE OPEN";
+            this.lblTableOpenHost.Text = "OPEN";
             // 
             // lblTableDirtyHost
             // 
@@ -293,10 +295,22 @@
             this.lblTableDirtyHost.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableDirtyHost.Location = new System.Drawing.Point(432, 176);
             this.lblTableDirtyHost.Name = "lblTableDirtyHost";
-            this.lblTableDirtyHost.Size = new System.Drawing.Size(130, 18);
+            this.lblTableDirtyHost.Size = new System.Drawing.Size(65, 18);
             this.lblTableDirtyHost.TabIndex = 27;
-            this.lblTableDirtyHost.Text = "TABLE DIRTY";
+            this.lblTableDirtyHost.Text = "DIRTY";
             this.lblTableDirtyHost.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // lblTableStatusHost
+            // 
+            this.lblTableStatusHost.AutoSize = true;
+            this.lblTableStatusHost.BackColor = System.Drawing.Color.Transparent;
+            this.lblTableStatusHost.Font = new System.Drawing.Font("Modern No. 20", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableStatusHost.ForeColor = System.Drawing.Color.White;
+            this.lblTableStatusHost.Location = new System.Drawing.Point(432, 56);
+            this.lblTableStatusHost.Name = "lblTableStatusHost";
+            this.lblTableStatusHost.Size = new System.Drawing.Size(119, 21);
+            this.lblTableStatusHost.TabIndex = 28;
+            this.lblTableStatusHost.Text = "Table Status";
             // 
             // HostForm
             // 
@@ -305,6 +319,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(602, 551);
+            this.Controls.Add(this.lblTableStatusHost);
             this.Controls.Add(this.lblTableDirtyHost);
             this.Controls.Add(this.lblTableOpenHost);
             this.Controls.Add(this.lblTableOccupiedHost);
@@ -361,5 +376,6 @@
         private System.Windows.Forms.Label lblTableOccupiedHost;
         private System.Windows.Forms.Label lblTableOpenHost;
         private System.Windows.Forms.Label lblTableDirtyHost;
+        private System.Windows.Forms.Label lblTableStatusHost;
     }
 }
