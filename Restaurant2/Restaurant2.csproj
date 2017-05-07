@@ -62,11 +62,6 @@
       <DependentUpon>CookForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="HostForm.cs">
       <SubType>Form</SubType>
@@ -192,17 +187,6 @@
     <EmbeddedResource Include="WaiterOrderReady.resx">
       <DependentUpon>WaiterOrderReady.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Project2.xsc">
       <DependentUpon>Project2.xsd</DependentUpon>
     </None>
