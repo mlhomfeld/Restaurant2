@@ -140,6 +140,8 @@ namespace Restaurant2
             return newID;
 
         }
+        // Places appropriate Order IDs and MenuItemIDs into the Purchase table to
+        // help determine which orders had which items
         private void PlaceOrderPurchasesInPurchaseTable(List<int> menuItemIDs, int createdOrderID)
         {
             try
@@ -170,6 +172,8 @@ namespace Restaurant2
                 MessageBox.Show(err.Message);
             }
         }
+        // This method grabs menu item prices from dbo.MenuItem, adds them together and places
+        // the total into the appropriate order record's total in dbo.Order
         private void AddMenuPricesToOrderTotal(List<int> menuItemIDs, int orderID)
         {
             decimal total = 0M;
@@ -241,45 +245,19 @@ namespace Restaurant2
                 MessageBox.Show(errrr.Message);
             }
         }
-        // Retrieves Orders with a OrderStatus of Ready
+        // Retrieves Orders with an OrderStatus of Ready and returns the orderIDs in a List
         public List<int> RetrieveReadyOrders()
         {
             List<int> orderIDs = new List<int>();
             try
             {
-                //SqlConnection connection = new SqlConnection();
-                ////Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
-                //connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
-                //connection.Open();
-                //using (SqlCommand selectReadyOrders = connection.CreateCommand())
-                //{
-                //    selectReadyOrders.CommandText = "select * from dbo.RestaurantOrder where OrderStatus = @OrderStatus;";
-                //    var orderIDParam = new SqlParameter("OrderStatus", "Ready");
-                //    //var fnameParam = new SqlParameter("FirstName", SqlDbType.VarChar) { Value = "Dewayne" };
-                //    selectReadyOrders.Parameters.Add(orderIDParam);
-
-                //    using (SqlDataReader reader = selectReadyOrders.ExecuteReader())
-                //    {
-                //        string rec = "";
-                //        while (reader.Read())
-                //        {
-                //            rec = reader.GetString(3) + " earned by ";
-                //            rec += reader.GetString(1) + " ";
-                //            rec += reader.GetString(2);
-                //            Console.WriteLine(rec);
-                //        }
-                //    }
-                //}
                 SqlConnection connection = new SqlConnection();
                 connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 connection.Open();
                 using (SqlCommand readOrderStatus = connection.CreateCommand())
                 {
-                    //for (int i = 1; i < 8; i++)
-                    //{
                     readOrderStatus.CommandText = "select * from dbo.RestaurantOrder where OrderStatus = @OrderStatus;";
                     var orderStatusParam = new SqlParameter("OrderStatus", "Ready");
-                    //var fnameParam = new SqlParameter("TableID", SqlDbType.VarChar) { Value = i };
                     readOrderStatus.Parameters.Add(orderStatusParam);
 
                     using (SqlDataReader reader = readOrderStatus.ExecuteReader())
@@ -289,8 +267,6 @@ namespace Restaurant2
                             orderIDs.Add(reader.GetInt32(0));
                         }
                     }
-
-                    //}
                 }
                 connection.Close();
             }
@@ -300,11 +276,42 @@ namespace Restaurant2
             }
             return orderIDs;
         }
+        // Retrieves Orders with an OrderStatus of Delivered and returns the orderIDS in a List
+        public List<int> RetrieveDeliveredOrders()
+        {
+            List<int> orderIDs = new List<int>();
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand readOrderStatus = connection.CreateCommand())
+                {
+                    readOrderStatus.CommandText = "select * from dbo.RestaurantOrder where OrderStatus = @OrderStatus;";
+                    var orderStatusParam = new SqlParameter("OrderStatus", "Delivered");
+                    readOrderStatus.Parameters.Add(orderStatusParam);
+
+                    using (SqlDataReader reader = readOrderStatus.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            orderIDs.Add(reader.GetInt32(0));
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            return orderIDs;
+        }
+        // Updates the order record's OrderStatus
         public void SetOrderToDelivered(int orderNumber)
         {
             try
             {
-                //Opens connection to the database to update the status
                 SqlConnection connection = new SqlConnection();
                 connection.ConnectionString = "Server=cis1.actx.edu;Database=Project2;User Id=db2;Password = db20;";
                 connection.Open();

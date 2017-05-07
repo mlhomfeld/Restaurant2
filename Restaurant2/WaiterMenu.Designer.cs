@@ -140,6 +140,7 @@
             // 
             // lstOrder
             // 
+            this.lstOrder.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lstOrder.FormattingEnabled = true;
             this.lstOrder.ItemHeight = 15;
             this.lstOrder.Location = new System.Drawing.Point(13, 64);

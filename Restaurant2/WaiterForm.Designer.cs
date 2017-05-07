@@ -44,7 +44,6 @@
             this.lblTableOpenWaiter = new System.Windows.Forms.Label();
             this.lblTableOccupiedWaiter = new System.Windows.Forms.Label();
             this.lblTableDirtyWaiter = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblTableStatusWaiter = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -75,7 +74,7 @@
             // btnTableTwo
             // 
             this.btnTableTwo.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableTwo.Location = new System.Drawing.Point(280, 24);
+            this.btnTableTwo.Location = new System.Drawing.Point(144, 40);
             this.btnTableTwo.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableTwo.Name = "btnTableTwo";
             this.btnTableTwo.Size = new System.Drawing.Size(102, 80);
@@ -99,7 +98,7 @@
             // btnTableFive
             // 
             this.btnTableFive.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTableFive.Location = new System.Drawing.Point(144, 40);
+            this.btnTableFive.Location = new System.Drawing.Point(280, 21);
             this.btnTableFive.Margin = new System.Windows.Forms.Padding(2);
             this.btnTableFive.Name = "btnTableFive";
             this.btnTableFive.Size = new System.Drawing.Size(102, 80);
@@ -174,7 +173,7 @@
             this.btnCheckReadyOrders.Name = "btnCheckReadyOrders";
             this.btnCheckReadyOrders.Size = new System.Drawing.Size(103, 38);
             this.btnCheckReadyOrders.TabIndex = 10;
-            this.btnCheckReadyOrders.Text = "Ready Order";
+            this.btnCheckReadyOrders.Text = "Ready Orders";
             this.btnCheckReadyOrders.UseVisualStyleBackColor = true;
             // 
             // btnOrderPayment
@@ -190,7 +189,7 @@
             // lblTableOpenWaiter
             // 
             this.lblTableOpenWaiter.AutoSize = true;
-            this.lblTableOpenWaiter.BackColor = System.Drawing.Color.Yellow;
+            this.lblTableOpenWaiter.BackColor = System.Drawing.Color.LimeGreen;
             this.lblTableOpenWaiter.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOpenWaiter.Location = new System.Drawing.Point(432, 72);
             this.lblTableOpenWaiter.Name = "lblTableOpenWaiter";
@@ -201,7 +200,7 @@
             // lblTableOccupiedWaiter
             // 
             this.lblTableOccupiedWaiter.AutoSize = true;
-            this.lblTableOccupiedWaiter.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblTableOccupiedWaiter.BackColor = System.Drawing.Color.Yellow;
             this.lblTableOccupiedWaiter.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOccupiedWaiter.Location = new System.Drawing.Point(432, 112);
             this.lblTableOccupiedWaiter.Name = "lblTableOccupiedWaiter";
@@ -222,15 +221,6 @@
             this.lblTableDirtyWaiter.Text = "DIRTY";
             this.lblTableDirtyWaiter.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 14);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "label1";
-            // 
             // lblTableStatusWaiter
             // 
             this.lblTableStatusWaiter.AutoSize = true;
@@ -250,7 +240,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(599, 503);
             this.Controls.Add(this.lblTableStatusWaiter);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTableDirtyWaiter);
             this.Controls.Add(this.lblTableOccupiedWaiter);
             this.Controls.Add(this.lblTableOpenWaiter);
@@ -293,7 +282,6 @@
         private System.Windows.Forms.Label lblTableOpenWaiter;
         private System.Windows.Forms.Label lblTableOccupiedWaiter;
         private System.Windows.Forms.Label lblTableDirtyWaiter;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTableStatusWaiter;
     }
 }

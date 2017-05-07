@@ -139,7 +139,39 @@ namespace Restaurant2
 
         public void CheckInventory()
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                //Server = myServerAddress; Database = myDataBase; User Id = myUsername; Password = myPassword;
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+
+
+                Console.WriteLine("---SQL SELECT---");
+                using (SqlCommand readAllProfessorRecords = connection.CreateCommand())
+                {
+                    readAllProfessorRecords.CommandText = "select * from dbo.Professor where FirstName = @FirstName;";
+                    var fnameParam = new SqlParameter("FirstName", "Dewayne");
+                    //var fnameParam = new SqlParameter("FirstName", SqlDbType.VarChar) { Value = "Dewayne" };
+                    readAllProfessorRecords.Parameters.Add(fnameParam);
+
+                    using (SqlDataReader reader = readAllProfessorRecords.ExecuteReader())
+                    {
+                        string rec = "";
+                        while (reader.Read())
+                        {
+                            rec = reader.GetString(3) + " earned by ";
+                            rec += reader.GetString(1) + " ";
+                            rec += reader.GetString(2);
+                            Console.WriteLine(rec);
+                        }
+                    }
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
     }
 }

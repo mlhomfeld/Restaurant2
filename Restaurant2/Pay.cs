@@ -22,33 +22,24 @@ namespace Restaurant2
         {
 
         }
-
-        private void listYourOrder_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtYourTotal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listOrderedItems_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBalance_TextChanged(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            lstOrders.Items.Clear();
+            Waiter wt = new Waiter();
+            List<int> orderIDs = wt.RetrieveDeliveredOrders();
+            for (int i = 0; i < orderIDs.Count; i++)
+            {
+                lstOrders.Items.Add(orderIDs[i].ToString());
+            }
+            
         }
 
-        private void textTotalPaid_TextChanged(object sender, EventArgs e)
+        private void btnDisplaySelectedOrder_Click(object sender, EventArgs e)
         {
 
         }

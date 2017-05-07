@@ -47,5 +47,12 @@ namespace Restaurant2
             Manager man = new Manager();
             man.RemoveEmployee(txtRmvEmployee.Text);
         }
+
+        private void btnCheckInventory_Click(object sender, EventArgs e)
+        {
+            InventoryForm checkInv = new InventoryForm();
+            this.Hide();
+            checkInv.Show();
+        }
     }
 }

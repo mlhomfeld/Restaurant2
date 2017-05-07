@@ -147,7 +147,7 @@
             // lblTableOpenBusboy
             // 
             this.lblTableOpenBusboy.AutoSize = true;
-            this.lblTableOpenBusboy.BackColor = System.Drawing.Color.Yellow;
+            this.lblTableOpenBusboy.BackColor = System.Drawing.Color.LimeGreen;
             this.lblTableOpenBusboy.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOpenBusboy.Location = new System.Drawing.Point(440, 56);
             this.lblTableOpenBusboy.Name = "lblTableOpenBusboy";
@@ -158,7 +158,7 @@
             // lblTableOccupiedBusboy
             // 
             this.lblTableOccupiedBusboy.AutoSize = true;
-            this.lblTableOccupiedBusboy.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblTableOccupiedBusboy.BackColor = System.Drawing.Color.Yellow;
             this.lblTableOccupiedBusboy.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOccupiedBusboy.Location = new System.Drawing.Point(440, 96);
             this.lblTableOccupiedBusboy.Name = "lblTableOccupiedBusboy";
