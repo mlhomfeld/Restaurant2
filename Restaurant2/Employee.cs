@@ -43,34 +43,39 @@ namespace Restaurant2
                     using (SqlDataReader reader = readEmployeeRecords.ExecuteReader())
                     {
                         string rec = "";
+                        string status = "";
                         while (reader.Read())
                         {
                             rec = reader.GetString(5);
+                            status = reader.GetString(6);
                         }
 
-                        switch(rec)
+                        if (status == "Active")
                         {
-                            case "Busboy":
-                                BusboyForm bus = new BusboyForm();
-                                bus.Show();
-                                break;
-                            case "Waiter":
-                                WaiterForm wait = new WaiterForm();
-                                wait.Show();
-                                break;
-                            case "Manager":
-                                ManagerForm man = new ManagerForm();
-                                man.Show();
-                                //RandomChallenge(employeeID);
-                                break;
-                            case "Host":
-                                HostForm host = new HostForm();
-                                host.Show();
-                                break;
-                            case "Cook":
-                                CookForm cookie = new CookForm();
-                                cookie.Show();
-                                break;
+                            switch (rec)
+                            {
+                                case "Busboy":
+                                    BusboyForm bus = new BusboyForm();
+                                    bus.Show();
+                                    break;
+                                case "Waiter":
+                                    WaiterForm wait = new WaiterForm();
+                                    wait.Show();
+                                    break;
+                                case "Manager":
+                                    ManagerForm man = new ManagerForm();
+                                    man.Show();
+                                    //RandomChallenge(employeeID);
+                                    break;
+                                case "Host":
+                                    HostForm host = new HostForm();
+                                    host.Show();
+                                    break;
+                                case "Cook":
+                                    CookForm cookie = new CookForm();
+                                    cookie.Show();
+                                    break;
+                            }
                         }
 
                     }
