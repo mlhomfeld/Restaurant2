@@ -22,5 +22,12 @@ namespace Restaurant2
             Manager man = new Manager();
             man.ModifyEmployee(txtEmployeeID.Text, txtFirstName.Text, txtLastName.Text, txtPayRate.Text, txtPass.Text, txtRole.Text);
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerForm mng = new ManagerForm();
+            mng.Show();
+        }
     }
 }

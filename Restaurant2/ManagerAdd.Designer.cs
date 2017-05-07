@@ -40,6 +40,7 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtRole = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -143,12 +144,24 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(13, 12);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(174, 34);
+            this.btnBack.TabIndex = 11;
+            this.btnBack.Text = "Back to previous";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // ManagerAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(601, 514);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtRole);
             this.Controls.Add(this.txtPass);
@@ -183,5 +196,6 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtRole;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnBack;
     }
 }
