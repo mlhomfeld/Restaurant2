@@ -37,7 +37,6 @@
             this.txtRmvEmployee = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.EmployeeID = new System.Windows.Forms.Label();
-            this.btnCheckInventory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreateEmployee
@@ -108,24 +107,12 @@
             this.EmployeeID.TabIndex = 6;
             this.EmployeeID.Text = "Employee ID:";
             // 
-            // btnCheckInventory
-            // 
-            this.btnCheckInventory.Location = new System.Drawing.Point(15, 12);
-            this.btnCheckInventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnCheckInventory.Name = "btnCheckInventory";
-            this.btnCheckInventory.Size = new System.Drawing.Size(167, 34);
-            this.btnCheckInventory.TabIndex = 7;
-            this.btnCheckInventory.Text = "Check Inventory";
-            this.btnCheckInventory.UseVisualStyleBackColor = true;
-            this.btnCheckInventory.Click += new System.EventHandler(this.btnCheckInventory_Click);
-            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(600, 449);
-            this.Controls.Add(this.btnCheckInventory);
             this.Controls.Add(this.EmployeeID);
             this.Controls.Add(this.txtRmvEmployee);
             this.Controls.Add(this.btnLogout);
@@ -151,6 +138,5 @@
         private System.Windows.Forms.TextBox txtRmvEmployee;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label EmployeeID;
-        private System.Windows.Forms.Button btnCheckInventory;
     }
 }

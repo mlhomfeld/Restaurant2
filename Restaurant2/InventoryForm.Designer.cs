@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            
             this.SuspendLayout();
-            
             // 
             // InventoryForm
             // 
@@ -40,12 +37,10 @@
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Name = "InventoryForm";
             this.Text = "InventoryForm";
-            
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        
     }
 }
