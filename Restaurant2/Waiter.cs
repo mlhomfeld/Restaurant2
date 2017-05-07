@@ -335,6 +335,109 @@ namespace Restaurant2
                 MessageBox.Show(err.Message);
             }
         }
+        // Pulls the items needed to be displayed for the Pay Order Form from dbo.Purchase
+        public List<int> PullPayOrderItemsFromPurchaseTable(int orderID)
+        {
+            List<int> menuItemIDs = new List<int>();
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand readOrderID = connection.CreateCommand())
+                {
+                    //for (int i = 1; i < 8; i++)
+                    //{
+                    readOrderID.CommandText = "select * from dbo.Purchase where OrderID = @OrderID;";
+                    var orderContentParam = new SqlParameter("OrderID", orderID);
+                    readOrderID.Parameters.Add(orderContentParam);
+
+                    using (SqlDataReader reader = readOrderID.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            menuItemIDs.Add(reader.GetInt32(2));
+                        }
+                    }
+
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            return menuItemIDs;
+        }
+        // Pulls menu item names for Pay Form
+        public List<string> PullPayMenuItemNames(List<int> menuItemIDs)
+        {
+            List<string> menuItemNames = new List<string>();
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand readMenuItemNames = connection.CreateCommand())
+                {
+                    for (int i = 0; i < menuItemIDs.Count; i++)
+                    {
+                        readMenuItemNames.CommandText = "select * from dbo.MenuItem where MenuItemID = @MenuItemID" + i.ToString() + ";";
+                        var idParam = new SqlParameter("MenuItemID" + i.ToString(), menuItemIDs[i]);
+                        readMenuItemNames.Parameters.Add(idParam);
+
+                        using (SqlDataReader reader = readMenuItemNames.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                menuItemNames.Add(reader.GetString(1));
+                            }
+                        }
+
+                    }
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            return menuItemNames;
+        }
+        public decimal PullPayOrderTotal(int orderID)
+        {
+            decimal orderTotal = 0M;
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand readTableStatus = connection.CreateCommand())
+                {
+                    //for (int i = 1; i < menuItemNames.Count; i++)
+                    //{
+                        readTableStatus.CommandText = "select * from dbo.RestaurantOrder where OrderID = @OrderID;";
+                        var idParam = new SqlParameter("OrderID", orderID);
+                        readTableStatus.Parameters.Add(idParam);
+
+                        using (SqlDataReader reader = readTableStatus.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                orderTotal = reader.GetDecimal(1);
+                            }
+                        }
+
+                    //}
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            return orderTotal;
+        }
         public void SetTableToDirty(int tableNumber)
         {
             // This method will change the status of the table in the database.

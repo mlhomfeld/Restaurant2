@@ -38,10 +38,25 @@ namespace Restaurant2
             }
             
         }
-
         private void btnDisplaySelectedOrder_Click(object sender, EventArgs e)
         {
-
+            lstOrderedItems.Items.Clear();
+            try
+            {
+                Waiter wt = new Waiter();
+                List<int> menuIDs = wt.PullPayOrderItemsFromPurchaseTable(int.Parse(lstOrders.SelectedItem.ToString()));
+                List<string> menuItemNames = wt.PullPayMenuItemNames(menuIDs);
+                for (int i = 0; i < menuItemNames.Count; i++)
+                {
+                    lstOrderedItems.Items.Add(menuItemNames[i]);
+                }
+                txtYourTotal.Text = wt.PullPayOrderTotal(int.Parse(lstOrders.SelectedItem.ToString())).ToString("F2");
+                txtRemainingBalance.Text = wt.PullPayOrderTotal(int.Parse(lstOrders.SelectedItem.ToString())).ToString("F2");
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
     }
 }

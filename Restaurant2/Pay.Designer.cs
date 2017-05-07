@@ -34,13 +34,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblOrderList = new System.Windows.Forms.Label();
             this.btnPayOrder = new System.Windows.Forms.Button();
-            this.listOrderedItems = new System.Windows.Forms.ListBox();
+            this.lstOrderedItems = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCancelOrder = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textRemainingBalance = new System.Windows.Forms.TextBox();
+            this.txtRemainingBalance = new System.Windows.Forms.TextBox();
             this.textTotalPaid = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDisplaySelectedOrder = new System.Windows.Forms.Button();
@@ -94,15 +94,15 @@
             this.btnPayOrder.UseVisualStyleBackColor = true;
             this.btnPayOrder.Click += new System.EventHandler(this.btnPayOrder_Click);
             // 
-            // listOrderedItems
+            // lstOrderedItems
             // 
-            this.listOrderedItems.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.listOrderedItems.FormattingEnabled = true;
-            this.listOrderedItems.ItemHeight = 14;
-            this.listOrderedItems.Location = new System.Drawing.Point(301, 84);
-            this.listOrderedItems.Name = "listOrderedItems";
-            this.listOrderedItems.Size = new System.Drawing.Size(197, 312);
-            this.listOrderedItems.TabIndex = 5;
+            this.lstOrderedItems.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lstOrderedItems.FormattingEnabled = true;
+            this.lstOrderedItems.ItemHeight = 14;
+            this.lstOrderedItems.Location = new System.Drawing.Point(301, 84);
+            this.lstOrderedItems.Name = "lstOrderedItems";
+            this.lstOrderedItems.Size = new System.Drawing.Size(197, 312);
+            this.lstOrderedItems.TabIndex = 5;
             // 
             // label3
             // 
@@ -153,12 +153,12 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Total being paid:";
             // 
-            // textRemainingBalance
+            // txtRemainingBalance
             // 
-            this.textRemainingBalance.Location = new System.Drawing.Point(211, 545);
-            this.textRemainingBalance.Name = "textRemainingBalance";
-            this.textRemainingBalance.Size = new System.Drawing.Size(76, 19);
-            this.textRemainingBalance.TabIndex = 14;
+            this.txtRemainingBalance.Location = new System.Drawing.Point(211, 545);
+            this.txtRemainingBalance.Name = "txtRemainingBalance";
+            this.txtRemainingBalance.Size = new System.Drawing.Size(76, 19);
+            this.txtRemainingBalance.TabIndex = 14;
             // 
             // textTotalPaid
             // 
@@ -199,13 +199,13 @@
             this.Controls.Add(this.btnDisplaySelectedOrder);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.textTotalPaid);
-            this.Controls.Add(this.textRemainingBalance);
+            this.Controls.Add(this.txtRemainingBalance);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnCancelOrder);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.listOrderedItems);
+            this.Controls.Add(this.lstOrderedItems);
             this.Controls.Add(this.btnPayOrder);
             this.Controls.Add(this.lblOrderList);
             this.Controls.Add(this.label1);
@@ -227,13 +227,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblOrderList;
         private System.Windows.Forms.Button btnPayOrder;
-        private System.Windows.Forms.ListBox listOrderedItems;
+        private System.Windows.Forms.ListBox lstOrderedItems;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCancelOrder;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textRemainingBalance;
+        private System.Windows.Forms.TextBox txtRemainingBalance;
         private System.Windows.Forms.TextBox textTotalPaid;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnDisplaySelectedOrder;
