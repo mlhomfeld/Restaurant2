@@ -20,6 +20,8 @@ namespace Restaurant2
 
         private void btnPayOrder_Click(object sender, EventArgs e)
         {
+            Customer cust = new Customer();
+            txtRemainingBalance.Text = cust.Pay(txtRemainingBalance.Text,txtTotalPaid.Text);
 
         }
         private void btnCancel_Click(object sender, EventArgs e)
