@@ -307,7 +307,7 @@ namespace Restaurant2
             }
             return orderIDs;
         }
-        // Updates the order record's OrderStatus
+        // Updates the order record's OrderStatus to Delivered
         public void SetOrderToDelivered(int orderNumber)
         {
             try
@@ -334,6 +334,73 @@ namespace Restaurant2
                 //Error box if connections fail
                 MessageBox.Show(err.Message);
             }
+        }
+        // Updates the order record's OrderStatus to Paid
+        public void SetOrderToPaid(int orderNumber)
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=Project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand updateToPaidOrder = connection.CreateCommand())
+                {
+                    updateToPaidOrder.CommandText = "update dbo.RestaurantOrder set OrderStatus = @OrderStatus where OrderID = @OrderID;";
+                    var orderParam = new SqlParameter("OrderStatus", SqlDbType.VarChar) { Value = "Paid" };
+                    var idParam = new SqlParameter("OrderID", SqlDbType.Int) { Value = orderNumber };
+                    updateToPaidOrder.Parameters.Add(orderParam);
+                    updateToPaidOrder.Parameters.Add(idParam);
+
+                    updateToPaidOrder.ExecuteNonQuery();
+                }
+                connection.Close();
+
+            }
+            catch (Exception err)
+            {
+                //Error box if connections fail
+                MessageBox.Show(err.Message);
+            }
+        }
+        // Updates the order record's OrderStatus to Canceled
+        public bool SetOrderToCanceled(int orderNumber)
+        {
+            // Boolean value set to determine whether or not to clear/refresh listboxes and 
+            // text boxes depending on whether or not the order is canceled
+            bool yesNo = false;
+            DialogResult dialogResult = MessageBox.Show("Would you like to cancel this order?", "!!!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    SqlConnection connection = new SqlConnection();
+                    connection.ConnectionString = "Server=cis1.actx.edu;Database=Project2;User Id=db2;Password = db20;";
+                    connection.Open();
+                    using (SqlCommand updateToDeliverOrder = connection.CreateCommand())
+                    {
+                        updateToDeliverOrder.CommandText = "update dbo.RestaurantOrder set OrderStatus = @OrderStatus where OrderID = @OrderID;";
+                        var orderParam = new SqlParameter("OrderStatus", SqlDbType.VarChar) { Value = "Canceled" };
+                        var idParam = new SqlParameter("OrderID", SqlDbType.Int) { Value = orderNumber };
+                        updateToDeliverOrder.Parameters.Add(orderParam);
+                        updateToDeliverOrder.Parameters.Add(idParam);
+
+                        updateToDeliverOrder.ExecuteNonQuery();
+                    }
+                    connection.Close();
+                    yesNo = true;
+                }
+                catch (Exception err)
+                {
+                    //Error box if connections fail
+                    MessageBox.Show(err.Message);
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                // Close
+                yesNo = false;
+            }
+            return yesNo;
         }
         // Pulls the items needed to be displayed for the Pay Order Form from dbo.Purchase
         public List<int> PullPayOrderItemsFromPurchaseTable(int orderID)
