@@ -12,8 +12,7 @@ using System.IO;
 
 namespace Restaurant2
 {
-
-    // Making a comment
+    
     public class Employee
     {
         
