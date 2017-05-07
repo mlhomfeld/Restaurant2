@@ -26,8 +26,8 @@ namespace Restaurant2
 
         private void btnPreppingOrder_Click(object sender, EventArgs e)
         {
-            
-            
+            //Converts Order number into the Menu Items To diplay
+            lstMenuItemsDisplay.Items.Clear();
             try
             {
                 Cook cook = new Cook();
@@ -35,7 +35,31 @@ namespace Restaurant2
 
                 for (int i = 0; i < orderContent.Count; i++)
                 {
-                    lstMenuItemsDisplay.Items.Add(orderContent[i].ToString());
+                    
+                    if (orderContent[i].ToString() == "1")
+                    {
+                        lstMenuItemsDisplay.Items.Add("Burger");
+                    }
+                    else if (orderContent[i].ToString() == "2")
+                    {
+                        lstMenuItemsDisplay.Items.Add("CheeseBurger");
+                    }
+                    else if (orderContent[i].ToString() == "3")
+                    {
+                        lstMenuItemsDisplay.Items.Add("MilkShake");
+                    }
+                    else if (orderContent[i].ToString() == "4")
+                    {
+                        lstMenuItemsDisplay.Items.Add("SoftDrink");
+                    }
+                    else if (orderContent[i].ToString() == "6")
+                    {
+                        lstMenuItemsDisplay.Items.Add("Fries");
+                    }
+                    else if (orderContent[i].ToString() == "7")
+                    {
+                        lstMenuItemsDisplay.Items.Add("Salad");
+                    }
                 }
             }
             catch(Exception err)
