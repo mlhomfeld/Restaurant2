@@ -13,11 +13,6 @@ namespace Restaurant2
 {
     public class Cook : Employee
     {
-        public Cook()
-        {
-
-        }
-       
         public List<int> ReceiveOrders()
         {
             List<int> orderIds = new List<int>();

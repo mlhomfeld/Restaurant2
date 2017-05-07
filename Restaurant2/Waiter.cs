@@ -245,7 +245,7 @@ namespace Restaurant2
                 MessageBox.Show(errrr.Message);
             }
         }
-        // Retrieves Orders with a OrderStatus of Ready and returns the orderIDs in a List
+        // Retrieves Orders with an OrderStatus of Ready and returns the orderIDs in a List
         public List<int> RetrieveReadyOrders()
         {
             List<int> orderIDs = new List<int>();
@@ -258,6 +258,37 @@ namespace Restaurant2
                 {
                     readOrderStatus.CommandText = "select * from dbo.RestaurantOrder where OrderStatus = @OrderStatus;";
                     var orderStatusParam = new SqlParameter("OrderStatus", "Ready");
+                    readOrderStatus.Parameters.Add(orderStatusParam);
+
+                    using (SqlDataReader reader = readOrderStatus.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            orderIDs.Add(reader.GetInt32(0));
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            return orderIDs;
+        }
+        // Retrieves Orders with an OrderStatus of Delivered and returns the orderIDS in a List
+        public List<int> RetrieveDeliveredOrders()
+        {
+            List<int> orderIDs = new List<int>();
+            try
+            {
+                SqlConnection connection = new SqlConnection();
+                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
+                connection.Open();
+                using (SqlCommand readOrderStatus = connection.CreateCommand())
+                {
+                    readOrderStatus.CommandText = "select * from dbo.RestaurantOrder where OrderStatus = @OrderStatus;";
+                    var orderStatusParam = new SqlParameter("OrderStatus", "Delivered");
                     readOrderStatus.Parameters.Add(orderStatusParam);
 
                     using (SqlDataReader reader = readOrderStatus.ExecuteReader())

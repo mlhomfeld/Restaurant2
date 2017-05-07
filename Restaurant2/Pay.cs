@@ -29,7 +29,14 @@ namespace Restaurant2
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
+            lstOrders.Items.Clear();
+            Waiter wt = new Waiter();
+            List<int> orderIDs = wt.RetrieveDeliveredOrders();
+            for (int i = 0; i < orderIDs.Count; i++)
+            {
+                lstOrders.Items.Add(orderIDs[i].ToString());
+            }
+            
         }
 
         private void btnDisplaySelectedOrder_Click(object sender, EventArgs e)

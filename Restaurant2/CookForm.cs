@@ -18,7 +18,7 @@ namespace Restaurant2
             InitializeComponent();
         }
 
-        private int orderNumber = 1;
+        private int orderNumber; //= 1;
         private void btnRetrieveOrder_Click(object sender, EventArgs e)
         {
             // Waiter submits order, I retrieve it.
@@ -37,11 +37,12 @@ namespace Restaurant2
         private void btnOrderReady_Click(object sender, EventArgs e)
         {
             Cook cook = new Cook();
+            orderNumber = int.Parse(lstPendingOrders.SelectedItem.ToString());
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to set order " + orderNumber + " to finish?", "!!!", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 cook.SetOrderToReady(orderNumber);
-                orderNumber++;
+                //orderNumber++;
             }
             else if (dialogResult == DialogResult.No)
             {
