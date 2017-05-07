@@ -78,6 +78,12 @@ namespace Restaurant2
                             }
                         }
 
+                        else
+                        {
+                            MessageBox.Show("Bounce, fool.");
+                            Application.Exit();
+                        }
+
                     }
 
                 }
