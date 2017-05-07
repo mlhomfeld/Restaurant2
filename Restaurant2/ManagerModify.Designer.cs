@@ -42,6 +42,7 @@
             this.btnModify = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtEmployeeID = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -163,12 +164,24 @@
             this.txtEmployeeID.Size = new System.Drawing.Size(419, 28);
             this.txtEmployeeID.TabIndex = 12;
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(17, 12);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(174, 34);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Back to previous";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // ManagerModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(600, 557);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtEmployeeID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnModify);
@@ -207,5 +220,6 @@
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEmployeeID;
+        private System.Windows.Forms.Button btnBack;
     }
 }
