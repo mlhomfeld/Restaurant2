@@ -269,7 +269,7 @@
             // lblTableOccupiedHost
             // 
             this.lblTableOccupiedHost.AutoSize = true;
-            this.lblTableOccupiedHost.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblTableOccupiedHost.BackColor = System.Drawing.Color.Yellow;
             this.lblTableOccupiedHost.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOccupiedHost.Location = new System.Drawing.Point(432, 136);
             this.lblTableOccupiedHost.Name = "lblTableOccupiedHost";
@@ -280,7 +280,7 @@
             // lblTableOpenHost
             // 
             this.lblTableOpenHost.AutoSize = true;
-            this.lblTableOpenHost.BackColor = System.Drawing.Color.Yellow;
+            this.lblTableOpenHost.BackColor = System.Drawing.Color.LimeGreen;
             this.lblTableOpenHost.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOpenHost.ForeColor = System.Drawing.Color.Black;
             this.lblTableOpenHost.Location = new System.Drawing.Point(432, 96);

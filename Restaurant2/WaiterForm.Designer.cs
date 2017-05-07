@@ -173,7 +173,7 @@
             this.btnCheckReadyOrders.Name = "btnCheckReadyOrders";
             this.btnCheckReadyOrders.Size = new System.Drawing.Size(103, 38);
             this.btnCheckReadyOrders.TabIndex = 10;
-            this.btnCheckReadyOrders.Text = "Ready Order";
+            this.btnCheckReadyOrders.Text = "Ready Orders";
             this.btnCheckReadyOrders.UseVisualStyleBackColor = true;
             // 
             // btnOrderPayment
@@ -189,7 +189,7 @@
             // lblTableOpenWaiter
             // 
             this.lblTableOpenWaiter.AutoSize = true;
-            this.lblTableOpenWaiter.BackColor = System.Drawing.Color.Yellow;
+            this.lblTableOpenWaiter.BackColor = System.Drawing.Color.LimeGreen;
             this.lblTableOpenWaiter.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOpenWaiter.Location = new System.Drawing.Point(432, 72);
             this.lblTableOpenWaiter.Name = "lblTableOpenWaiter";
@@ -200,7 +200,7 @@
             // lblTableOccupiedWaiter
             // 
             this.lblTableOccupiedWaiter.AutoSize = true;
-            this.lblTableOccupiedWaiter.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblTableOccupiedWaiter.BackColor = System.Drawing.Color.Yellow;
             this.lblTableOccupiedWaiter.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableOccupiedWaiter.Location = new System.Drawing.Point(432, 112);
             this.lblTableOccupiedWaiter.Name = "lblTableOccupiedWaiter";
