@@ -62,12 +62,23 @@
       <DependentUpon>CookForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="HostForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HostForm.Designer.cs">
       <DependentUpon>HostForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LogInForm.cs">
       <SubType>Form</SubType>
@@ -102,6 +113,11 @@
       <DependentUpon>Pay.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Project2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Project2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecureLogin.cs">
       <SubType>Form</SubType>
@@ -136,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HostForm.resx">
       <DependentUpon>HostForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
@@ -173,6 +192,28 @@
     <EmbeddedResource Include="WaiterOrderReady.resx">
       <DependentUpon>WaiterOrderReady.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Project2.xsc">
+      <DependentUpon>Project2.xsd</DependentUpon>
+    </None>
+    <None Include="Project2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Project2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Project2.xss">
+      <DependentUpon>Project2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

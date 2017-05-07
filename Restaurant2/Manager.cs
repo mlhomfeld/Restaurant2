@@ -124,6 +124,21 @@ namespace Restaurant2
 
         public void CheckSales()
         {
+            throw new System.NotImplementedException();
+        }
+
+        public void CheckTurnover()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void PayEmployee()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CheckInventory()
+        {
             try
             {
                 SqlConnection connection = new SqlConnection();
@@ -157,22 +172,6 @@ namespace Restaurant2
             {
                 MessageBox.Show(err.Message);
             }
-        }
-
-
-        public void CheckTurnover()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void PayEmployee()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void CheckInventory()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
