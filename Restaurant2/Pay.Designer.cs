@@ -40,7 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBalance = new System.Windows.Forms.TextBox();
+            this.textRemainingBalance = new System.Windows.Forms.TextBox();
             this.textTotalPaid = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDisplaySelectedOrder = new System.Windows.Forms.Button();
@@ -55,7 +55,6 @@
             this.lstOrders.Name = "lstOrders";
             this.lstOrders.Size = new System.Drawing.Size(198, 312);
             this.lstOrders.TabIndex = 0;
-            this.lstOrders.SelectedIndexChanged += new System.EventHandler(this.listYourOrder_SelectedIndexChanged);
             // 
             // txtYourTotal
             // 
@@ -63,14 +62,14 @@
             this.txtYourTotal.Name = "txtYourTotal";
             this.txtYourTotal.Size = new System.Drawing.Size(97, 19);
             this.txtYourTotal.TabIndex = 1;
-            this.txtYourTotal.TextChanged += new System.EventHandler(this.txtYourTotal_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(299, 427);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 14);
+            this.label1.Size = new System.Drawing.Size(69, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "Your Total:";
             // 
@@ -86,6 +85,7 @@
             // 
             // btnPayOrder
             // 
+            this.btnPayOrder.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayOrder.Location = new System.Drawing.Point(302, 545);
             this.btnPayOrder.Name = "btnPayOrder";
             this.btnPayOrder.Size = new System.Drawing.Size(111, 27);
@@ -103,7 +103,6 @@
             this.listOrderedItems.Name = "listOrderedItems";
             this.listOrderedItems.Size = new System.Drawing.Size(197, 312);
             this.listOrderedItems.TabIndex = 5;
-            this.listOrderedItems.SelectedIndexChanged += new System.EventHandler(this.listOrderedItems_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -117,6 +116,7 @@
             // 
             // btnCancelOrder
             // 
+            this.btnCancelOrder.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelOrder.Location = new System.Drawing.Point(419, 545);
             this.btnCancelOrder.Name = "btnCancelOrder";
             this.btnCancelOrder.Size = new System.Drawing.Size(111, 27);
@@ -128,9 +128,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(103, 545);
+            this.label4.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(91, 547);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 14);
+            this.label4.Size = new System.Drawing.Size(114, 15);
             this.label4.TabIndex = 9;
             this.label4.Text = "Remaining Balance:";
             // 
@@ -145,19 +146,19 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(103, 580);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 14);
+            this.label6.Size = new System.Drawing.Size(96, 15);
             this.label6.TabIndex = 13;
             this.label6.Text = "Total being paid:";
             // 
-            // textBalance
+            // textRemainingBalance
             // 
-            this.textBalance.Location = new System.Drawing.Point(211, 545);
-            this.textBalance.Name = "textBalance";
-            this.textBalance.Size = new System.Drawing.Size(76, 19);
-            this.textBalance.TabIndex = 14;
-            this.textBalance.TextChanged += new System.EventHandler(this.textBalance_TextChanged);
+            this.textRemainingBalance.Location = new System.Drawing.Point(211, 545);
+            this.textRemainingBalance.Name = "textRemainingBalance";
+            this.textRemainingBalance.Size = new System.Drawing.Size(76, 19);
+            this.textRemainingBalance.TabIndex = 14;
             // 
             // textTotalPaid
             // 
@@ -165,26 +166,29 @@
             this.textTotalPaid.Name = "textTotalPaid";
             this.textTotalPaid.Size = new System.Drawing.Size(76, 19);
             this.textTotalPaid.TabIndex = 15;
-            this.textTotalPaid.TextChanged += new System.EventHandler(this.textTotalPaid_TextChanged);
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(38, 416);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 25);
             this.btnRefresh.TabIndex = 16;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnDisplaySelectedOrder
             // 
             this.btnDisplaySelectedOrder.AutoSize = true;
+            this.btnDisplaySelectedOrder.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplaySelectedOrder.Location = new System.Drawing.Point(119, 416);
             this.btnDisplaySelectedOrder.Name = "btnDisplaySelectedOrder";
-            this.btnDisplaySelectedOrder.Size = new System.Drawing.Size(125, 25);
+            this.btnDisplaySelectedOrder.Size = new System.Drawing.Size(143, 25);
             this.btnDisplaySelectedOrder.TabIndex = 17;
             this.btnDisplaySelectedOrder.Text = "Display Selected Order";
             this.btnDisplaySelectedOrder.UseVisualStyleBackColor = true;
+            this.btnDisplaySelectedOrder.Click += new System.EventHandler(this.btnDisplaySelectedOrder_Click);
             // 
             // Pay
             // 
@@ -195,7 +199,7 @@
             this.Controls.Add(this.btnDisplaySelectedOrder);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.textTotalPaid);
-            this.Controls.Add(this.textBalance);
+            this.Controls.Add(this.textRemainingBalance);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -229,7 +233,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBalance;
+        private System.Windows.Forms.TextBox textRemainingBalance;
         private System.Windows.Forms.TextBox textTotalPaid;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnDisplaySelectedOrder;
