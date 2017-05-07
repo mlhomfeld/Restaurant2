@@ -18,11 +18,8 @@ namespace Restaurant2
             InitializeComponent();
         }
 
-        private int orderNumber; //= 1;
-        private void btnRetrieveOrder_Click(object sender, EventArgs e)
-        {
-            // Waiter submits order, I retrieve it.
-        }
+        private int orderNumber;
+        
 
         private void btnPreppingOrder_Click(object sender, EventArgs e)
         {
@@ -32,7 +29,7 @@ namespace Restaurant2
             {
                 Cook cook = new Cook();
                 List<int> orderContent = cook.ConvertOrders(int.Parse(lstPendingOrders.SelectedItem.ToString()));
-
+                //Changes the order number to the respectable food
                 for (int i = 0; i < orderContent.Count; i++)
                 {
                     
@@ -75,8 +72,8 @@ namespace Restaurant2
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to set order " + orderNumber + " to finish?", "!!!", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                //Runs cook Method
                 cook.SetOrderToReady(orderNumber);
-                //orderNumber++;
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -93,6 +90,7 @@ namespace Restaurant2
 
         private void btnrefresh_Click(object sender, EventArgs e)
         {
+            //Refreshs the table to see which orders there are and then adds to the table
             lstPendingOrders.Items.Clear();
             Cook cook = new Cook();
             List<int> orderIDs = cook.ReceiveOrders();

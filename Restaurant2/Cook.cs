@@ -15,6 +15,7 @@ namespace Restaurant2
     {
         public List<int> ReceiveOrders()
         {
+            //Pulls the orders down from the Database
             List<int> orderIds = new List<int>();
             try
             {
@@ -52,6 +53,7 @@ namespace Restaurant2
 
         public List<int> ConvertOrders(int orderID)
         {
+            //Converts the Order Id into Menu Items
             List<int> ordercontent = new List<int>();
             try
             {
@@ -99,8 +101,6 @@ namespace Restaurant2
                     }
 
                     // end timestamp entry code. 
-
-                    //}
                 }
                 connection.Close();
             }
@@ -111,46 +111,12 @@ namespace Restaurant2
             return ordercontent;
         }
 
-        public List<string> ConvertMenuItemsIDs()
-        {
-            List<string> status = new List<string>();
-            try
-            {
-                SqlConnection connection = new SqlConnection();
-                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
-                connection.Open();
-                using (SqlCommand readTableStatus = connection.CreateCommand())
-                {
-                    for (int i = 1; i < 8; i++)
-                    {
-                        readTableStatus.CommandText = "select * from dbo.SeatingArea where SeatingAreaID = @SeatingAreaID" + i.ToString() + ";";
-                        var idParam = new SqlParameter("SeatingAreaID" + i.ToString(), i);
-                        //var fnameParam = new SqlParameter("TableID", SqlDbType.VarChar) { Value = i };
-                        readTableStatus.Parameters.Add(idParam);
-
-                        using (SqlDataReader reader = readTableStatus.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                status.Add(reader.GetString(1));
-                            }
-                        }
-
-                    }
-                }
-                connection.Close();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            return status;
-        }
+       
 
         public void SetOrderToReady(int orderNumber)
         {
             
-           
+           //method changes Order to Ready
                 try
                 {
                     //Opens connection to the database to update the status
