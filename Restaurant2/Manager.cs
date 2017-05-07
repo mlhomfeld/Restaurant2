@@ -14,6 +14,8 @@ namespace Restaurant2
     {
         public void CreateEmployee(string firstName, string lastName, string payRate, string passWord, string role)
         {
+            // This method will pull values from the ManagerAdd form and add them as a new record in the employee table in the database
+
             try
             {
                 SqlConnection connection = new SqlConnection();
@@ -26,7 +28,6 @@ namespace Restaurant2
                 using (SqlCommand insertNewEmployee = connection.CreateCommand())
                 {
                     insertNewEmployee.CommandText = "insert into dbo.Employee values (@FirstName, @LastName, @PayRate, @Password, @Role, @EmployeeStatus, @Passcode);";
-                    //var idParam = new SqlParameter("EmployeeID", SqlDbType.VarChar) { Value = "*" };
                     var fnameParam = new SqlParameter("FirstName", SqlDbType.VarChar) { Value = firstName };
                     var lnameParam = new SqlParameter("LastName", SqlDbType.VarChar) { Value = lastName };
                     var prateParam = new SqlParameter("PayRate", SqlDbType.Money) { Value = payRate };
@@ -34,7 +35,6 @@ namespace Restaurant2
                     var roleParam = new SqlParameter("Role", SqlDbType.VarChar) { Value = role };
                     var empStatusParam = new SqlParameter("EmployeeStatus", SqlDbType.VarChar) { Value = "Active" };
                     var passcodeParam = new SqlParameter("Passcode", SqlDbType.Int) { Value = null }; // changed to null, set value if error arises and try again.
-                    //insertNewEmployee.Parameters.Add(idParam);
                     insertNewEmployee.Parameters.Add(fnameParam);
                     insertNewEmployee.Parameters.Add(lnameParam);
                     insertNewEmployee.Parameters.Add(prateParam);
@@ -57,6 +57,7 @@ namespace Restaurant2
 
         public void RemoveEmployee(string employeeID)
         {
+            // This method will change the status of a specific employee to Inactive using the selected ID of an employee.
             try
             {
                 SqlConnection connection = new SqlConnection();
@@ -86,10 +87,12 @@ namespace Restaurant2
 
         public void ModifyEmployee(string employeeID, string firstName, string lastName, string payRate, string passWord, string role)
         {
+            // This method will pull changes into the textboxes in ManagerModify form and change them in the database.
+            
+
             try
             {
                 SqlConnection connection = new SqlConnection();
-                //Server = myServerAddress; Database = myDataBase; User Id = myUsername; Password = myPassword;
                 connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 connection.Open();
                 
@@ -124,41 +127,8 @@ namespace Restaurant2
 
         public void CheckSales()
         {
-            try
-            {
-                SqlConnection connection = new SqlConnection();
-                //Server = myServerAddress; Database = myDataBase; User Id = myUsername; Password = myPassword;
-                connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
-                connection.Open();
-
-
-                Console.WriteLine("---SQL SELECT---");
-                using (SqlCommand readAllProfessorRecords = connection.CreateCommand())
-                {
-                    readAllProfessorRecords.CommandText = "select * from dbo.Professor where FirstName = @FirstName;";
-                    var fnameParam = new SqlParameter("FirstName", "Dewayne");
-                    //var fnameParam = new SqlParameter("FirstName", SqlDbType.VarChar) { Value = "Dewayne" };
-                    readAllProfessorRecords.Parameters.Add(fnameParam);
-
-                    using (SqlDataReader reader = readAllProfessorRecords.ExecuteReader())
-                    {
-                        string rec = "";
-                        while (reader.Read())
-                        {
-                            rec = reader.GetString(3) + " earned by ";
-                            rec += reader.GetString(1) + " ";
-                            rec += reader.GetString(2);
-                            Console.WriteLine(rec);
-                        }
-                    }
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
+            throw new System.NotImplementedException();
         }
-
 
         public void CheckTurnover()
         {
@@ -170,9 +140,10 @@ namespace Restaurant2
             throw new System.NotImplementedException();
         }
 
-        public void CheckInventory()
+        public void CheckInventory(string item)
         {
             throw new System.NotImplementedException();
+
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Restaurant2
     {
         public List<int> ReceiveOrders()
         {
+            //Pulls the orders down from the Database
             List<int> orderIds = new List<int>();
             try
             {
@@ -25,18 +26,18 @@ namespace Restaurant2
                 {
                     //for (int i = 1; i < 8; i++)
                     //{
-                        readOrderStatus.CommandText = "select * from dbo.RestaurantOrder where OrderStatus = @OrderStatus;";
-                        var orderStatusParam = new SqlParameter("OrderStatus", "Submitted");
-                        //var fnameParam = new SqlParameter("TableID", SqlDbType.VarChar) { Value = i };
-                        readOrderStatus.Parameters.Add(orderStatusParam);
+                    readOrderStatus.CommandText = "select * from dbo.RestaurantOrder where OrderStatus = @OrderStatus;";
+                    var orderStatusParam = new SqlParameter("OrderStatus", "Submitted");
+                    //var fnameParam = new SqlParameter("TableID", SqlDbType.VarChar) { Value = i };
+                    readOrderStatus.Parameters.Add(orderStatusParam);
 
-                        using (SqlDataReader reader = readOrderStatus.ExecuteReader())
+                    using (SqlDataReader reader = readOrderStatus.ExecuteReader())
+                    {
+                        while (reader.Read())
                         {
-                            while (reader.Read())
-                            {
-                                orderIds.Add(reader.GetInt32(0));
-                            }
+                            orderIds.Add(reader.GetInt32(0));
                         }
+                    }
 
 
                     //}
@@ -49,9 +50,10 @@ namespace Restaurant2
             }
             return orderIds;
         }
-        
+
         public List<int> ConvertOrders(int orderID)
         {
+            //Converts the Order Id into Menu Items
             List<int> ordercontent = new List<int>();
             try
             {
@@ -99,8 +101,6 @@ namespace Restaurant2
                     }
 
                     // end timestamp entry code. 
-
-                    //}
                 }
                 connection.Close();
             }
@@ -110,10 +110,13 @@ namespace Restaurant2
             }
             return ordercontent;
         }
+
+       
+
         public void SetOrderToReady(int orderNumber)
         {
             
-           
+           //method changes Order to Ready
                 try
                 {
                     //Opens connection to the database to update the status
