@@ -70,13 +70,13 @@ namespace Restaurant2
 
 
                 Console.WriteLine("Attempting to change employee status.");
-                using (SqlCommand updateEmployee = connection.CreateCommand())
+                using (SqlCommand removeEmployee = connection.CreateCommand())
                 {
-                    updateEmployee.CommandText = "update dbo.Employee set EmployeeStatus = @EmployeeStatus where EmployeeID = " + employeeID + ";";
+                    removeEmployee.CommandText = "update dbo.Employee set EmployeeStatus = @EmployeeStatus where EmployeeID = " + employeeID + ";";
                     var empIDParam = new SqlParameter("EmployeeStatus", SqlDbType.VarChar) { Value = "Inactive" };
-                    updateEmployee.Parameters.Add(empIDParam);
+                    removeEmployee.Parameters.Add(empIDParam);
 
-                    updateEmployee.ExecuteNonQuery();
+                    removeEmployee.ExecuteNonQuery();
                     MessageBox.Show("Employee set to inactive.");
                 }
             }
