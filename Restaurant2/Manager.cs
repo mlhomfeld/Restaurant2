@@ -12,6 +12,8 @@ namespace Restaurant2
 {
     public class Manager : Employee
     {
+
+        
         public void CreateEmployee(string firstName, string lastName, string payRate, string passWord, string role)
         {
             // This method will pull values from the ManagerAdd form and add them as a new record in the employee table in the database
@@ -58,6 +60,7 @@ namespace Restaurant2
         public void RemoveEmployee(string employeeID)
         {
             // This method will change the status of a specific employee to Inactive using the selected ID of an employee.
+            // Once inactive the account is disabled in Employee Class
             try
             {
                 SqlConnection connection = new SqlConnection();
@@ -88,6 +91,8 @@ namespace Restaurant2
         public void ModifyEmployee(string employeeID, string firstName, string lastName, string payRate, string passWord, string role)
         {
             // This method will pull changes into the textboxes in ManagerModify form and change them in the database.
+            
+            // --- Need to add code to fill fields 
             
 
             try

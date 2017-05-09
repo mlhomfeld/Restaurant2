@@ -89,5 +89,12 @@ namespace Restaurant2
                 MessageBox.Show(err.Message);
             }
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            WaiterForm waitForm = new WaiterForm();
+            waitForm.Show();
+            this.Hide();
+        }
     }
 }
