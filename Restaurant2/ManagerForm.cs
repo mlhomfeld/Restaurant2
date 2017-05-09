@@ -44,6 +44,8 @@ namespace Restaurant2
 
         private void btn_Click(object sender, EventArgs e)
         {
+            // Need to add a small listbox on manager window that shows some employee info to choose from instead of the current type id into text box
+            //  If i added this i could get rid of the multiple forms i used and just call on one anytime a form is neccesary
             Manager man = new Manager();
             man.RemoveEmployee(txtRmvEmployee.Text);
         }

@@ -12,6 +12,8 @@ namespace Restaurant2
 {
     public class Manager : Employee
     {
+
+        
         public void CreateEmployee(string firstName, string lastName, string payRate, string passWord, string role)
         {
             // This method will pull values from the ManagerAdd form and add them as a new record in the employee table in the database
