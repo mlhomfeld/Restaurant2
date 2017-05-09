@@ -55,7 +55,6 @@ namespace Restaurant2
             try
             {
                 SqlConnection connection = new SqlConnection();
-                //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
                 connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 connection.Open();
                 using (SqlCommand insertNewOrder = connection.CreateCommand())
@@ -80,7 +79,6 @@ namespace Restaurant2
             try
             {
                 SqlConnection connection = new SqlConnection();
-                //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
                 connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 connection.Open();
                 using (SqlCommand selectNewOrderID = connection.CreateCommand())
@@ -147,7 +145,6 @@ namespace Restaurant2
             try
             {
                 SqlConnection connection = new SqlConnection();
-                //Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;
                 connection.ConnectionString = "Server=cis1.actx.edu;Database=project2;User Id=db2;Password = db20;";
                 connection.Open();
                 for (int i = 0; i < menuItemIDs.Count; i++)
@@ -185,8 +182,6 @@ namespace Restaurant2
                 connection.Open();
                 using (SqlCommand readMenuPrices = connection.CreateCommand())
                 {
-                    //foreach (int item in menuItemIDs)
-                    //{
                     for (int i = 0; i < menuItemIDs.Count; i++)
                     {
                         readMenuPrices.CommandText = "select * from dbo.MenuItem where MenuItemID = @MenuItemID" + i.ToString() + ";";
@@ -199,7 +194,6 @@ namespace Restaurant2
                             {
                                 priceCollection.Add(reader.GetDecimal(2));
                             }
-                            //}
                         }
                     }
                 }
@@ -211,17 +205,7 @@ namespace Restaurant2
             }
             for (int i = 0; i < priceCollection.Count; i++)
             {
-                //string rawPrice = "";
-                //decimal price = 0M;
-                //price = priceCollection[i];
-                //if(decimal.TryParse(rawPrice, out price))
-                //{
                 total += priceCollection[i];
-                //}
-                //else
-                //{
-                //    MessageBox.Show("The following price: " + priceCollection[i].ToString() + "was not added to the total", "Error");
-                //}
             }
             try
             {
@@ -413,8 +397,6 @@ namespace Restaurant2
                 connection.Open();
                 using (SqlCommand readOrderID = connection.CreateCommand())
                 {
-                    //for (int i = 1; i < 8; i++)
-                    //{
                     readOrderID.CommandText = "select * from dbo.Purchase where OrderID = @OrderID;";
                     var orderContentParam = new SqlParameter("OrderID", orderID);
                     readOrderID.Parameters.Add(orderContentParam);
@@ -481,8 +463,6 @@ namespace Restaurant2
                 connection.Open();
                 using (SqlCommand readTableStatus = connection.CreateCommand())
                 {
-                    //for (int i = 1; i < menuItemNames.Count; i++)
-                    //{
                         readTableStatus.CommandText = "select * from dbo.RestaurantOrder where OrderID = @OrderID;";
                         var idParam = new SqlParameter("OrderID", orderID);
                         readTableStatus.Parameters.Add(idParam);
@@ -495,7 +475,6 @@ namespace Restaurant2
                             }
                         }
 
-                    //}
                 }
                 connection.Close();
             }

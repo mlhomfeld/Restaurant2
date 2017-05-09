@@ -266,7 +266,6 @@ namespace Restaurant2
                     {
                         readTableStatus.CommandText = "select * from dbo.SeatingArea where SeatingAreaID = @SeatingAreaID" + i.ToString() + ";";
                         var idParam = new SqlParameter("SeatingAreaID" + i.ToString(), i);
-                        //var fnameParam = new SqlParameter("TableID", SqlDbType.VarChar) { Value = i };
                         readTableStatus.Parameters.Add(idParam);
 
                         using (SqlDataReader reader = readTableStatus.ExecuteReader())
