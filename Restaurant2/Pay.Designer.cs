@@ -44,6 +44,7 @@
             this.txtTotalPaid = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDisplaySelectedOrder = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstOrders
@@ -87,7 +88,7 @@
             // btnPayOrder
             // 
             this.btnPayOrder.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayOrder.Location = new System.Drawing.Point(301, 576);
+            this.btnPayOrder.Location = new System.Drawing.Point(310, 501);
             this.btnPayOrder.Name = "btnPayOrder";
             this.btnPayOrder.Size = new System.Drawing.Size(111, 27);
             this.btnPayOrder.TabIndex = 4;
@@ -119,7 +120,7 @@
             // btnCancelOrder
             // 
             this.btnCancelOrder.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelOrder.Location = new System.Drawing.Point(429, 576);
+            this.btnCancelOrder.Location = new System.Drawing.Point(427, 501);
             this.btnCancelOrder.Name = "btnCancelOrder";
             this.btnCancelOrder.Size = new System.Drawing.Size(111, 27);
             this.btnCancelOrder.TabIndex = 7;
@@ -131,7 +132,7 @@
             // 
             this.lblRemainingBalance.AutoSize = true;
             this.lblRemainingBalance.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemainingBalance.Location = new System.Drawing.Point(91, 547);
+            this.lblRemainingBalance.Location = new System.Drawing.Point(91, 489);
             this.lblRemainingBalance.Name = "lblRemainingBalance";
             this.lblRemainingBalance.Size = new System.Drawing.Size(114, 15);
             this.lblRemainingBalance.TabIndex = 9;
@@ -149,7 +150,7 @@
             // 
             this.lblPayment.AutoSize = true;
             this.lblPayment.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPayment.Location = new System.Drawing.Point(149, 582);
+            this.lblPayment.Location = new System.Drawing.Point(149, 528);
             this.lblPayment.Name = "lblPayment";
             this.lblPayment.Size = new System.Drawing.Size(56, 15);
             this.lblPayment.TabIndex = 13;
@@ -157,14 +158,14 @@
             // 
             // txtRemainingBalance
             // 
-            this.txtRemainingBalance.Location = new System.Drawing.Point(211, 545);
+            this.txtRemainingBalance.Location = new System.Drawing.Point(211, 487);
             this.txtRemainingBalance.Name = "txtRemainingBalance";
             this.txtRemainingBalance.Size = new System.Drawing.Size(76, 19);
             this.txtRemainingBalance.TabIndex = 14;
             // 
             // txtTotalPaid
             // 
-            this.txtTotalPaid.Location = new System.Drawing.Point(211, 580);
+            this.txtTotalPaid.Location = new System.Drawing.Point(211, 524);
             this.txtTotalPaid.Name = "txtTotalPaid";
             this.txtTotalPaid.Size = new System.Drawing.Size(76, 19);
             this.txtTotalPaid.TabIndex = 15;
@@ -192,12 +193,24 @@
             this.btnDisplaySelectedOrder.UseVisualStyleBackColor = true;
             this.btnDisplaySelectedOrder.Click += new System.EventHandler(this.btnDisplaySelectedOrder_Click);
             // 
+            // btnReturn
+            // 
+            this.btnReturn.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Location = new System.Drawing.Point(255, 569);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(94, 30);
+            this.btnReturn.TabIndex = 18;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // Pay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(600, 611);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnDisplaySelectedOrder);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.txtTotalPaid);
@@ -239,5 +252,6 @@
         private System.Windows.Forms.TextBox txtTotalPaid;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnDisplaySelectedOrder;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

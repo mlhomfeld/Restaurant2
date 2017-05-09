@@ -33,5 +33,12 @@ namespace Restaurant2
                 lstReadyOrders.Items.Add(orderIDs[i].ToString());
             }
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            WaiterForm waitForm = new WaiterForm();
+            waitForm.Show();
+            this.Hide();
+        }
     }
 }

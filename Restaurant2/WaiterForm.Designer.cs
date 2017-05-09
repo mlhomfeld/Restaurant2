@@ -175,6 +175,7 @@
             this.btnCheckReadyOrders.TabIndex = 10;
             this.btnCheckReadyOrders.Text = "Ready Orders";
             this.btnCheckReadyOrders.UseVisualStyleBackColor = true;
+            this.btnCheckReadyOrders.Click += new System.EventHandler(this.btnCheckReadyOrders_Click);
             // 
             // btnOrderPayment
             // 
@@ -185,6 +186,7 @@
             this.btnOrderPayment.TabIndex = 11;
             this.btnOrderPayment.Text = "Order Payment";
             this.btnOrderPayment.UseVisualStyleBackColor = true;
+            this.btnOrderPayment.Click += new System.EventHandler(this.btnOrderPayment_Click);
             // 
             // lblTableOpenWaiter
             // 
@@ -219,7 +221,6 @@
             this.lblTableDirtyWaiter.Size = new System.Drawing.Size(65, 18);
             this.lblTableDirtyWaiter.TabIndex = 14;
             this.lblTableDirtyWaiter.Text = "DIRTY";
-            this.lblTableDirtyWaiter.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblTableStatusWaiter
             // 

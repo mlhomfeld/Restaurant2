@@ -68,5 +68,12 @@ namespace Restaurant2
             lstOrder.Items.Clear();
             CurrentOrder.Clear();
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            WaiterForm waitForm = new WaiterForm();
+            waitForm.Show();
+            this.Hide();
+        }
     }
 }

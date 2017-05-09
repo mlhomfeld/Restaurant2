@@ -19,11 +19,6 @@ namespace Restaurant2
             
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnTableOne_Click(object sender, EventArgs e)
         {
             Waiter wait = new Waiter();
@@ -71,92 +66,99 @@ namespace Restaurant2
         {
             Busboy bb = new Busboy();
             List<string> status = new List<string>();
-            status = bb.RefreshTableStatuses();
-            // Due to scope, had to utilize this with a bunch of switch statements
-            // Wish there was a more elegant way.
-            switch (status[0])
+            try
             {
-                case "Red":
-                    btnTableOne.BackColor = Color.Red;
-                    break;
-                case "Green":
-                    btnTableOne.BackColor = Color.LightGreen;
-                    break;
-                case "Yellow":
-                    btnTableOne.BackColor = Color.Yellow;
-                    break;
+                status = bb.RefreshTableStatuses();
+                // Due to scope, had to utilize this with a bunch of switch statements
+                // Wish there was a more elegant way.
+                switch (status[0])
+                {
+                    case "Red":
+                        btnTableOne.BackColor = Color.Red;
+                        break;
+                    case "Green":
+                        btnTableOne.BackColor = Color.LightGreen;
+                        break;
+                    case "Yellow":
+                        btnTableOne.BackColor = Color.Yellow;
+                        break;
+                }
+                switch (status[1])
+                {
+                    case "Red":
+                        btnTableTwo.BackColor = Color.Red;
+                        break;
+                    case "Green":
+                        btnTableTwo.BackColor = Color.LightGreen;
+                        break;
+                    case "Yellow":
+                        btnTableTwo.BackColor = Color.Yellow;
+                        break;
+                }
+                switch (status[2])
+                {
+                    case "Red":
+                        btnTableThree.BackColor = Color.Red;
+                        break;
+                    case "Green":
+                        btnTableThree.BackColor = Color.LightGreen;
+                        break;
+                    case "Yellow":
+                        btnTableThree.BackColor = Color.Yellow;
+                        break;
+                }
+                switch (status[3])
+                {
+                    case "Red":
+                        btnTableFour.BackColor = Color.Red;
+                        break;
+                    case "Green":
+                        btnTableFour.BackColor = Color.LightGreen;
+                        break;
+                    case "Yellow":
+                        btnTableFour.BackColor = Color.Yellow;
+                        break;
+                }
+                switch (status[4])
+                {
+                    case "Red":
+                        btnTableFive.BackColor = Color.Red;
+                        break;
+                    case "Green":
+                        btnTableFive.BackColor = Color.LightGreen;
+                        break;
+                    case "Yellow":
+                        btnTableFive.BackColor = Color.Yellow;
+                        break;
+                }
+                switch (status[5])
+                {
+                    case "Red":
+                        btnTableSix.BackColor = Color.Red;
+                        break;
+                    case "Green":
+                        btnTableSix.BackColor = Color.LightGreen;
+                        break;
+                    case "Yellow":
+                        btnTableSix.BackColor = Color.Yellow;
+                        break;
+                }
+                switch (status[6])
+                {
+                    case "Red":
+                        btnTableSeven.BackColor = Color.Red;
+                        break;
+                    case "Green":
+                        btnTableSeven.BackColor = Color.LightGreen;
+                        break;
+                    case "Yellow":
+                        btnTableSeven.BackColor = Color.Yellow;
+                        break;
+                }
             }
-            switch (status[1])
+            catch(Exception err)
             {
-                case "Red":
-                    btnTableTwo.BackColor = Color.Red;
-                    break;
-                case "Green":
-                    btnTableTwo.BackColor = Color.LightGreen;
-                    break;
-                case "Yellow":
-                    btnTableTwo.BackColor = Color.Yellow;
-                    break;
-            }
-            switch (status[2])
-            {
-                case "Red":
-                    btnTableThree.BackColor = Color.Red;
-                    break;
-                case "Green":
-                    btnTableThree.BackColor = Color.LightGreen;
-                    break;
-                case "Yellow":
-                    btnTableThree.BackColor = Color.Yellow;
-                    break;
-            }
-            switch (status[3])
-            {
-                case "Red":
-                    btnTableFour.BackColor = Color.Red;
-                    break;
-                case "Green":
-                    btnTableFour.BackColor = Color.LightGreen;
-                    break;
-                case "Yellow":
-                    btnTableFour.BackColor = Color.Yellow;
-                    break;
-            }
-            switch (status[4])
-            {
-                case "Red":
-                    btnTableFive.BackColor = Color.Red;
-                    break;
-                case "Green":
-                    btnTableFive.BackColor = Color.LightGreen;
-                    break;
-                case "Yellow":
-                    btnTableFive.BackColor = Color.Yellow;
-                    break;
-            }
-            switch (status[5])
-            {
-                case "Red":
-                    btnTableSix.BackColor = Color.Red;
-                    break;
-                case "Green":
-                    btnTableSix.BackColor = Color.LightGreen;
-                    break;
-                case "Yellow":
-                    btnTableSix.BackColor = Color.Yellow;
-                    break;
-            }
-            switch (status[6])
-            {
-                case "Red":
-                    btnTableSeven.BackColor = Color.Red;
-                    break;
-                case "Green":
-                    btnTableSeven.BackColor = Color.LightGreen;
-                    break;
-                case "Yellow":
-                    btnTableSeven.BackColor = Color.Yellow;
-                    break;
+                MessageBox.Show(err.Message);
             }
         }
         private void btnLogout_Click(object sender, EventArgs e)
@@ -165,14 +167,25 @@ namespace Restaurant2
             emp.LogOut();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCreateOrder_Click(object sender, EventArgs e)
         {
+            WaiterMenu createOrder = new WaiterMenu();
+            createOrder.Show();
+            this.Hide();
+        }
 
+        private void btnCheckReadyOrders_Click(object sender, EventArgs e)
+        {
+            WaiterOrderReady readyOrder = new WaiterOrderReady();
+            readyOrder.Show();
+            this.Hide();
+        }
+
+        private void btnOrderPayment_Click(object sender, EventArgs e)
+        {
+            Pay orderPay = new Pay();
+            orderPay.Show();
+            this.Hide();
         }
     }
 }

@@ -39,6 +39,7 @@
             this.btnSubmitOrder = new System.Windows.Forms.Button();
             this.lblCurrentOrder = new System.Windows.Forms.Label();
             this.lstOrder = new System.Windows.Forms.ListBox();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBurger
@@ -148,12 +149,23 @@
             this.lstOrder.Size = new System.Drawing.Size(247, 364);
             this.lstOrder.TabIndex = 11;
             // 
+            // btnReturn
+            // 
+            this.btnReturn.Location = new System.Drawing.Point(259, 455);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(110, 41);
+            this.btnReturn.TabIndex = 12;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // WaiterMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(602, 461);
+            this.ClientSize = new System.Drawing.Size(602, 499);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.lstOrder);
             this.Controls.Add(this.lblCurrentOrder);
             this.Controls.Add(this.btnSubmitOrder);
@@ -184,5 +196,6 @@
         private System.Windows.Forms.Button btnSubmitOrder;
         private System.Windows.Forms.Label lblCurrentOrder;
         private System.Windows.Forms.ListBox lstOrder;
+        private System.Windows.Forms.Button btnReturn;
     }
 }
