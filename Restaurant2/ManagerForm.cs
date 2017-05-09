@@ -52,9 +52,7 @@ namespace Restaurant2
 
         private void btnCheckInventory_Click(object sender, EventArgs e)
         {
-            InventoryForm checkInv = new InventoryForm();
-            this.Hide();
-            checkInv.Show();
+            
         }
     }
 }
